@@ -1,0 +1,202 @@
+$corFonte: #868e96;
+$corDestaque: #323538;
+
+body {
+    font-size: 19.5px;
+    color: $corFonte;
+
+    h1 {
+        font-size: 27px;
+        color: $corDestaque;
+    }
+
+    h2 {
+        font-size: 22px;
+        color: $corDestaque;
+    }
+
+    h3 {
+        font-size: 20px;
+        color: $corDestaque;
+    }
+
+    a {
+        color: $corDestaque;
+    }
+}
+body *{
+    outline: none;
+}
+
+%Espacamento {
+    padding: 16px 0;
+    border-bottom: $corFonte .5px solid;
+}
+
+%data {
+    color: $corDestaque;
+    font-size: .8em;
+}
+
+ul {
+    list-style: disc;
+    margin-left: 40px;
+    font-size: .8em;
+
+    li {
+        list-style: disc;
+    }
+}
+
+.header {
+    padding-top: 75px;
+    padding-bottom: 20px;
+    border-bottom: $corFonte .5px solid;
+
+    &__row {
+        min-height: calc(100vh - 95px);
+    }
+
+    &__nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background-color: $corDestaque;
+        padding: 0 20px;
+
+    }
+
+    &__nome {
+        font-weight: lighter;
+        color: #fff;
+    }
+
+    &__titulo {
+        font-size: 40px;
+        margin-bottom: 0;
+    }
+
+    &__cidade {
+        margin: .5em 0;
+    }
+
+    &__email {
+        display: block;
+        font-size: 15px;
+        font-weight: bolder;
+    }
+
+    &__redes {
+        display: flex;
+        background-color: $corDestaque;
+        color: #fefefe;
+        font-size: 27px;
+        width: 50px;
+        height: 50px;
+        border-radius: 100%;
+    }
+
+}
+
+.main {
+    &__section {
+        @extend %Espacamento;
+    }
+
+    .sectionExperiencia {
+        &__cargo {
+            margin-bottom: 0;
+        }
+
+        &__empresa {
+            margin: 0;
+        }
+
+        &__data {
+            @extend %data
+        }
+    }
+
+    .sectionFormacao {
+        &__instituicao {
+            margin-bottom: 0;
+        }
+
+        &__curso {
+            margin: 0;
+        }
+
+        &__data {
+            @extend %data
+        }
+    }
+
+    .sectionCompetencias {
+        .fab {
+            font-size: 40px;
+            display: block;
+        }
+        &__label{
+            margin-top: 0;
+            font-size: 16px;
+            font-weight: bolder;
+            color: $corDestaque;
+        }
+    }
+}
+
+.footer {
+    @extend %Espacamento;
+
+}
+
+@media only screen and (min-width: 48em) {
+    .container {
+        width: 47.25rem;
+    }
+}
+
+@media only screen and (min-width: 62em) {
+    .container {
+        width: 47.25rem;
+    }
+
+    body {
+        font-size: 21px;
+
+        h1 {
+            font-size: 42px;
+        }
+
+        h2 {
+            font-size: 32px;
+        }
+
+        h3 {
+            font-size: 25px;
+        }
+    }
+
+    %Espacamento {
+        padding: 32px 0;
+    }
+
+    .header {
+        padding-top: 100px;
+
+        &__row {
+            min-height: initial;
+        }
+        &__nav{
+            height: 100%;
+            width: 150px;
+        }
+    }
+}
+
+@media only screen and (min-width: 75em) {
+    .container {
+        width: 47.25rem;
+    }
+}
