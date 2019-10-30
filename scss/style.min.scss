@@ -103,7 +103,6 @@ ul {
             transform: scale(1.3);
         }
     }
-
 }
 
 .main {
@@ -156,7 +155,6 @@ ul {
 
 .footer {
     @extend %Espacamento;
-
 }
 
 @media only screen and (min-width: 48em) {
