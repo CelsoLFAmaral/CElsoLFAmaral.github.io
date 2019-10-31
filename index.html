@@ -41,12 +41,25 @@
 
 <body>
     <header class="header">
-        <nav class="header__nav">
-            <h2 class="header__nome">
+        <nav class="header__nav nav">
+            <h2 class="nav__nome">
                 Celso Luiz Ferraz do Amaral
             </h2>
+            <div class="header__hamburguer hamburguer">
+                <label for="check" class="hamburguer__icone">
+                    <i class="fas fa-bars"></i>
+                </label>
+                <input type="checkbox" name="check" id="check" class="hamburguer__check">
+            </div>
+            <div class="nav__menu">
+                <a class="nav__link" href="#sobre">Sobre</a>
+                <a class="nav__link" href="#experiencia">Experincia</a>
+                <a class="nav__link" href="#formacao">Formação acadêmica</a>
+                <a class="nav__link" href="#competencias">Competências Técnicas</a>
+                <a class="nav__link" href="#portifolio">Portifólio</a>
+            </div>
         </nav>
-        <div class="container">
+        <div id="sobre" class="container">
             <div class="row header__row middle-xs">
                 <div class="col-xs-12">
                     <h1 class="header__titulo">
@@ -125,7 +138,7 @@
                 </div>
             </div>
         </section>
-        <section class="main__section sectionFormacao">
+        <section id="formacao" class="main__section sectionFormacao">
             <div class="container">
                 <div class="row">
                     <div class="col-xs-12">
@@ -158,7 +171,7 @@
                 </div>
             </div>
         </section>
-        <section class="main__section sectionCompetencias">
+        <section id="competencias" class="main__section sectionCompetencias">
             <div class="container">
                 <div class="row">
                     <div class="col-xs-12">
@@ -180,8 +193,7 @@
                                     CSS3
                                     <br>
                                     Flexbox Grid
-                                    <br
-                                    >Bootstrap 4
+                                    <br>Bootstrap 4
                                 </p>
                             </div>
                             <div class="col-xs-4 col-sm-3 center-xs">
@@ -219,15 +231,21 @@
                 </div>
             </div>
         </section>
-        <section class="main__section sectionPortifolio">
+        <section id="portifolio" class="main__section sectionPortifolio">
             <div class="container">
                 <div class="row">
                     <div class="col-xs-12">
+                        <h2>
+                            Portifólio
+                        </h2>
                     </div>
                 </div>
             </div>
         </section>
     </main>
+    <!-- Jquery 3.3.1 -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="js/main.js"></script>
 </body>
 
 </html>

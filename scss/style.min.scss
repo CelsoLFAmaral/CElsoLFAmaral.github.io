@@ -58,19 +58,58 @@ ul {
         min-height: calc(100vh - 95px);
     }
 
-    &__nav {
+    .nav {
         position: fixed;
         top: 0;
         left: 0;
         width: 100%;
         background-color: $corDestaque;
         padding: 0 20px;
+        transition: .3s;
 
-    }
+        &__menu {
+            display: none;
+        }
 
-    &__nome {
-        font-weight: lighter;
-        color: #fff;
+        &__nome {
+            font-weight: lighter;
+            color: #fff;
+        }
+
+        &__link {
+
+            color: #fff;
+            display: block;
+
+            &:hover {
+                opacity: .6;
+            }
+        }
+
+        .hamburguer {
+            position: absolute;
+            top: 0;
+            right: 0;
+            z-index: 37;
+            height: 60px;
+            width: 60px;
+
+            &__check {
+                display: none;
+                &:checked ~ .header .nav .hamburguer__icone{
+                    display: none;
+                    transition: .3s;
+                }
+            }
+
+            &__icone {
+                cursor: pointer;
+                position: absolute;
+                padding: 15px;
+                font-size: 1.3em;
+                outline: none;
+            }
+        }
     }
 
     &__titulo {
@@ -141,7 +180,7 @@ ul {
     .sectionCompetencias {
         .fab {
             font-size: 40px;
-            display: block;
+            display: inline-block;
         }
 
         &__label {
@@ -195,7 +234,7 @@ ul {
             min-height: initial;
         }
 
-        &__nav {
+        .nav {
             height: 100%;
             width: 150px;
         }
@@ -203,21 +242,24 @@ ul {
 
     .main {
         .sectionCompetencias {
-            &__label{
+            &__label {
                 color: transparent;
                 transition: .3s;
             }
+
             .fab {
                 font-size: 60px;
                 transition: .3s;
-                &:hover{
+
+                &:hover {
                     transition: .3s;
                     color: $corDestaque;
                     cursor: pointer;
                 }
             }
         }
-        .fab:hover ~ .sectionCompetencias__label{
+
+        .fab:hover~.sectionCompetencias__label {
             transition: .3s;
             color: $corDestaque;
         }
