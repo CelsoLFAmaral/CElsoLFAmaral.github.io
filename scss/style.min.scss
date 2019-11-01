@@ -5,6 +5,7 @@ body {
     font-size: 19.5px;
     color: $corFonte;
 
+
     h1 {
         font-size: 27px;
         color: $corDestaque;
@@ -49,13 +50,20 @@ ul {
     }
 }
 
+.header,
+.main__section {
+    min-height: 100vh;
+    display: flex;
+}
+
 .header {
     padding-top: 75px;
     padding-bottom: 20px;
     border-bottom: $corFonte .5px solid;
+    transition: margin-left .5s;
 
-    &__row {
-        min-height: calc(100vh - 95px);
+    &__hamburguer {
+        display: none;
     }
 
     .nav {
@@ -64,11 +72,20 @@ ul {
         left: 0;
         width: 100%;
         background-color: $corDestaque;
-        padding: 0 20px;
-        transition: .3s;
+        transition: .5s;
+        overflow: hidden;
 
         &__menu {
-            display: none;
+            height: 0;
+            transition: .5s;
+
+            &.responsive {
+                float: none;
+                height: 5*39px;
+                text-align: left;
+                transition: .5s;
+
+            }
         }
 
         &__nome {
@@ -77,7 +94,7 @@ ul {
         }
 
         &__link {
-
+            margin: 10px 0;
             color: #fff;
             display: block;
 
@@ -86,29 +103,19 @@ ul {
             }
         }
 
-        .hamburguer {
+        &__hamburguer {
             position: absolute;
             top: 0;
             right: 0;
             z-index: 37;
-            height: 60px;
-            width: 60px;
+            cursor: pointer;
+            padding: 23px 15px;
+            font-size: 1.3em;
+            outline: none;
+        }
 
-            &__check {
-                display: none;
-                &:checked ~ .header .nav .hamburguer__icone{
-                    display: none;
-                    transition: .3s;
-                }
-            }
-
-            &__icone {
-                cursor: pointer;
-                position: absolute;
-                padding: 15px;
-                font-size: 1.3em;
-                outline: none;
-            }
+        &__close {
+            display: none;
         }
     }
 
@@ -145,6 +152,8 @@ ul {
 }
 
 .main {
+    transition: margin-left .5s;
+
     &__section {
         @extend %Espacamento;
     }
@@ -184,21 +193,56 @@ ul {
         }
 
         &__label {
-            margin-top: 0;
+            margin-top: 10px;
             font-size: 16px;
             font-weight: bolder;
             color: $corDestaque;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
         }
     }
 }
 
 .footer {
+    transition: margin-left .5s;
+
     @extend %Espacamento;
 }
 
 @media only screen and (min-width: 48em) {
     .container {
         width: 47.25rem;
+    }
+
+    .main {
+
+        .sectionCompetencias {
+
+            .fab {
+                position: relative;
+
+            }
+
+            &__label {
+                visibility: hidden;
+                width: 160px;
+                background-color: #555;
+                color: #fff;
+                text-align: center;
+                border-radius: 6px;
+                padding: 8px 0;
+                position: absolute;
+                z-index: 1;
+                top: 125%;
+                left: 50%;
+                margin-left: -80px;
+
+            }
+        }
+        .fab:hover>.sectionCompetencias__label {
+            visibility: visible;
+            -webkit-animation: fadeIn 1s;
+            animation: fadeIn 1s;
+        }
     }
 }
 
@@ -227,41 +271,56 @@ ul {
         padding: 32px 0;
     }
 
-    .header {
-        padding-top: 100px;
-
-        &__row {
-            min-height: initial;
-        }
-
-        .nav {
-            height: 100%;
-            width: 150px;
+    .header,
+    .main,
+    .footer {
+        &.responsive {
+            margin-left: 250px;
         }
     }
 
-    .main {
-        .sectionCompetencias {
-            &__label {
-                color: transparent;
-                transition: .3s;
-            }
+    .header {
+        padding-top: 20px;
+        position: relative;
 
-            .fab {
-                font-size: 60px;
-                transition: .3s;
-
-                &:hover {
-                    transition: .3s;
-                    color: $corDestaque;
-                    cursor: pointer;
-                }
-            }
+        &__hamburguer {
+            display: block;
+            position: fixed;
+            top: 0;
+            right: 0;
+            font-size: 36px;
+            margin: 50px
         }
 
-        .fab:hover~.sectionCompetencias__label {
-            transition: .3s;
-            color: $corDestaque;
+        .nav {
+            height: 100vh;
+            display: flex;
+            width: 0;
+            padding: 0;
+
+            &.responsive {
+                width: 250px;
+            }
+
+            &__menu {
+                height: initial;
+            }
+
+            &__hamburguer {
+                display: none;
+            }
+
+            &__close {
+                display: block;
+                position: absolute;
+                top: 0;
+                right: 0;
+                z-index: 37;
+                cursor: pointer;
+                padding: 23px 15px;
+                font-size: 1.3em;
+                outline: none;
+            }
         }
     }
 }
@@ -269,5 +328,23 @@ ul {
 @media only screen and (min-width: 75em) {
     .container {
         width: 47.25rem;
+    }
+
+    .header {
+        &__hamburguer {
+            display: none;
+        }
+
+        .nav {
+            width: 250px;
+
+            &__close {
+                display: none;
+            }
+
+            &__nome {
+                font-size: 40px;
+            }
+        }
     }
 }
