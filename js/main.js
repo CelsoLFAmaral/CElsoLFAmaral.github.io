@@ -49,7 +49,7 @@ var header = document.querySelector('.header'),
 
 botao.addEventListener('click', function () {
     if (menu.className === "nav__menu") {
-    menu.classList.add("responsive");
+        menu.classList.add("responsive");
     } else {
         menu.classList.remove("responsive");
     }
@@ -73,19 +73,12 @@ botaoClose.addEventListener('click', function () {
 })
 
 link.forEach(element => {
-    element.addEventListener('click',function () {
-        menu.classList.remove("responsive");     
+    element.addEventListener('click', function () {
+        menu.classList.remove("responsive");
 
     })
 });
 
-competencias.forEach(element => {
-    element.addEventListener('click',function () {
-        
-    })
-});
-
-function myFunction() {
-    var popup = document.getElementById("myPopup");
-    popup.classList.toggle("show");
-  }
+$('.fab').hover(
+    $(this).addClass("show")
+);
