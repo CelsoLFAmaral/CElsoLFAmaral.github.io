@@ -1,0 +1,675 @@
+@import 'layout';
+
+$fundoDestaque:#1824BB;
+$fundoFooter:#5162C8;
+$mainTexto:#667CFF;
+
+
+%button {
+    background-color: #ffc32c;
+    color: #3e464f;
+    font-weight: bold;
+    display: block;
+    margin: 1rem auto;
+    border-radius: 20px;
+    font-size: 1.2em;
+    padding: 1rem;
+    max-width: 500px;
+    text-align: center;
+    animation: scale 1s linear infinite;
+    transition: .3s;
+
+    &:hover {
+        color: rgb(139, 155, 245);
+        background-color: #fff;
+        transition: .3s;
+        animation: none .3s;
+    }
+}
+
+@keyframes scale {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.03);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+@keyframes pulse {
+	0% {
+		
+		box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.7);
+	}
+
+	50% {
+		
+		box-shadow: 0 0 0 10px rgba(0, 0, 0, 0);
+	}
+
+	100% {
+		
+		box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+	}
+}
+    
+.pulse{
+    animation: pulse 2s infinite;
+}
+%logo {
+    width: 160px;
+}
+
+.fb-page {
+    padding: .3rem 0 1rem 0;
+}
+
+.darkRoom {
+    z-index: 1200;
+    display: none;
+    position: fixed;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    will-change: opacity;
+
+    &__video {
+        margin-top: 20px;
+        position: relative;
+        padding-bottom: 45.25%;
+        /* 16:9 */
+        padding-top: 25px;
+        height: 0;
+        width: 100%;
+    }
+
+    &__iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        border-radius: 10px;
+        box-shadow: 0px 3px 20px 0px rgba(0, 0, 0, 0.75);
+    }
+}
+
+.formulario {
+    @include modal;
+
+    select {
+        display: block;
+    }
+
+    &__button {
+        @include hoverGrowUp;
+        font-size: 1.5em;
+    }
+}
+
+.hidden-xs {
+    display: none;
+}
+
+.header {
+    @include background-image('headerBg.png');
+    color: #fff;
+
+    h4 {
+        line-height: 1.2em;
+    }
+
+    &__logo {
+        @extend %logo
+    }
+
+    &__titulo {
+        font-size: 29px;
+        margin: 0;
+        line-height: 1.2em;
+
+        &--destaque {
+            font-size: 24px;
+        }
+    }
+
+    &__subtitulo {
+        font-size: 22px;
+        font-weight: lighter;
+        font-style: italic;
+        margin: .5em 0;
+    }
+
+    &__bonus {
+        margin: 0;
+        font-size: 32px;
+        line-height: 1em;
+
+        &--destaque {
+            font-size: 20px;
+            font-weight: lighter;
+            font-style: italic;
+        }
+    }
+
+    &__seta {
+        max-width: 20px;
+        margin-top: 20px;
+    }
+
+    &__button {
+        @extend %button;
+        margin-top: 50px;
+    }
+
+    .caixaVideo {
+        // border: solid 1px #8BE9FF;
+        border-radius: 15px;
+        @include caixaVideo;
+        // filter: saturate(15%);
+
+        &__capa {
+            display: none;
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            padding: 0;
+            width: 100%;
+            border-radius: 5px;
+        }
+        .header__play{
+            font-size: 3em;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            @include size(125px)
+        }
+        .videoPlayer {
+            // display: none;
+            border-radius: 15px;
+            max-height: 100%;
+        }
+    }
+
+    &__thumbs {
+        display: none;
+        border-radius: 15px;
+
+        img {
+            border-radius: 5px;
+        }
+    }
+
+    .enunciado {
+        font-size: .8em;
+
+        &__icone {
+            background-color:$fundoDestaque;
+            border-radius: 3px;
+            position: relative;
+            height: 25px;
+            max-width: 95px;
+            margin: 10px auto;
+
+            i {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                max-width: 10px;
+                max-height: 15px;
+            }
+        }
+
+        &__titulo {
+            margin: 0;
+        }
+
+        &__aviso {
+            margin-top: 0;
+        }
+    }
+
+    #video1,
+    #video2,
+    #video3 {
+        pointer-events: none;
+        cursor: initial;
+    }
+}
+
+.main {
+    h1,h2,h3,h4{
+        color: $fundoFooter;
+    }
+    color: $mainTexto;
+    .sectionComentario {
+        position: relative;
+        
+        h2 {
+            margin-bottom: 0;
+        }
+
+        p {
+            margin: 0;
+        }
+
+        p {
+            line-height: 1.2em;
+        }
+
+        .video {
+            margin: 15px 0;
+        }
+
+        &__button {
+            @extend %button;
+        }
+
+        &__pergunta,
+        &__tituloDepoimentos--destaque {
+            font-weight: normal;
+        }
+
+        &__titulo {
+            margin-top: 0;
+        }
+
+        &__fundo {
+            position: absolute;
+
+            &--saturno {
+                max-width: 1000px;
+                width: 1000px;
+                top: 50%;
+                left: 40%;
+                transform: translate(-50%, -50%);
+                z-index: -1;
+            }
+
+            &--foguete {
+                &1 {
+                    top: 10%;
+                    right: -.8rem;
+                    z-index: -1;
+                }
+
+                &2 {
+                    bottom: 10%;
+                    right: -.8rem;
+                    z-index: -1;
+                }
+            }
+        }
+
+        &__compartilhar {
+            @extend %button;
+        }
+
+        .redes {
+            display: flex;
+            color: #707070;
+            margin-bottom: 20px;
+
+            i{
+                color: $fundoFooter;
+            }
+
+            &__circulo {
+                @include circle(50px);
+                display: inline-flex;
+                background-color: $fundoFooter;
+
+               i{
+                color: #fff;
+                font-size: 1.5em;
+               }
+            }
+
+            &__destaque {
+                font-weight: lighter;
+            }
+
+            p {
+                display: inline-block;
+                padding: 0 20px;
+                font-weight: bold;
+                width: 70%;
+            }
+        }
+
+        .videosDepoimentos {
+            margin-bottom: 15px;
+
+            background-color: #efeeee;
+
+            .no-pad {
+                padding: 0;
+            }
+
+            .row {
+                margin: 0;
+            }
+
+            a {
+                display: block;
+                cursor: pointer;
+                pointer-events: painted;
+            }
+
+            &__descricao {
+                padding: 0 1rem;
+            }
+
+            &__nome {
+                margin: 0;
+                font-size: 0.9rem;
+                font-weight: bold;
+                text-transform: uppercase;
+                color: #2f7bb9;
+            }
+
+            &__area {
+                margin: 0;
+                font-size: 0.9rem;
+                font-style: italic;
+                color: #454545;
+            }
+        }
+    }
+
+    .sectionChristian {
+        background-color: $fundoFooter;
+        color: #fff;
+        position: relative;
+        overflow: hidden;
+
+        * {
+            z-index: 1;
+        }
+
+        h2 {
+            font-size: 27px;
+        }
+
+        &__button {
+            @extend %button;
+            position: relative;
+        }
+
+        &__destaque {
+            margin-bottom: 0;
+        }
+
+        &__fundo {
+            position: absolute;
+
+            &--saturno {
+                width: 1000px;
+                max-width: 1000px;
+                top: 72%;
+                left: 90%;
+                z-index: 0;
+                transform: translate(-50%, -50%);
+            }
+        }
+    }
+}
+
+.footer {
+    background-color: $fundoFooter;
+    color: #fff;
+    font-size: .8em;
+    padding-bottom: 64px;
+
+    &__logo {
+        @extend %logo;
+    }
+}
+
+@include mq('tablet') {
+    .hidden-sm {
+        display: none;
+    }
+
+    .show-sm {
+        display: block;
+    }
+
+    .main {
+        .sectionComentario {
+            &__fundo {
+                &--foguete {
+                    &1 {
+                        right: auto;
+                        left: 0;
+                        max-width: 300px;
+                        top: 10%;
+                    }
+
+                    &2 {
+                        display: none;
+                    }
+                }
+
+                &--saturno {
+                    top: 75%;
+                    width: 500px;
+                    left: auto;
+                    right: 0;
+                    transform: translate(0, -50%);
+                }
+            }
+        }
+    }
+}
+
+@include mq('tablet-wide') {
+    .container {
+        width: 61rem;
+    }
+
+    .hidden-xs {
+        display: block;
+    }
+
+    .hidden-md {
+        display: none;
+    }
+
+    %logo-md {
+        margin-bottom: 30px
+    }
+
+    .iziModal {
+        max-width: 800px !important;
+    }
+
+    .header {
+
+        .col-md-3 {
+            padding-left: 0;
+        }
+
+        h4 {
+            font-size: 25px
+        }
+
+        &__logo {
+            @extend %logo-md
+        }
+
+        &__sobreTitulo {
+            font-size: 20px;
+        }
+
+        &__titulo {
+            font-size: 42px;
+
+            &--destaque {
+                font-size: 42px;
+            }
+        }
+
+        &__subtitulo {
+            font-size: 32px;
+        }
+
+        &__bonus {
+            font-size: 42px;
+
+            &--destaque {
+                font-style: normal;
+                font-weight: bold;
+                font-size: 42px;
+            }
+        }
+
+        &__thumbs {
+            display: block;
+            margin-top: 5px;
+            position: relative;
+            width: 100%;
+            max-width: 72%;
+            // border: solid 1px #8BE9FF;
+            filter: saturate(15%);
+
+            &:before {
+                content: "";
+                display: block;
+                padding-bottom: 56.25%;
+            }
+
+            img {
+                position: absolute;
+                top: 0;
+                left: 0;
+
+            }
+        }
+
+        &__play {
+            position: absolute;
+            display: flex;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            @include circle(60px);
+            background-color: rgba(0, 0, 87, 0.5);
+
+        }
+
+        .enunciado {
+            display: none;
+        }
+    }
+
+    .main {
+        .sectionComentario {
+            .video {
+                margin: 50px 0;
+            }
+
+            &__titulo {
+                font-size: 47px !important;
+            }
+
+            &__destaque {
+                border: none;
+                display: block;
+            }
+
+            &__fundo {
+                &--foguete {
+                    &1 {
+                        right: auto;
+                        left: 0;
+                        max-width: 300px;
+                        top: 10%;
+                    }
+                }
+
+                &--saturno {
+                    top: 63%;
+                }
+            }
+
+            &__destaque {
+                background-color: transparent;
+            }
+
+            .redes {
+                p {
+                    width: 80%;
+                }
+            }
+        }
+
+        .sectionChristian {
+            h2 {
+                font-size: 47px;
+            }
+
+            &__fundo {
+                &--saturno {
+                    width: 800px;
+                    max-width: 1000px;
+                    top: 23%;
+                    left: 75%;
+                    z-index: 0;
+                }
+            }
+        }
+    }
+
+    .footer {
+        padding: 32px 0;
+
+        &__logo {
+            @extend %logo-md
+        }
+    }
+}
+
+@include mq('desktop') {
+    .container {
+        width: 71rem;
+    }
+
+    .main {
+        .sectionComentario {
+            &__fundo {
+                &--foguete1 {
+                    left: 5%;
+                    top: 22%;
+                }
+            }
+
+            .redes {
+                p {
+                    width: 70%;
+                }
+            }
+        }
+    }
+}
+
+@include mq('desktop-extra-wide') {
+    .main {
+        .sectionChristian {
+            padding-bottom: 64px;
+        }
+    }
+
+    .footer {
+        &__logo {
+            margin-bottom: 30px;
+        }
+    }
+}

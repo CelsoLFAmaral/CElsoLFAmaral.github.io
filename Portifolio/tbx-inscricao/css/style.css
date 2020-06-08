@@ -1,0 +1,1210 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,600,700&display=swap");
+#destaque,
+.main .sectionAjudar__p--destaque,
+.main .sectionAjudar__verdade,
+.main .sectionMindpro__p--destaque,
+.main .sectionMasterClass .card__subtitulo,
+.main .sectionMasterClass__subtitulo,
+.main .sectionCursos__subtitulo,
+.main .sectionBiblioteca .card__subtituloMentores,
+.main .sectionBiblioteca__subtitulo,
+.main .sectionChamadaFinal__titulo,
+.main .sectionChamadaFinal__p--destaque {
+  color: #FF4175;
+  font-weight: bold;
+}
+
+#titulo,
+.main .sectionAjudar__titulo,
+.main .sectionAjudar__verdade,
+.main .sectionMasterClass__titulo,
+.main .sectionCursos__titulo,
+.main .sectionChamadaFinal__titulo {
+  font-size: 2em;
+}
+
+.main .sectionMasterClass .card__tituloMaster, .main .sectionMasterClass__tituloMasterClass, .main .sectionCursos__titulo, .main .sectionBiblioteca .card__tituloMentores, .main .sectionBiblioteca__titulo {
+  margin-bottom: 0;
+}
+
+.main .sectionMasterClass .card__subtitulo, .main .sectionMasterClass__subtitulo, .main .sectionCursos__subtitulo, .main .sectionBiblioteca .card__subtituloMentores, .main .sectionBiblioteca__subtitulo {
+  margin-top: 0;
+}
+
+#bgEscuro {
+  background: #09024c;
+  background: -moz-linear-gradient(45deg, #09024c 0%, #bb2d5f 86%, #bb2d5f 100%);
+  background: -webkit-gradient(left bottom, right top, color-stop(0%, #09024c), color-stop(86%, #bb2d5f), color-stop(100%, #bb2d5f));
+  background: -webkit-linear-gradient(45deg, #09024c 0%, #bb2d5f 86%, #bb2d5f 100%);
+  background: -o-linear-gradient(45deg, #09024c 0%, #bb2d5f 86%, #bb2d5f 100%);
+  background: -ms-linear-gradient(45deg, #09024c 0%, #bb2d5f 86%, #bb2d5f 100%);
+  background: linear-gradient(45deg, #09024c 0%, #bb2d5f 86%, #bb2d5f 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#09024c', endColorstr='#bb2d5f', GradientType=1);
+  color: #fff;
+}
+
+#bgEstrelado {
+  background-image: url("../img/bg-estrelado.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  padding: 30px 0;
+}
+
+.container-imgfl {
+  display: none;
+}
+
+.ul {
+  padding-inline-start: 40px;
+  position: relative;
+}
+
+.ul__li {
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.ul__li:after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: -30px;
+  top: 10px;
+  transform: translateY(-50%);
+  width: 15px;
+  height: 15px;
+  background-image: url("../img/icone-triadbox.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.formulario {
+  padding: 30px 40px;
+}
+
+.formulario-pdf {
+  padding: 0;
+}
+
+.formulario .formulario__nome, .formulario .formulario__email, .formulario .formulario__telefoneDdd, .formulario .formulario__telefoneNumero, .formulario .formulario__telefoneHidden {
+  width: 100% !important;
+  padding: 0 15px !important;
+  border: 1px solid #ddd !important;
+  border-radius: 3px !important;
+  margin-bottom: 15px !important;
+  width: 100% !important;
+  transition: .5s !important;
+  box-sizing: border-box !important;
+}
+
+.formulario .formulario__nome:focus, .formulario .formulario__email:focus, .formulario .formulario__telefoneDdd:focus, .formulario .formulario__telefoneNumero:focus, .formulario .formulario__telefoneHidden:focus {
+  border-color: #FF4175 !important;
+  transition: .5 !important;
+}
+
+.formulario__telefoneDdd {
+  display: inline-block;
+  max-width: 21%;
+  margin-right: 10px !important;
+}
+
+.formulario__telefoneNumero {
+  display: inline-block;
+  max-width: 72.5%;
+}
+
+.formulario__check {
+  display: flex !important;
+  font-size: .8em !important;
+  border: none !important;
+  padding: 0 !important;
+}
+
+.formulario__button {
+  cursor: pointer !important;
+  pointer-events: painted !important;
+  color: #fff !important;
+  font-size: 1em !important;
+  margin-bottom: 0 !important;
+  width: 100% !important;
+  padding: 15px !important;
+  border: 1px solid #ddd !important;
+  max-width: 50% !important;
+  font-weight: 600;
+  background: #01fcc6;
+  background: -moz-linear-gradient(left, #01fcc6 0%, #27e38b 100%);
+  background: -webkit-gradient(left top, right top, color-stop(0%, #01fcc6), color-stop(100%, #27e38b));
+  background: -webkit-linear-gradient(left, #01fcc6 0%, #27e38b 100%);
+  background: -o-linear-gradient(left, #01fcc6 0%, #27e38b 100%);
+  background: -ms-linear-gradient(left, #01fcc6 0%, #27e38b 100%);
+  background: linear-gradient(to right, #01fcc6 0%, #27e38b 100%);
+  transition: .3s;
+}
+
+.formulario__button:hover {
+  color: #fff;
+  opacity: 0.8;
+}
+
+.formulario__button--desativado {
+  background: #77767b !important;
+  color: #d6d6d8 !important;
+  pointer-events: none !important;
+  font-weight: bold !important;
+  transition: .3s !important;
+}
+
+.formulario .termo--link {
+  color: blue;
+  cursor: pointer;
+}
+
+@media only screen and (min-width: 767px) {
+  .formulario__telefoneDdd {
+    display: inline-block;
+    max-width: 15%;
+    margin-right: 10px !important;
+  }
+  .formulario__telefoneNumero {
+    display: inline-block;
+    max-width: 81.5%;
+  }
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  outline: none;
+}
+
+a,
+a:focus,
+a:hover,
+.button:hover,
+.button:focus {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  width: 100%;
+  max-width: 100%;
+}
+
+strong {
+  font-weight: 900;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  font-size: 13.5px;
+  color: #585858;
+}
+
+.hidden-xs {
+  display: none;
+}
+
+@keyframes agita {
+  0% {
+    top: -10px;
+    left: 8px;
+  }
+  50% {
+    top: -3px;
+    left: -3px;
+  }
+  100% {
+    top: -10px;
+    left: 8px;
+  }
+}
+
+.efeito-agita:after {
+  animation: agita 3s ease-in-out infinite;
+}
+
+.button {
+  position: relative;
+  color: #280A4D;
+  font-size: 0.8em;
+  padding: 20px;
+  width: 100%;
+  max-width: 500px;
+  cursor: pointer;
+  transition: .3s;
+  display: inline-block;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border-radius: 20px;
+  font-weight: 900;
+  margin-bottom: 0;
+  background: #35efa5;
+  background: -moz-linear-gradient(45deg, #35efa5 0%, #58ffbc 100%);
+  background: -webkit-gradient(left bottom, right top, color-stop(0%, #35efa5), color-stop(100%, #58ffbc));
+  background: -webkit-linear-gradient(45deg, #35efa5 0%, #58ffbc 100%);
+  background: -o-linear-gradient(45deg, #35efa5 0%, #58ffbc 100%);
+  background: -ms-linear-gradient(45deg, #35efa5 0%, #58ffbc 100%);
+  background: linear-gradient(45deg, #35efa5 0%, #58ffbc 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#35efa5', endColorstr='#58ffbc', GradientType=1);
+  -webkit-box-shadow: -1px -2px 33px -5px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: -1px -2px 33px -5px rgba(0, 0, 0, 0.75);
+  box-shadow: -1px -2px 33px -5px rgba(0, 0, 0, 0.75);
+}
+
+.button:hover {
+  color: #280A4D;
+}
+
+.button__whats:hover {
+  transition: .3s;
+}
+
+.button__whats:hover:hover {
+  -moz-transform: scale(1.05);
+  -webkit-transform: scale(1.05);
+  transform: scale(1.05);
+  transition: .3s;
+}
+
+.button.encerrado {
+  background: grey;
+  color: #000;
+  pointer-events: none;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+
+.button.encerrado:after {
+  content: "";
+  display: block;
+  position: absolute;
+  border: none;
+}
+
+.button:after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: -8px;
+  left: 8px;
+  width: 100%;
+  height: 100%;
+  border: 5px solid #280A4D;
+  border-radius: 20px;
+  transition: .3s;
+}
+
+.button:before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border-radius: 20px;
+  border: 5px solid #280A4D;
+  opacity: 0;
+  transition: .3s;
+}
+
+.button:hover:before, .button:focus:before {
+  opacity: 1;
+  transition: .3s;
+}
+
+.button:hover:after, .button:focus:after {
+  border: 5px solid #fff;
+  transition: .3s;
+}
+
+.countdown, .main .sectionResumo .card__total {
+  position: relative;
+  border-radius: 20px;
+  color: #fff;
+  font-weight: bold;
+  margin: 50px 0;
+  padding: 5px 20px 30px 20px;
+  background: #cf0778;
+  background: -moz-linear-gradient(45deg, #cf0778 -5%, #ef354b 105%);
+  background: -webkit-gradient(left bottom, right top, color-stop(-5%, #cf0778), color-stop(105%, #ef354b));
+  background: -webkit-linear-gradient(45deg, #cf0778 -5%, #ef354b 105%);
+  background: -o-linear-gradient(45deg, #cf0778 -5%, #ef354b 105%);
+  background: -ms-linear-gradient(45deg, #cf0778 -5%, #ef354b 105%);
+  background: linear-gradient(45deg, #cf0778 -5%, #ef354b 105%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#cf0778', endColorstr='#ef354b', GradientType=1);
+  font-size: 2em;
+  padding: 15px 20px 29px 20px;
+  margin: 20px auto;
+}
+
+.countdown .col-xs, .main .sectionResumo .card__total .col-xs,
+.countdown .col-xs-1, .main .sectionResumo .card__total .col-xs-1 {
+  padding-left: 0 !important;
+}
+
+.countdown__enunciado {
+  font-size: .5em;
+}
+
+.countdown:after, .main .sectionResumo .card__total:after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: -8px;
+  left: 8px;
+  width: 100%;
+  height: 100%;
+  border: 5px solid #280A4D;
+  border-radius: 20px;
+  transition: .3s;
+}
+
+.countdown #dias::after, .main .sectionResumo .card__total #dias::after, .countdown #dias2::after, .main .sectionResumo .card__total #dias2::after, .countdown #horas::after, .main .sectionResumo .card__total #horas::after, .countdown #horas2::after, .main .sectionResumo .card__total #horas2::after, .countdown #minutos::after, .main .sectionResumo .card__total #minutos::after, .countdown #minutos2::after, .main .sectionResumo .card__total #minutos2::after, .countdown #segundos::after, .main .sectionResumo .card__total #segundos::after, .countdown #segundos2::after, .main .sectionResumo .card__total #segundos2::after {
+  font-size: .3em;
+  bottom: -7px;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+.countdown #dias, .main .sectionResumo .card__total #dias,
+.countdown #dias2, .main .sectionResumo .card__total #dias2 {
+  position: relative;
+}
+
+.countdown #dias::after, .main .sectionResumo .card__total #dias::after,
+.countdown #dias2::after, .main .sectionResumo .card__total #dias2::after {
+  content: "Dias";
+  display: block;
+  position: absolute;
+}
+
+.countdown #horas, .main .sectionResumo .card__total #horas,
+.countdown #horas2, .main .sectionResumo .card__total #horas2 {
+  position: relative;
+}
+
+.countdown #horas::after, .main .sectionResumo .card__total #horas::after,
+.countdown #horas2::after, .main .sectionResumo .card__total #horas2::after {
+  content: "Horas";
+  display: block;
+  position: absolute;
+}
+
+.countdown #minutos, .main .sectionResumo .card__total #minutos,
+.countdown #minutos2, .main .sectionResumo .card__total #minutos2 {
+  position: relative;
+}
+
+.countdown #minutos::after, .main .sectionResumo .card__total #minutos::after,
+.countdown #minutos2::after, .main .sectionResumo .card__total #minutos2::after {
+  content: "Minutos";
+  display: block;
+  position: absolute;
+}
+
+.countdown #segundos, .main .sectionResumo .card__total #segundos,
+.countdown #segundos2, .main .sectionResumo .card__total #segundos2 {
+  position: relative;
+}
+
+.countdown #segundos::after, .main .sectionResumo .card__total #segundos::after,
+.countdown #segundos2::after, .main .sectionResumo .card__total #segundos2::after {
+  content: "Segundos";
+  display: block;
+  position: absolute;
+}
+
+.main .sectionAjudar .card, .main .sectionMasterClass .card, .main .sectionBiblioteca .card, .main .sectionResumo .card {
+  padding: 15px 30px;
+  margin: 2rem 0;
+  max-width: 100%;
+  width: 600px;
+  border-radius: 30px;
+  -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+  -moz-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+  -webkit-box-shadow: 0 2px 5px 0 rgba(255, 65, 117, 0.16), 0 2px 10px 0 rgba(255, 65, 117, 0.12) !important;
+  -moz-box-shadow: 0 2px 5px 0 rgba(255, 65, 117, 0.16), 0 2px 10px 0 rgba(255, 65, 117, 0.12) !important;
+  box-shadow: 0 2px 5px 0 rgba(255, 65, 117, 0.16), 0 2px 10px 0 rgba(255, 65, 117, 0.12) !important;
+  font-weight: 600;
+}
+
+.collapsible {
+  box-shadow: none;
+  border: none;
+}
+
+.collapsible-body {
+  border: none;
+}
+
+.collapsible-body p {
+  padding: 0;
+}
+
+.collapsible-header {
+  background-color: transparent;
+  border: 1px solid #37F0A7;
+  border-radius: 15px;
+  position: relative;
+  color: #37F0A7;
+  width: 120px;
+  margin: 10px auto;
+}
+
+.collapsible-header:after {
+  content: "Saiba mais";
+  display: block;
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.collapsible-header:hover, .collapsible-header:focus {
+  background-color: transparent;
+}
+
+.collapsible__li.active > .collapsible-header:after {
+  content: "Fechar";
+  display: block;
+  position: absolute;
+}
+
+#mindpro,
+#faltam,
+#chamada {
+  display: none;
+}
+
+.container-imagemFlutuante {
+  display: none;
+}
+
+.corpoFaixa {
+  min-height: 157px;
+}
+
+.header {
+  padding: 30px;
+  color: #fff;
+  position: relative;
+  background-image: url("../img/header-bg.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.header .faixaTelefone {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  width: 100%;
+  background-color: #FF485E;
+  color: #fff;
+  font-weight: bold;
+  font-size: .8em;
+  padding-top: 30px;
+}
+
+.header .faixaTelefone__i {
+  font-size: 2.5em;
+  margin-right: 15px;
+  font-weight: normal;
+}
+
+.header .faixaTelefone__p {
+  display: inline-flex;
+}
+
+.header .faixaTelefone__p--destaque {
+  font-size: 1.8em;
+  display: contents;
+}
+
+.header .faixaTelefone__close {
+  position: absolute;
+  right: 0;
+  top: -30px;
+  margin: 5px;
+  padding: 5px 6px;
+  border: 1px solid #fff;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.header .faixaTelefone .button {
+  color: #35efa5;
+  background: #280A4D;
+  font-weight: bold;
+  font-size: 2em;
+  padding: 5px 0;
+  border-radius: 15px;
+  max-width: 210px;
+  box-shadow: none;
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+.header .faixaTelefone .button:after, .header .faixaTelefone .button:before {
+  display: none;
+}
+
+.header .faixaTelefone .button__seta {
+  font-size: 1.2em;
+}
+
+.header__logo {
+  max-width: 150px;
+}
+
+.header__caixas {
+  position: absolute;
+  left: 0;
+  bottom: -50px;
+}
+
+.main__section {
+  padding: 30px 0;
+}
+
+.main .sectionAjudar .card__img {
+  max-width: 200px;
+}
+
+.main .sectionMindpro__img {
+  width: 380px;
+  margin-left: -60px;
+  margin-top: 30px;
+  max-width: 600px;
+}
+
+.main .sectionMindpro__titulo {
+  font-size: 2em;
+}
+
+.main .sectionPrograma {
+  background-image: url("../img/countdown-bg.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #fff;
+}
+
+.main .sectionMasterClass .card__img {
+  max-width: 200px;
+}
+
+.main .sectionMasterClass__tituloMasterClass {
+  font-size: 3em;
+}
+
+.main .sectionMasterClass__preco {
+  background-color: #EF354B;
+  color: #fff;
+  padding: 5px;
+  border-radius: 10px;
+}
+
+.main .sectionMasterClass__imgPessoas {
+  width: 400px;
+  max-width: 600px;
+}
+
+.main .sectionMasterClass__valor {
+  font-weight: 900;
+}
+
+.main .sectionImportante__circulo {
+  border-radius: 100%;
+  display: inline-flex;
+  width: 75px;
+  height: 75px;
+  border: 6px solid #FF4175;
+  font-size: 2em;
+  position: relative;
+}
+
+.main .sectionImportante__circulo:before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border-radius: 100%;
+  border: 2px solid #fff;
+  transition: .3s;
+}
+
+.main .sectionCursos__imgApenas {
+  width: 426px;
+  max-width: 600px;
+  margin-left: -90px;
+  margin-top: 40px;
+}
+
+.main .sectionCursos__imgTriad {
+  width: 420px;
+  max-width: 600px;
+  margin-top: 60px;
+}
+
+.main .sectionCursos__imgMente {
+  width: 420px;
+  max-width: 600px;
+  margin-top: 40px;
+  margin-left: -80px;
+}
+
+.main .sectionCursos__preco {
+  background-color: #EF354B;
+  color: #fff;
+  padding: 5px;
+  border-radius: 10px;
+}
+
+.main .sectionCursos .titulo2 {
+  margin-top: 100px;
+}
+
+.main .sectionCursos__muitoMais {
+  max-width: 25px;
+}
+
+.main .sectionCursos__muitoMais--p {
+  margin-top: 0;
+}
+
+.main .sectionCursos__valor {
+  font-weight: 900;
+}
+
+.main .sectionBiblioteca .mentores {
+  position: relative;
+  margin-top: 20px;
+  margin-bottom: 50px;
+}
+
+.main .sectionBiblioteca .mentores__img {
+  display: inline-block;
+  margin: 0 30px;
+  white-space: normal;
+}
+
+.main .sectionBiblioteca .mentores .slick-prev:before, .main .sectionBiblioteca .mentores .slick-next:before {
+  font-family: none !important;
+  line-height: 0.5 !important;
+  font-size: 30px !important;
+}
+
+.main .sectionBiblioteca .mentores .slick-prev,
+.main .sectionBiblioteca .mentores .slick-next {
+  z-index: 100;
+  background-color: transparent;
+  border: 1px solid #FF4175;
+  border-radius: 10px;
+  width: 50px;
+  height: 30px;
+}
+
+.main .sectionBiblioteca .mentores .slick-prev:before,
+.main .sectionBiblioteca .mentores .slick-next:before {
+  color: #FF4175 !important;
+}
+
+.main .sectionBiblioteca .mentores .slick-prev {
+  cursor: pointer;
+  left: 24%;
+  top: 100%;
+}
+
+.main .sectionBiblioteca .mentores .slick-next {
+  cursor: pointer;
+  right: 24%;
+  top: 100%;
+}
+
+@media only screen and (min-width: 767px) {
+  .main .sectionBiblioteca .mentores .slick-prev {
+    cursor: pointer;
+    left: 44%;
+    top: 100%;
+  }
+  .main .sectionBiblioteca .mentores .slick-next {
+    cursor: pointer;
+    right: 44%;
+    top: 100%;
+  }
+}
+
+.main .sectionBiblioteca .mentores .container-fluid {
+  padding: 0 !important;
+}
+
+.main .sectionBiblioteca .card {
+  max-width: 95%;
+  margin-left: 5px;
+  margin-right: 5px;
+  min-height: 405px;
+}
+
+.main .sectionBiblioteca .card__mentor {
+  max-width: 200px;
+  display: block;
+  margin: 0 auto;
+}
+
+.main .sectionBiblioteca .card__subtituloMentores {
+  font-weight: 600;
+}
+
+.main .sectionBiblioteca__titulo {
+  font-size: 2.5em;
+}
+
+.main .sectionResumo {
+  background-image: url("../img/countdown-bg.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.main .sectionResumo .card {
+  padding: 15px .75rem;
+  width: 100%;
+}
+
+.main .sectionResumo .card .linha:nth-child(even) {
+  background: #F5F6F9;
+}
+
+.main .sectionResumo .card .linha2 {
+  background: #F5F6F9;
+}
+
+.main .sectionResumo .card .preco {
+  font-size: .5em;
+  margin: 1rem auto;
+}
+
+.main .sectionResumo .card .preco .preco {
+  position: relative;
+}
+
+.main .sectionResumo .card .preco .preco__valor {
+  font-size: 3.4em;
+}
+
+.main .sectionResumo .card .preco .preco--de .preco__valor:before {
+  content: "De";
+  display: block;
+  position: absolute;
+  font-size: .5em;
+  top: -11px;
+  left: 0;
+  color: #585858;
+}
+
+.main .sectionResumo .card .preco .preco--de .preco__valor:after {
+  content: "";
+  display: block;
+  position: absolute;
+  font-size: .5em;
+  top: 50%;
+  left: 50%;
+  height: 1px;
+  width: 90%;
+  background: #FF4175;
+  transform: translate(-50%, -50%);
+}
+
+.main .sectionResumo .card .preco .preco--por .preco__valor:before {
+  content: "Por";
+  display: block;
+  position: absolute;
+  font-size: .5em;
+  top: -11px;
+  left: 7px;
+  color: #585858;
+}
+
+.main .sectionResumo .card .preco .preco--por .preco__valor:after {
+  content: "à vista";
+  display: block;
+  position: absolute;
+  font-size: .3em;
+  bottom: -2px;
+  right: 0;
+  transform: translate(-50%);
+}
+
+.main .sectionResumo .card .preco .preco--ate .preco__valor:before {
+  content: "Ou";
+  display: block;
+  position: absolute;
+  font-size: .5em;
+  top: -11px;
+  left: 7px;
+  color: #585858;
+}
+
+.main .sectionResumo .card .preco .preco--ate .preco__valor:after {
+  content: "no cartão de crédito";
+  display: block;
+  position: absolute;
+  font-size: .3em;
+  bottom: -2px;
+  left: 13px;
+}
+
+@media only screen and (min-width: 399px) {
+  .main .sectionResumo .card .preco {
+    font-size: .6em;
+  }
+  .main .sectionResumo .card .preco .preco--de .preco__valor:before, .main .sectionResumo .card .preco .preco--por .preco__valor:before, .main .sectionResumo .card .preco .preco--ate .preco__valor:before {
+    top: -15px;
+  }
+}
+
+@media only screen and (min-width: 767px) {
+  .main .sectionResumo .card .preco {
+    font-size: .9em;
+  }
+  .main .sectionResumo .card .preco .preco {
+    font-size: 1em;
+  }
+  .main .sectionResumo .card .preco .preco--de .preco__valor:before, .main .sectionResumo .card .preco .preco--por .preco__valor:before, .main .sectionResumo .card .preco .preco--ate .preco__valor:before {
+    top: 0px;
+    font-size: .3em;
+    left: 5px;
+  }
+  .main .sectionResumo .card .preco .preco--por .preco__valor::before {
+    left: 23px;
+  }
+  .main .sectionResumo .card .preco .preco--ate .preco__valor::before {
+    left: 25px;
+  }
+  .main .sectionResumo .card .preco .preco--por .preco__valor::after, .main .sectionResumo .card .preco .preco--ate .preco__valor::after {
+    bottom: -5px;
+  }
+  .main .sectionResumo .card .preco .preco--ate .preco__valor:after {
+    left: 9px;
+  }
+}
+
+@media only screen and (min-width: 1023px) {
+  .main .sectionResumo .card .preco {
+    font-size: .9em;
+  }
+  .main .sectionResumo .card .preco .preco {
+    font-size: 1em;
+  }
+  .main .sectionResumo .card .preco .preco--de .preco__valor:before, .main .sectionResumo .card .preco .preco--por .preco__valor:before, .main .sectionResumo .card .preco .preco--ate .preco__valor:before {
+    top: 0px;
+    font-size: .3em;
+    left: 6px;
+  }
+  .main .sectionResumo .card .preco .preco--por .preco__valor::before {
+    left: 20px;
+  }
+  .main .sectionResumo .card .preco .preco--ate .preco__valor::before {
+    left: 25px;
+  }
+  .main .sectionResumo .card .preco .preco--por .preco__valor::after, .main .sectionResumo .card .preco .preco--ate .preco__valor::after {
+    bottom: -5px;
+  }
+  .main .sectionResumo .card .preco .preco--ate .preco__valor:after {
+    left: 25px;
+  }
+}
+
+@media only screen and (min-width: 1365px) {
+  .main .sectionResumo .card .preco {
+    font-size: .9em;
+  }
+  .main .sectionResumo .card .preco .preco {
+    font-size: 1em;
+  }
+  .main .sectionResumo .card .preco .preco--de .preco__valor:before, .main .sectionResumo .card .preco .preco--por .preco__valor:before, .main .sectionResumo .card .preco .preco--ate .preco__valor:before {
+    top: 0px;
+    font-size: .3em;
+    left: 25px;
+  }
+  .main .sectionResumo .card .preco .preco--por .preco__valor::before {
+    left: 37px;
+  }
+  .main .sectionResumo .card .preco .preco--ate .preco__valor::before {
+    left: 42px;
+  }
+  .main .sectionResumo .card .preco .preco--por .preco__valor::after, .main .sectionResumo .card .preco .preco--ate .preco__valor::after {
+    bottom: -5px;
+    right: 30px;
+  }
+  .main .sectionResumo .card .preco .preco--ate .preco__valor:after {
+    left: 42px;
+  }
+}
+
+.main .sectionResumo .card .preco__valor.card__traco:after {
+  height: 3px;
+  width: 100%;
+}
+
+.main .sectionResumo .card .ul__texto {
+  width: 100%;
+  display: inline-block;
+}
+
+.main .sectionResumo .card__precoGrande {
+  color: #37F0A7;
+  font-size: 4em;
+  font-weight: 600;
+  margin: 0;
+}
+
+.main .sectionResumo .card__centavos {
+  font-size: .5em;
+}
+
+.main .sectionResumo .card__vezes {
+  margin-bottom: 0;
+  font-size: 1.5em;
+}
+
+.main .sectionResumo .card__ou {
+  margin-top: 0;
+  font-size: 1.5em;
+}
+
+.main .sectionResumo .card__total {
+  min-height: 70px;
+  position: relative;
+  font-size: 2.5em !important;
+  margin: 20px 0 !important;
+}
+
+.main .sectionResumo .card__total:before {
+  content: "TOTAL";
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.main .sectionResumo .card__traco {
+  position: relative;
+}
+
+.main .sectionResumo .card__traco:after {
+  content: "";
+  display: block;
+  position: absolute;
+  font-size: .5em;
+  top: 50%;
+  left: 50%;
+  height: 2px;
+  width: 90%;
+  background: #FF4175;
+  transform: translate(-50%, -50%);
+}
+
+.main .sectionResumo .card__button--escuro:after {
+  border: 5px solid #fff;
+}
+
+.main .sectionResumo .card__button--escuro:hover:after {
+  border: 5px solid #000;
+}
+
+.main .sectionResumo .card__button--escuro:hover:before {
+  border: 5px solid #fff;
+}
+
+.main .sectionResumo__titulo {
+  font-size: 1.6em;
+  color: #fff;
+}
+
+.main .sectionCountdown {
+  background-image: url("../img/countdown-bg.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #fff;
+}
+
+.main .sectionChamadaFinal .countdown, .main .sectionChamadaFinal .sectionResumo .card__total, .main .sectionResumo .sectionChamadaFinal .card__total {
+  margin-top: 70px;
+}
+
+@media only screen and (min-width: 767px) {
+  body {
+    font-size: 14px;
+  }
+  .button {
+    max-width: 450px;
+    font-size: 1em;
+  }
+  .countdown, .main .sectionResumo .card__total {
+    font-size: 2em;
+  }
+  .header__caixas {
+    left: 50%;
+    transform: translate(-50%);
+    bottom: -100px;
+  }
+  .main .sectionAjudar {
+    padding-top: 90px;
+  }
+  .hidden-sm {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 1023px) {
+  .countdown, .main .sectionResumo .card__total {
+    max-width: 600px;
+  }
+  .container-imgfl {
+    display: block;
+  }
+  .hidden-xs {
+    display: block;
+  }
+  .container-imagemFlutuante {
+    display: block;
+  }
+  .corpoFaixa {
+    min-height: 100px;
+  }
+  .header__caixas {
+    max-width: 700px;
+  }
+  .header__logo {
+    max-width: 200px;
+  }
+  .header .faixaTelefone {
+    padding-top: 1rem;
+  }
+  .header .faixaTelefone__i {
+    font-size: 3.5em;
+  }
+  .header .faixaTelefone__close {
+    margin-top: 0;
+    top: 0;
+  }
+  .header .faixaTelefone .button {
+    font-size: 1.8em;
+    max-width: 270px;
+    margin: 0;
+  }
+  .main .sectionAjudar {
+    padding-top: 90px;
+  }
+  .main .sectionAjudar .container-imagemFlutuante__imgFl.img1, .main .sectionAjudar .container-imagemFlutuante__imgFl.img2 {
+    max-width: 80px;
+  }
+  .main .sectionAjudar .container-imagemFlutuante__imgFl.img3 {
+    max-width: 150px;
+  }
+  .main .sectionPrograma .container-imagemFlutuante__imgFl.img1 {
+    max-width: 80px;
+  }
+  .main .sectionPrograma .container-imagemFlutuante__imgFl.img2 {
+    max-width: 150px;
+  }
+  .main .sectionMasterClass__img {
+    max-width: 200px;
+  }
+  .main .sectionMasterClass .container-imagemFlutuante__imgFl.img1 {
+    max-width: 80px;
+  }
+  .main .sectionMasterClass .container-imagemFlutuante__imgFl.img2 {
+    max-width: 80px;
+  }
+  .main .sectionImportante .container-imagemFlutuante__imgFl.img1 {
+    max-width: 80px;
+  }
+  .main .sectionImportante .container-imagemFlutuante__imgFl.img2 {
+    max-width: 150px;
+  }
+  .main .sectionCursos .container-imagemFlutuante__imgFl.img1 {
+    max-width: 150px;
+  }
+  .main .sectionCursos .collapsible__li.active .collapsible-header {
+    right: 50%;
+    transform: translateX(50%);
+    margin-top: 15px;
+  }
+  .main .sectionCursos__button {
+    position: absolute;
+    right: 25%;
+    margin: 5px auto;
+  }
+  .main .sectionBiblioteca .card {
+    min-height: 300px;
+  }
+  .main .sectionBiblioteca__titulo {
+    font-size: 3em;
+  }
+  .main .sectionBiblioteca .container-imagemFlutuante__imgFl.img1 {
+    max-width: 50px;
+  }
+  .main .sectionBiblioteca .container-imagemFlutuante__imgFl.img2, .main .sectionBiblioteca .container-imagemFlutuante__imgFl.img3 {
+    max-width: 150px;
+  }
+  .main .sectionResumo .card .ul__texto {
+    width: 82%;
+    display: inline-block;
+  }
+  .main .sectionResumo .container-imagemFlutuante__imgFl.img1, .main .sectionResumo .container-imagemFlutuante__imgFl.img3 {
+    max-width: 150px;
+  }
+  .main .sectionResumo .container-imagemFlutuante__imgFl.img2 {
+    max-width: 50px;
+  }
+  .main .sectionResumo .preco__valor {
+    font-weight: 600;
+  }
+  .main .sectionGarantia .container-imagemFlutuante__imgFl.img1 {
+    max-width: 150px;
+  }
+  .main .sectionGarantia .container-imagemFlutuante__imgFl.img2 {
+    max-width: 50px;
+  }
+  .main .sectionMindpro .container-imagemFlutuante__imgFl.img1 {
+    max-width: 50px;
+  }
+  .main .sectionCountdown .container-imagemFlutuante__imgFl.img1 {
+    max-width: 150px;
+  }
+  .main .sectionCountdown .container-imagemFlutuante__imgFl.img2 {
+    max-width: 80px;
+  }
+  .main .sectionChamadaFinal .container-imagemFlutuante__imgFl.img1 {
+    max-width: 80px;
+  }
+}
+
+.footer {
+  padding: 30px 0;
+}
+
+@media only screen and (min-width: 1279px) {
+  .header .faixaTelefone {
+    font-size: 1em;
+  }
+}

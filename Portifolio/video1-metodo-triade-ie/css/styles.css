@@ -1,0 +1,759 @@
+@media only screen and (min-width: 1023px) {
+  .iziModal {
+    border-radius: 30px !important;
+  }
+}
+
+.header__button, .main .sectionComentario__button, .main .sectionComentario__compartilhar, .main .sectionChristian__button {
+  background-color: #ffc32c;
+  color: #3e464f;
+  font-weight: bold;
+  display: block;
+  margin: 1rem auto;
+  border-radius: 20px;
+  font-size: 1.2em;
+  padding: 1rem;
+  max-width: 500px;
+  text-align: center;
+  animation: scale 1s linear infinite;
+  transition: .3s;
+}
+
+.header__button:hover, .main .sectionComentario__button:hover, .main .sectionComentario__compartilhar:hover, .main .sectionChristian__button:hover {
+  color: #8b9bf5;
+  background-color: #fff;
+  transition: .3s;
+  animation: none .3s;
+}
+
+@keyframes scale {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.03);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.7);
+  }
+  50% {
+    box-shadow: 0 0 0 10px transparent;
+  }
+  100% {
+    box-shadow: 0 0 0 0 transparent;
+  }
+}
+
+.pulse {
+  animation: pulse 2s infinite;
+}
+
+.header__logo, .footer__logo {
+  width: 160px;
+}
+
+.fb-page {
+  padding: .3rem 0 1rem 0;
+}
+
+.darkRoom {
+  z-index: 1200;
+  display: none;
+  position: fixed;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.9);
+  will-change: opacity;
+}
+
+.darkRoom__video {
+  margin-top: 20px;
+  position: relative;
+  padding-bottom: 45.25%;
+  /* 16:9 */
+  padding-top: 25px;
+  height: 0;
+  width: 100%;
+}
+
+.darkRoom__iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0px 3px 20px 0px rgba(0, 0, 0, 0.75);
+}
+
+.formulario {
+  padding: 30px 40px;
+  border-radius: 30px;
+}
+
+.formulario #INPUT, .formulario .formulario__nome, .formulario .formulario__email, .formulario .formulario__telefoneDdd, .formulario .formulario__telefoneNumero, .formulario .formulario__telefoneHidden, .formulario .formulario__cargo {
+  width: 100%;
+  padding: 0 15px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  margin-bottom: 7.5px;
+  transition: .3s;
+  color: rgba(175, 175, 175, 0.8);
+  box-sizing: border-box !important;
+}
+
+.formulario #INPUT:focus, .formulario .formulario__nome:focus, .formulario .formulario__email:focus, .formulario .formulario__telefoneDdd:focus, .formulario .formulario__telefoneNumero:focus, .formulario .formulario__telefoneHidden:focus, .formulario .formulario__cargo:focus {
+  border-bottom: 1px solid #000160 !important;
+  border-color: #000160;
+  box-shadow: none !important;
+  transition: .3s;
+}
+
+.formulario #INPUT.placeholder, .formulario .placeholder.formulario__nome, .formulario .placeholder.formulario__email, .formulario .placeholder.formulario__telefoneDdd, .formulario .placeholder.formulario__telefoneNumero, .formulario .placeholder.formulario__telefoneHidden, .formulario .placeholder.formulario__cargo {
+  color: rgba(175, 175, 175, 0.8);
+}
+
+.formulario #INPUT:-moz-placeholder, .formulario .formulario__nome:-moz-placeholder, .formulario .formulario__email:-moz-placeholder, .formulario .formulario__telefoneDdd:-moz-placeholder, .formulario .formulario__telefoneNumero:-moz-placeholder, .formulario .formulario__telefoneHidden:-moz-placeholder, .formulario .formulario__cargo:-moz-placeholder {
+  color: rgba(175, 175, 175, 0.8);
+}
+
+.formulario #INPUT::-moz-placeholder, .formulario .formulario__nome::-moz-placeholder, .formulario .formulario__email::-moz-placeholder, .formulario .formulario__telefoneDdd::-moz-placeholder, .formulario .formulario__telefoneNumero::-moz-placeholder, .formulario .formulario__telefoneHidden::-moz-placeholder, .formulario .formulario__cargo::-moz-placeholder {
+  color: rgba(175, 175, 175, 0.8);
+}
+
+.formulario #INPUT:-ms-input-placeholder, .formulario .formulario__nome:-ms-input-placeholder, .formulario .formulario__email:-ms-input-placeholder, .formulario .formulario__telefoneDdd:-ms-input-placeholder, .formulario .formulario__telefoneNumero:-ms-input-placeholder, .formulario .formulario__telefoneHidden:-ms-input-placeholder, .formulario .formulario__cargo:-ms-input-placeholder {
+  color: rgba(175, 175, 175, 0.8);
+}
+
+.formulario #INPUT::-webkit-input-placeholder, .formulario .formulario__nome::-webkit-input-placeholder, .formulario .formulario__email::-webkit-input-placeholder, .formulario .formulario__telefoneDdd::-webkit-input-placeholder, .formulario .formulario__telefoneNumero::-webkit-input-placeholder, .formulario .formulario__telefoneHidden::-webkit-input-placeholder, .formulario .formulario__cargo::-webkit-input-placeholder {
+  color: rgba(175, 175, 175, 0.8);
+}
+
+.formulario__mascaraTelefone {
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  margin-bottom: 7.5px;
+}
+
+.formulario__telefoneDdd, .formulario__telefoneNumero {
+  margin: 0 !important;
+  border: none !important;
+}
+
+.formulario__telefoneDdd:focus, .formulario__telefoneNumero:focus {
+  border-color: transparent !important;
+  border-width: 0 !important;
+}
+
+.formulario__telefoneDdd {
+  display: inline-block;
+  max-width: 21%;
+  padding: 0 0 0 15px !important;
+}
+
+.formulario__telefoneNumero {
+  display: inline-block;
+  max-width: 77%;
+}
+
+.formulario__cargo {
+  display: block;
+  font-size: 1rem;
+}
+
+.formulario__cargo:focus {
+  outline: none !important;
+}
+
+.formulario__cargo option:disabled {
+  color: rgba(175, 175, 175, 0.8);
+}
+
+.formulario__button {
+  width: 100%;
+  max-width: 70%;
+  padding: 15px;
+  margin: 10px 0 0 0;
+  border-radius: 10px;
+  display: inline-block;
+  cursor: pointer;
+  transition: .3s;
+  pointer-events: painted !important;
+  color: #fff !important;
+  font-size: 1em !important;
+  border: 1px solid #ddd !important;
+  font-weight: 600;
+  background: #2AEDAB;
+}
+
+@media only screen and (min-width: 767px) {
+  .formulario__telefoneDdd {
+    display: inline-block;
+    max-width: 15%;
+    margin-right: 10px !important;
+  }
+  .formulario__telefoneNumero {
+    display: inline-block;
+  }
+  .formulario__button {
+    max-width: 40%;
+  }
+}
+
+.formulario select {
+  display: block;
+}
+
+.formulario__button {
+  font-size: 1.5em;
+}
+
+.formulario__button:hover, .formulario__button:focus {
+  -moz-transform: scale(1.05);
+  -webkit-transform: scale(1.05);
+  transform: scale(1.05);
+  transition: .3s;
+}
+
+.hidden-xs {
+  display: none;
+}
+
+.header {
+  background-image: url("../img/headerBg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  color: #fff;
+}
+
+.header h4 {
+  line-height: 1.2em;
+}
+
+.header__titulo {
+  font-size: 29px;
+  margin: 0;
+  line-height: 1.2em;
+}
+
+.header__titulo--destaque {
+  font-size: 24px;
+}
+
+.header__subtitulo {
+  font-size: 22px;
+  font-weight: lighter;
+  font-style: italic;
+  margin: .5em 0;
+}
+
+.header__bonus {
+  margin: 0;
+  font-size: 32px;
+  line-height: 1em;
+}
+
+.header__bonus--destaque {
+  font-size: 20px;
+  font-weight: lighter;
+  font-style: italic;
+}
+
+.header__seta {
+  max-width: 20px;
+  margin-top: 20px;
+}
+
+.header__button {
+  margin-top: 50px;
+}
+
+.header .caixaVideo {
+  border-radius: 15px;
+  position: relative;
+  width: 100%;
+}
+
+.header .caixaVideo:before {
+  content: "";
+  display: block;
+  padding-bottom: 56.25%;
+}
+
+.header .caixaVideo .videoPlayer {
+  display: block;
+  overflow: hidden;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  padding: 0;
+  width: 100%;
+  transition: width .2s ease-in-out, height .2s ease-in-out, transform .3s ease-in-out;
+}
+
+.header .caixaVideo .videoPlayer:before {
+  content: "";
+  display: block;
+  padding-bottom: 56.25%;
+}
+
+.header .caixaVideo .videoPlayer__iframe {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+@media only screen and (min-width: 1023px) {
+  .header .caixaVideo .videoPlayer .close {
+    display: none;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    cursor: pointer;
+    z-index: 11;
+    color: #fff;
+  }
+  .header .caixaVideo .videoPlayer.is-sticky {
+    position: fixed;
+    bottom: 30px;
+    right: 5px;
+    width: 380px;
+    z-index: 900;
+    transition: width .2s ease-in-out, height .2s ease-in-out, transform .3s ease-in-out;
+  }
+  .header .caixaVideo .videoPlayer.stepDesaparece-1 {
+    display: none;
+  }
+  .header .caixaVideo .videoPlayer.stepAparece-1 {
+    -webkit-transition: .3s;
+    transition: .3s;
+    opacity: 0;
+    display: block;
+  }
+  .header .caixaVideo .videoPlayer.stepAparece-2 {
+    -webkit-transition: .3s;
+    transition: .3s;
+    opacity: 1;
+  }
+}
+
+.header .caixaVideo__capa {
+  display: none;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  padding: 0;
+  width: 100%;
+  border-radius: 5px;
+}
+
+.header .caixaVideo .header__play {
+  font-size: 3em;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 125px;
+  height: 125px;
+}
+
+.header .caixaVideo .videoPlayer {
+  border-radius: 15px;
+  max-height: 100%;
+}
+
+.header__thumbs {
+  display: none;
+  border-radius: 15px;
+}
+
+.header__thumbs img {
+  border-radius: 5px;
+}
+
+.header .enunciado {
+  font-size: .8em;
+}
+
+.header .enunciado__icone {
+  background-color: #1824BB;
+  border-radius: 3px;
+  position: relative;
+  height: 25px;
+  max-width: 95px;
+  margin: 10px auto;
+}
+
+.header .enunciado__icone i {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 10px;
+  max-height: 15px;
+}
+
+.header .enunciado__titulo {
+  margin: 0;
+}
+
+.header .enunciado__aviso {
+  margin-top: 0;
+}
+
+.header #video1,
+.header #video2,
+.header #video3 {
+  pointer-events: none;
+  cursor: initial;
+}
+
+.main {
+  color: #667CFF;
+}
+
+.main h1, .main h2, .main h3, .main h4 {
+  color: #5162C8;
+}
+
+.main .sectionComentario {
+  position: relative;
+}
+
+.main .sectionComentario h2 {
+  margin-bottom: 0;
+}
+
+.main .sectionComentario p {
+  margin: 0;
+}
+
+.main .sectionComentario p {
+  line-height: 1.2em;
+}
+
+.main .sectionComentario .video {
+  margin: 15px 0;
+}
+
+.main .sectionComentario__pergunta, .main .sectionComentario__tituloDepoimentos--destaque {
+  font-weight: normal;
+}
+
+.main .sectionComentario__titulo {
+  margin-top: 0;
+}
+
+.main .sectionComentario__fundo {
+  position: absolute;
+}
+
+.main .sectionComentario__fundo--saturno {
+  max-width: 1000px;
+  width: 1000px;
+  top: 50%;
+  left: 40%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+}
+
+.main .sectionComentario__fundo--foguete1 {
+  top: 10%;
+  right: -.8rem;
+  z-index: -1;
+}
+
+.main .sectionComentario__fundo--foguete2 {
+  bottom: 10%;
+  right: -.8rem;
+  z-index: -1;
+}
+
+.main .sectionComentario .redes {
+  display: flex;
+  color: #707070;
+  margin-bottom: 20px;
+}
+
+.main .sectionComentario .redes i {
+  color: #5162C8;
+}
+
+.main .sectionComentario .redes__circulo {
+  border-radius: 100%;
+  width: 50px;
+  height: 50px;
+  display: inline-flex;
+  background-color: #5162C8;
+}
+
+.main .sectionComentario .redes__circulo i {
+  color: #fff;
+  font-size: 1.5em;
+}
+
+.main .sectionComentario .redes__destaque {
+  font-weight: lighter;
+}
+
+.main .sectionComentario .redes p {
+  display: inline-block;
+  padding: 0 20px;
+  font-weight: bold;
+  width: 70%;
+}
+
+.main .sectionComentario .videosDepoimentos {
+  margin-bottom: 15px;
+  background-color: #efeeee;
+}
+
+.main .sectionComentario .videosDepoimentos .no-pad {
+  padding: 0;
+}
+
+.main .sectionComentario .videosDepoimentos .row {
+  margin: 0;
+}
+
+.main .sectionComentario .videosDepoimentos a {
+  display: block;
+  cursor: pointer;
+  pointer-events: painted;
+}
+
+.main .sectionComentario .videosDepoimentos__descricao {
+  padding: 0 1rem;
+}
+
+.main .sectionComentario .videosDepoimentos__nome {
+  margin: 0;
+  font-size: 0.9rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #2f7bb9;
+}
+
+.main .sectionComentario .videosDepoimentos__area {
+  margin: 0;
+  font-size: 0.9rem;
+  font-style: italic;
+  color: #454545;
+}
+
+.main .sectionChristian {
+  background-color: #5162C8;
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+}
+
+.main .sectionChristian * {
+  z-index: 1;
+}
+
+.main .sectionChristian h2 {
+  font-size: 27px;
+}
+
+.main .sectionChristian__button {
+  position: relative;
+}
+
+.main .sectionChristian__destaque {
+  margin-bottom: 0;
+}
+
+.main .sectionChristian__fundo {
+  position: absolute;
+}
+
+.main .sectionChristian__fundo--saturno {
+  width: 1000px;
+  max-width: 1000px;
+  top: 72%;
+  left: 90%;
+  z-index: 0;
+  transform: translate(-50%, -50%);
+}
+
+.footer {
+  background-color: #5162C8;
+  color: #fff;
+  font-size: .8em;
+  padding-bottom: 64px;
+}
+
+@media only screen and (min-width: 767px) {
+  .hidden-sm {
+    display: none;
+  }
+  .show-sm {
+    display: block;
+  }
+  .main .sectionComentario__fundo--foguete1 {
+    right: auto;
+    left: 0;
+    max-width: 300px;
+    top: 10%;
+  }
+  .main .sectionComentario__fundo--foguete2 {
+    display: none;
+  }
+  .main .sectionComentario__fundo--saturno {
+    top: 75%;
+    width: 500px;
+    left: auto;
+    right: 0;
+    transform: translate(0, -50%);
+  }
+}
+
+@media only screen and (min-width: 1023px) {
+  .container {
+    width: 61rem;
+  }
+  .hidden-xs {
+    display: block;
+  }
+  .hidden-md {
+    display: none;
+  }
+  .header__logo, .footer__logo {
+    margin-bottom: 30px;
+  }
+  .iziModal {
+    max-width: 800px !important;
+  }
+  .header .col-md-3 {
+    padding-left: 0;
+  }
+  .header h4 {
+    font-size: 25px;
+  }
+  .header__sobreTitulo {
+    font-size: 20px;
+  }
+  .header__titulo {
+    font-size: 42px;
+  }
+  .header__titulo--destaque {
+    font-size: 42px;
+  }
+  .header__subtitulo {
+    font-size: 32px;
+  }
+  .header__bonus {
+    font-size: 42px;
+  }
+  .header__bonus--destaque {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 42px;
+  }
+  .header__thumbs {
+    display: block;
+    margin-top: 5px;
+    position: relative;
+    width: 100%;
+    max-width: 72%;
+    filter: saturate(15%);
+  }
+  .header__thumbs:before {
+    content: "";
+    display: block;
+    padding-bottom: 56.25%;
+  }
+  .header__thumbs img {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  .header__play {
+    position: absolute;
+    display: flex;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 100%;
+    width: 60px;
+    height: 60px;
+    background-color: rgba(0, 0, 87, 0.5);
+  }
+  .header .enunciado {
+    display: none;
+  }
+  .main .sectionComentario .video {
+    margin: 50px 0;
+  }
+  .main .sectionComentario__titulo {
+    font-size: 47px !important;
+  }
+  .main .sectionComentario__destaque {
+    border: none;
+    display: block;
+  }
+  .main .sectionComentario__fundo--foguete1 {
+    right: auto;
+    left: 0;
+    max-width: 300px;
+    top: 10%;
+  }
+  .main .sectionComentario__fundo--saturno {
+    top: 63%;
+  }
+  .main .sectionComentario__destaque {
+    background-color: transparent;
+  }
+  .main .sectionComentario .redes p {
+    width: 80%;
+  }
+  .main .sectionChristian h2 {
+    font-size: 47px;
+  }
+  .main .sectionChristian__fundo--saturno {
+    width: 800px;
+    max-width: 1000px;
+    top: 23%;
+    left: 75%;
+    z-index: 0;
+  }
+  .footer {
+    padding: 32px 0;
+  }
+}
+
+@media only screen and (min-width: 1279px) {
+  .container {
+    width: 71rem;
+  }
+  .main .sectionComentario__fundo--foguete1 {
+    left: 5%;
+    top: 22%;
+  }
+  .main .sectionComentario .redes p {
+    width: 70%;
+  }
+}
+
+@media only screen and (min-width: 1439px) {
+  .main .sectionChristian {
+    padding-bottom: 64px;
+  }
+  .footer__logo {
+    margin-bottom: 30px;
+  }
+}

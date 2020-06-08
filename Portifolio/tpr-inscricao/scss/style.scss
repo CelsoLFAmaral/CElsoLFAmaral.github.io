@@ -1,0 +1,860 @@
+@import 'mixins';
+
+$dourado:#FEC92F;
+$vermelho: #D72650;
+$fundoClaro:#EFF2F5;
+$fundoEscuro:#070B1E;
+$textoClaro: #fff;
+$textoEscuro: #0A102F;
+
+%button {
+    background-color: $dourado;
+    color: $textoEscuro;
+    border-radius: 50px;
+    width: 100%;
+    max-width: 500px;
+    font-weight: initial;
+    font-size: 1.2em;
+}
+
+@mixin chamada {
+    &__titulo {
+        font-size: 18px;
+        font-weight: initial;
+
+        span {
+            display: block;
+            color: $dourado;
+            font-weight: bold;
+        }
+    }
+
+    &__subtitulo {
+        font-weight: initial;
+        font-size: 20px;
+        margin-top: 0;
+
+    }
+
+    &__button {
+        @extend %button;
+    }
+
+    @include mq("tablet-wide") {
+        &__titulo {
+            font-size: 22px;
+            line-height: 1.2;
+        }
+
+        &__subtitulo {
+            font-size: 32px;
+            line-height: 1.2;
+        }
+    }
+}
+
+.countdown {
+    background-color: $vermelho;
+    color: $textoClaro;
+    padding-bottom: 1.5rem;
+    display: none;
+
+    &__subtitulo {
+        color: $dourado;
+        margin: 0;
+    }
+
+    &__caixa {
+        font-weight: bold;
+
+        p {
+            line-height: 1;
+            display: inline-block;
+        }
+    }
+
+    &__ponto {
+        font-size: 2rem;
+    }
+
+    &__data {
+        font-size: 3rem;
+        margin: 0 .4rem;
+
+        &.dia,
+        &.hora,
+        &.minuto,
+        &.segundo {
+            &:after {
+                font-size: .45em;
+                bottom: -8px;
+            }
+        }
+    }
+}
+
+.collapsible {
+    &--verMais {
+        .collapsible {
+            &-header {
+                display: inline-block;
+                background-color: transparent;
+                border: 2px solid $vermelho;
+                border-radius: 50px;
+                padding: 0 2rem;
+                color: $vermelho;
+            }
+
+            &-body {
+                margin-top: 1rem;
+                padding: 0;
+
+                p {
+                    padding: 0;
+                    margin: 1em 0;
+                }
+            }
+        }
+    }
+}
+
+.imgLarge {
+    padding: 0;
+}
+
+@include darkRoom;
+
+body {
+    font-family: 'Roboto';
+    font-size: 14px;
+    background-color: $fundoClaro;
+    color: $textoEscuro;
+
+    p {
+        line-height: 1.2;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    strong {
+        font-weight: 900;
+    }
+}
+
+.header {
+    @include background-image("bg_header.png");
+    color: $textoClaro;
+    @include chamada;
+}
+
+.main {
+    .section {
+        &Pare {
+            color: $textoEscuro;
+
+            &__titulo {
+                margin-top: 0;
+                line-height: 1;
+
+                span {
+                    color: $vermelho;
+                    display: block;
+                }
+            }
+
+            img {
+                display: none;
+            }
+        }
+
+        &Alcance {
+            color: $textoEscuro;
+            @include background-image("bg_cortado.png", top, center, cover);
+
+            &__titulo {
+                margin-top: 0;
+                line-height: 1;
+
+                span {
+                    color: $vermelho;
+                    display: block;
+                }
+            }
+
+            &__textoVermelho {
+                color: $vermelho;
+            }
+        }
+
+        &Christian {
+            background-color: $textoEscuro;
+            @include background-image("bg_christian.png", 50px, center, 100%);
+            color: $textoClaro;
+            position: relative;
+
+            h2 {
+                margin-top: 0;
+                color: $vermelho;
+            }
+
+            &__efeito {
+                position: absolute;
+                max-width: 100px;
+                top: -70px;
+                left: -40px;
+
+                &--2 {
+                    display: none;
+
+                }
+            }
+        }
+
+        &Metodologia {
+            background-color: $fundoEscuro;
+            color: $textoClaro;
+
+            h2 {
+                margin-top: 0;
+                color: $vermelho;
+            }
+
+            &__imgMd {
+                display: none;
+            }
+        }
+
+        &Programa {
+            @include background-image("bg_programa.png");
+
+            h2 {
+                margin: 0;
+                line-height: 1.2;
+
+                span {
+                    color: $vermelho;
+                    display: block;
+                }
+
+            }
+
+            &__subtitulo {
+                margin-top: 0;
+                line-height: 1;
+            }
+
+            &__imgMd {
+                display: none;
+            }
+
+            &__pilar1 {
+
+                h3 span,
+                .collapsible .collapsible-body strong {
+                    color: $vermelho;
+                }
+            }
+
+            &__pilar2 {
+
+                h3 span,
+                .collapsible .collapsible-body strong {
+                    color: #4090CC;
+
+                }
+            }
+
+            &__pilar3 {
+
+                h3 span,
+                .collapsible .collapsible-body strong {
+                    color: #E2B124;
+                }
+            }
+        }
+
+        &Certificado {
+            @include background-image("bg_certificado.png", bottom, left);
+            background-color: $textoEscuro;
+            padding: 100px 0;
+
+            h2 {
+                span {
+                    display: block;
+                    color: $vermelho;
+                }
+            }
+
+            &__titulo {
+                margin-top: 0;
+
+                display: inline-block;
+                position: relative;
+
+                &::after {
+                    @include pseudo;
+                    top: -70%;
+                    left: 50%;
+                    transform: translate(-40%);
+                    @include background-image("certificado.png", top, center, contain);
+                    width: 300px;
+                    height: 300px;
+                }
+
+                &--md {
+                    display: none;
+                }
+            }
+
+            &__img {
+                &--md {
+                    display: none;
+                }
+            }
+        }
+
+        &Bonus {
+            background-color: $textoEscuro;
+            color: $textoClaro;
+            padding: 0;
+
+            &--escuro {
+                background-color: $fundoEscuro;
+                padding: 1rem 0;
+
+            }
+
+            &--claro {
+                padding: 1rem 0;
+            }
+
+            &__aviso {
+                color: $dourado;
+            }
+
+            &__titulo {
+                margin-top: 0;
+
+                color: $vermelho;
+
+                span {
+                    font-weight: initial;
+                }
+            }
+
+            h3 {
+                display: flex;
+                margin-top: 0;
+            }
+
+            h4 {
+                color: $vermelho;
+                margin-bottom: 0;
+            }
+
+            p {
+                margin-top: 0;
+            }
+
+            img {
+                max-width: 56px;
+                height: 56px;
+                margin-right: 20px;
+            }
+        }
+
+        &Valor {
+            h2 {
+                margin: 0;
+
+                span {
+                    display: block;
+                    color: $vermelho;
+                }
+            }
+
+            .cardPreco {
+                background-color: $textoEscuro;
+                color: $textoClaro;
+                border-radius: 20px;
+                margin-top: 2rem;
+
+                &__linha {
+                    padding: .5rem .5em;
+                    margin-left: -1rem !important;
+                    margin-right: -1rem !important;
+
+                    &:nth-child(even) {
+                        background-color: $fundoEscuro;
+                    }
+
+                    &--claro {
+                        background-color: $textoEscuro !important;
+                    }
+
+                    &--branco {
+                        background-color: $fundoClaro;
+                        color: $textoEscuro;
+                        padding-left: 0;
+                        padding-right: 0;
+                    }
+                    &--valor{
+                        padding: 1.5rem .5rem;
+                    }
+                    &--total{
+                        padding-bottom: 2rem ;
+                    }
+                }
+
+                &__tracejado {
+                    width: 100%;
+                    border: 3px $textoClaro dotted;
+                    border-width: 3px 0 0 0;
+                    margin-bottom: 2rem;
+                }
+
+                &__total {
+                    color: $fundoEscuro;
+                    background-color: $vermelho;
+                    padding: .5rem 1rem;
+                    border-radius: 15px;
+
+                }
+
+                &__preco {
+                    &::after {
+                        display: none;
+                    }
+
+                    &--riscado::after {
+                        display: block;
+                        top: 48%;
+                    }
+                }
+
+                &__precoDesconto {
+                    .col-xs-4 {
+                        padding: 0;
+                    }
+                }
+
+                &__enunciado,
+                &__sifrao,
+                &__condicao {
+                    display: block;
+                }
+
+                &__enunciado,
+                &__sifrao,
+                &__condicao,
+                &__valor {
+                    margin: 0
+                }
+
+                &__enunciado,
+                &__sifrao {
+                    text-align: start;
+                }
+
+                &__valor,
+                &__centavos,
+                &__sifrao {
+                    color: $vermelho;
+                }
+
+                &__valor {
+                    font-size: 27px;
+                    position: relative;
+                    font-weight: 900;
+
+                    &--riscado::after {
+                        @include pseudo;
+                        left: -7.5%;
+                        top: 45%;
+                        width: 135%;
+                        height: 2px;
+                        background-color: $vermelho;
+                    }
+                }
+
+                &__centavos,
+                &__sifrao,
+                &__condicao,
+                &__enunciado {
+                    font-size: 12px;
+                }
+
+                &__condicao {
+                    text-align: end;
+                    margin-top: -10px;
+
+                    &--credito {
+                        text-align: center;
+                    }
+                }
+
+                &__button {
+                    @extend %button;
+                    font-size: 1.1em;
+                }
+            }
+        }
+
+        &Aviso {
+            background-color: $vermelho;
+            color: $textoClaro; 
+            display: none;
+
+            h2 {
+                span:first-of-type {
+                    color: $textoEscuro;
+                }
+            }
+
+            &__button {
+                @extend %button;
+            }
+        }
+
+        &Depoimento {
+            background-color: $textoEscuro;
+            color: $textoClaro;
+
+            h2 {
+                color: $vermelho;
+                margin-top: 0;
+
+                span {
+                    font-weight: initial;
+                }
+            }
+        }
+
+        &Faq {
+            background-color: $fundoEscuro;
+            color: $textoClaro;
+
+            h2 {
+                color: $vermelho;
+            }
+
+            .collapsible {
+                &__li {
+                    border-bottom: solid 2px #fff;
+                    border-radius: 0;
+                }
+
+                &-header {
+                    display: inline-block;
+                    cursor: pointer;
+                    -webkit-tap-highlight-color: transparent;
+                    background-color: transparent;
+                    padding: 0 20px;
+                    width: 100%;
+                    transition: .3s;
+
+                    &:hover {
+                        padding-left: 40px;
+                    }
+                }
+
+                &-body {
+                    p {
+                        padding: 2rem 0;
+                    }
+
+                    ul {
+                        padding-bottom: 15px;
+                        margin-left: 0;
+                    }
+
+                    a {
+                        color: #fff
+                    }
+
+                }
+            }
+        }
+
+        &Chamada {
+            @include background-image("bg_chamada.png");
+            background-color: $fundoEscuro;
+            color: $textoClaro;
+            @include chamada;
+
+            .row {
+                min-height: 60vh;
+
+            }
+        }
+    }
+}
+
+.footer {
+    background-color: $fundoEscuro;
+
+    a {
+        color: $textoClaro;
+    }
+}
+
+@include mq("phone-wide"){
+    .main{
+        .sectionValor{
+            .cardPreco__condicao--credito{
+                font-size: 14px;
+            }
+        }
+    }
+}
+
+@include mq("tablet") {
+    .countdown {
+        background-color: $vermelho;
+        color: $textoClaro;
+        padding-bottom: 1rem;
+
+        &__ponto {
+            font-size: 2rem;
+        }
+
+        &__data {
+            font-size: 58px;
+            margin: 0 1rem;
+
+            &.dia,
+            &.hora,
+            &.minuto,
+            &.segundo {
+                &::after {
+                    bottom: -15px;
+                }
+            }
+
+            &.segundo::after {
+                content: "Segundo";
+            }
+        }
+    }
+
+    .main {
+        .section {
+            &Metodologia {
+                &__imgMb {
+                    display: none;
+                }
+
+                &__imgMd {
+                    display: block;
+                }
+            }
+
+            &Programa {
+                &__imgMb {
+                    display: none;
+                }
+
+                &__imgMd {
+                    display: block;
+                }
+            }
+
+            &Certificado {
+            padding: 50px 0 100px 0;
+
+                &__titulo {
+                    display: none;
+
+                    &--md {
+                        font-size: 32px;
+                        display: block;
+
+                        span {
+                            font-size: .7em;
+                        }
+                    }
+                }
+
+                &__img--md {
+                    display: block;
+                }
+            }
+
+            &Valor {
+                .cardPreco {
+                    &__linha {
+                        padding: .5rem 2rem;
+                        margin-left: -1.5rem !important;
+                        margin-right: -1.5rem !important;
+                        &--valor{
+                            padding: 1.5rem 2rem;
+                        }
+                        &--total{
+                            padding-bottom: 2rem ;
+                        }
+                    }
+
+                    &__precoDesconto .col-xs-4 {
+                        padding: 0 .5rem;
+                    }
+
+                    &__enunciado {
+                        font-size: 18px;
+                    }
+
+                    &__sifrao,
+                    &__centavos,
+                    &__condicao {
+                        font-size: 12px;
+                    }
+
+                    &__condicao {
+                        margin-top: .1em;
+                    }
+
+                    &__valor {
+                        font-size: 40px;
+                    }
+                }
+            }
+
+            &Aviso {
+                h2 {
+                    font-size: 27px;
+                }
+            }
+        }
+    }
+}
+
+@include mq("tablet-wide") {
+    body {
+        font-size: 18px;
+    }
+
+    .main {
+        .section {
+            &Pare {
+                @include background-image("bg_pare.png", left, -20px, 200px);
+                padding-bottom: 32px;
+
+                img {
+                    display: block;
+                }
+            }
+
+            &Alcance {
+                &__titulo {
+                    span {
+                        display: inline;
+                    }
+                }
+            }
+
+            &Christian {
+                background-image: none;
+
+                &__efeito {
+                    max-width: 300px;
+                    top: -100px;
+                    left: -110px;
+
+                    &--2 {
+                        display: block;
+                        max-width: 60px;
+                        left: auto;
+                        top: auto;
+                        right: 50px;
+                        bottom: 50px;
+                    }
+                }
+
+                &__perfil {
+                    max-width: 25%;
+                    margin-left: -15%;
+                }
+
+                ul {
+                    margin: 0;
+                }
+            }
+
+            &Programa {
+
+                &__pilar2 {
+                    margin: 3rem 0;
+
+                }
+            }
+
+            &Bonus {
+
+                &--claro,
+                &--escuro {
+                    padding: 2rem 0;
+                }
+            }
+
+            &Chamada {
+                background-image: url("../img/bg_chamada-md.png");
+                background-position: -150px;
+
+                .row {
+                    min-height: auto;
+                }
+            }
+        }
+    }
+
+    .footer {
+        padding: 32px 0;
+    }
+}
+
+
+@include mq("desktop") {
+    .main {
+        .section {
+            &Pare {
+                background-size: 300px;
+                background-position-y: -50px;
+            }
+
+            &Christian {
+                &__perfil {
+                    margin-left: -17%;
+                }
+            }
+
+            &Chamada {
+                background-position: left;
+            }
+        }
+    }
+}
+
+@include mq("desktop-extra-large") {
+    .main {
+        .section {
+            &Pare {
+                background-size: 450px;
+                background-position-y: -70px;
+            }
+
+            &Christian {
+                &__efeito {
+                    &--2 {
+                        right: 20%;
+                    }
+                }
+
+                &__perfil {
+                    max-width: 18%;
+                    margin-left: -15%;
+                }
+            }
+        }
+    }
+}

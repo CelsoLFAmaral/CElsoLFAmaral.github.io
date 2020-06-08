@@ -1,0 +1,117 @@
+//default pseudo
+@mixin pseudo($display: block, $pos: absolute, $content: '') {
+    content: $content;
+    display: $display;
+    position: $pos;
+}
+
+//definir placeholder
+@mixin input-placeholder {
+    &.placeholder {
+        @content;
+    }
+
+    &:-moz-placeholder {
+        @content;
+    }
+
+    &::-moz-placeholder {
+        @content;
+    }
+
+    &:-ms-input-placeholder {
+        @content;
+    }
+
+    &::-webkit-input-placeholder {
+        @content;
+    }
+}
+
+.button--verde {
+    cursor: pointer !important;
+    pointer-events: painted !important;
+    color: #fff !important;
+    background: rgba(1, 252, 198, 1) !important;
+    background: -moz-linear-gradient(left, rgba(1, 252, 198, 1) 0%, rgba(39, 227, 139, 1) 100%) !important;
+    background: -webkit-gradient(left top, right top, color-stop(0%, rgba(1, 252, 198, 1)), color-stop(100%, rgba(39, 227, 139, 1))) !important;
+    background: -webkit-linear-gradient(left, rgba(1, 252, 198, 1) 0%, rgba(39, 227, 139, 1) 100%) !important;
+    background: -o-linear-gradient(left, rgba(1, 252, 198, 1) 0%, rgba(39, 227, 139, 1) 100%) !important;
+    background: -ms-linear-gradient(left, rgba(1, 252, 198, 1) 0%, rgba(39, 227, 139, 1) 100%) !important;
+    background: linear-gradient(to right, rgba(1, 252, 198, 1) 0%, rgba(39, 227, 139, 1) 100%) !important;
+    transition: .3s !important;
+}
+
+.button--vermelho {
+    background: rgba(255, 44, 72, 1);
+    background: -moz-linear-gradient(left, rgba(255, 44, 72, 1) 0%, rgba(255, 71, 96, 1) 100%);
+    background: -webkit-gradient(left top, right top, color-stop(0%, rgba(255, 44, 72, 1)), color-stop(100%, rgba(255, 71, 96, 1)));
+    background: -webkit-linear-gradient(left, rgba(255, 44, 72, 1) 0%, rgba(255, 71, 96, 1) 100%);
+    background: -o-linear-gradient(left, rgba(255, 44, 72, 1) 0%, rgba(255, 71, 96, 1) 100%);
+    background: -ms-linear-gradient(left, rgba(255, 44, 72, 1) 0%, rgba(255, 71, 96, 1) 100%);
+    background: linear-gradient(to right, rgba(255, 44, 72, 1) 0%, rgba(255, 71, 96, 1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff2c48', endColorstr='#ff4760', GradientType=1);
+}
+
+#HIDDENXS {
+    display: none !important
+}
+
+#HEADLINE {
+    margin-top: 1.6em;
+    text-align: center
+}
+
+#logo {
+    max-width: 200px;
+}
+
+h1,
+h2,
+strong {
+    font-weight: 900
+}
+
+.card {
+    padding: 10px 30px;
+    margin: 2rem 0;
+    border-radius: 10px;
+    -webkit-box-shadow: 0px 5px 8px 0px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 0px 5px 8px 0px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 5px 8px 0px rgba(0, 0, 0, 0.3);
+}
+
+
+.button {
+    display: flex;
+    position: relative;
+    padding: 15px 25px;
+    border-radius: 10px;
+    z-index: 2;
+
+    &__texto {
+        font-size: 1.2em;
+        display: inline-block;
+        width: 90%;
+
+        &--contato {
+            width: 100%
+        }
+    }
+
+    &__bordaIcone {
+        display: inline-flex;
+        width: 10%;
+        border-radius: 100%;
+        border: 1px solid #fff;
+        width: 2em;
+        height: 2em;
+    }
+
+    &__icone {
+        font-size: 1em;
+        line-height: 1em
+    }
+
+}
+

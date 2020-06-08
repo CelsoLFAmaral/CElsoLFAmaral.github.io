@@ -1,0 +1,124 @@
+@import url("https://fonts.googleapis.com/css2?family=Baloo+Thambi+2:wght@400;700&display=swap");
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  outline: none;
+}
+
+h1, h2, h3, h4 {
+  line-height: 1;
+}
+
+a,
+a:focus,
+a:hover {
+  text-decoration: none;
+}
+
+img {
+  width: 100%;
+  max-width: 100%;
+}
+
+strong {
+  font-weight: 900;
+}
+
+.row {
+  margin-bottom: 0;
+}
+
+body {
+  font-size: 14px;
+  font-family: "Baloo Thambi 2", cursive;
+  font-weight: normal;
+  color: #4C4B5E;
+  text-rendering: optimizeLegibility;
+  padding: 0;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+body h1 {
+  font-size: 26px;
+}
+
+body h2 {
+  font-size: 22px;
+}
+
+body h3 {
+  font-size: 20px;
+}
+
+@media only screen and (min-width: 1023px) {
+  body {
+    font-size: 18px;
+  }
+  body h1 {
+    font-size: 42px;
+  }
+  body h2 {
+    font-size: 32px;
+  }
+  body h3 {
+    font-size: 23px;
+  }
+}
+
+@media only screen and (min-width: 48em) {
+  .container {
+    width: 47.25rem;
+  }
+}
+
+@media only screen and (min-width: 64em) {
+  .container {
+    width: 47.25rem;
+  }
+}
+
+@media only screen and (min-width: 75em) {
+  .container {
+    width: 47.25rem;
+  }
+}
+
+.collapsible {
+  box-shadow: none;
+  border: none;
+}
+
+.collapsible ul {
+  padding: 1rem;
+}
+
+.collapsible-header, .collapsible-body {
+  border: none;
+}
+
+.collapsible-body {
+  padding: 0 1rem;
+}
+
+.collapsible__li {
+  list-style: none;
+  margin: 10px 0;
+  border-radius: 5px;
+}
+
+.collapsible__enunciado {
+  width: 100%;
+}
+
+.collapsible__enunciado--textoLg {
+  line-height: 1.2;
+  padding-bottom: 1rem;
+}
+
+.collapsible__icone {
+  margin-right: 0;
+  float: none;
+}
+/*# sourceMappingURL=base.css.map */

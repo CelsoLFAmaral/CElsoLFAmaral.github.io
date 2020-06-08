@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Thambi+2:wght@400;700&display=swap');
+
+$fontSansSource:'Baloo Thambi 2', cursive;
+
+$corTexto:#4C4B5E;
+
+$breakpoints: ("phone-wide": 400px,
+    "tablet": 768px,
+    "tablet-wide": 1024px,
+    "desktop": 1280px,
+    "desktop-wide": 1366px,
+    "desktop-extra-wide": 1440px,
+    "desktop-large": 1600px,
+    "desktop-extra-large": 1900px,
+    "desktop-xx-large": 2500px);
+
+
+@mixin mq($px, $worh: width, $type: min) {
+    @if map_has_key($breakpoints, $px) {
+        $px: map_get($breakpoints, $px);
+
+        @if $type==min {
+            $px: $px - 1px;
+        }
+
+        @media only screen and (#{$type}-#{$worh}: $px) {
+            @content;
+        }
+    }
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+    outline: none
+}
+h1,h2,h3,h4{
+    line-height: 1;
+}
+a,
+a:focus,
+a:hover {
+    text-decoration: none;
+}
+
+img {
+    width: 100%;
+    max-width: 100%;
+}
+
+strong {
+    font-weight: 900
+}
+
+.row {
+    margin-bottom: 0;
+}
+
+body {
+    font-size: 14px;
+    font-family: $fontSansSource;
+    font-weight: normal;
+    color: $corTexto;
+    text-rendering: optimizeLegibility;
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden;
+
+    h1 {
+        font-size: 26px;
+    }
+
+    h2 {
+        font-size: 22px;
+    }
+
+    h3 {
+        font-size: 20px;
+    }
+}
+
+@include mq('tablet-wide') {
+    body {
+        font-size: 18px;
+
+        h1 {
+            font-size: 42px
+        }
+
+        h2 {
+            font-size: 32px
+        }
+
+        h3 {
+            font-size: 23px
+        }
+    }
+}
+
+
+@media only screen and (min-width:48em) {
+    .container {
+        width: 47.25rem;
+    }
+}
+
+@media only screen and (min-width:64em) {
+    .container {
+        width: 47.25rem
+    }
+}
+
+@media only screen and (min-width:75em) {
+    .container {
+        width: 47.25rem
+    }
+}
+
+.collapsible {
+    box-shadow: none;
+    border: none;
+
+    ul {
+        padding: 1rem;
+    }
+
+    &-header,
+    &-body {
+        border: none;
+    }
+
+    &-body {
+        padding: 0 1rem;
+    }
+
+    &__li {
+        list-style: none;
+        margin: 10px 0;
+        border-radius: 5px;
+    }
+
+    &__enunciado {
+        width: 100%;
+
+        &--textoLg {
+            line-height: 1.2;
+            padding-bottom: 1rem;
+        }
+    }
+
+    &__icone {
+        margin-right: 0;
+        float: none;
+    }
+}

@@ -1,0 +1,61 @@
+@import 'layout';
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700,900|Roboto:300,400,500,700,900|Source+Sans+Pro:300,400,700,900|Source+Serif+Pro:400,600,700|Titillium+Web:300,400,600,700,900&display=swap');
+
+$fontSerifSource:'Source Serif Pro',
+serif;
+$fontSansSource:'Source Sans Pro',
+sans-serif;
+$fontSansRoboto:'Roboto',
+sans-serif;
+$fontSerifTitillium:'Titillium Web',
+sans-serif;
+$fontSerifMontserrat:'Montserrat',
+sans-serif;
+
+$corTexto: #3e464f;
+
+body {
+    font-size: 19.5px;
+    font-family: $fontSansSource;
+    font-weight: normal;
+    color: $corTexto;
+    text-rendering: optimizeLegibility;
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden;
+
+    h1 {
+        font-size: 27px;
+    }
+
+    h2 {
+        font-size: 22px
+    }
+
+    h3 {
+        font-size: 20px;
+    }
+
+    p {
+        line-height: 30px
+    }
+}
+
+@include mq('tablet-wide') {
+    body {
+        font-size: 21px;
+
+        h1 {
+            font-size: 42px
+        }
+
+        h2 {
+            font-size: 32px
+        }
+
+        h3 {
+            font-size: 25px
+        }
+    }
+}

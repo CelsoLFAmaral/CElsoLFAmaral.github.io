@@ -1,0 +1,353 @@
+
+$breakpoints: (
+    "phone-wide": 400px,
+    "tablet": 768px,
+    "tablet-wide": 1024px,
+    "desktop": 1280px,
+    "desktop-wide": 1366px,
+    "desktop-extra-wide": 1440px,
+    "desktop-large": 1600px,
+    "desktop-extra-large": 1900px,
+    "desktop-xx-large": 2500px
+    );
+
+@mixin mq($px, $worh: width, $type: min) {
+    @if map_has_key($breakpoints, $px) {
+        $px: map_get($breakpoints, $px);
+
+        @if $type==min {
+            $px: $px - 1px;
+        }
+
+        @media only screen and (#{$type}-#{$worh}: $px) {
+            @content;
+        }
+    }
+}
+
+
+// imagem de fundo
+@mixin background-image($img, $positionX:center, $positionY:center, $size:cover, $repeat:no-repeat) {
+    background-image: url('../img/'+$img) ;
+    background-repeat: $repeat;
+    background-size: $size;
+    background-position: $positionX $positionY;
+}
+
+//default pseudo
+@mixin pseudo($content: '', $display: block, $pos: absolute) {
+    content: $content;
+    display: $display;
+    position: $pos;
+}
+
+@mixin size($width, $height: $width) {
+    width: $width;
+    height: $height;
+}
+
+@mixin centerX{
+    left: 50%;
+    transform: translateX(-50%)
+}
+
+@mixin centerY{
+    top: 50%;
+    transform: translateY(-50%)
+}
+
+@mixin center{
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%)
+}
+
+@mixin shadow{
+    -webkit-box-shadow: 0px 5px 8px 0px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 0px 5px 8px 0px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 5px 8px 0px rgba(0, 0, 0, 0.3);
+}
+
+@mixin button($rad:30px,$maxw:500px, $mar:20px 0, $pad: 15px) {    
+    width: 100%;
+    max-width: $maxw;
+    padding: $pad;
+    margin: $mar;
+    border-radius: $rad;
+    display: inline-block;
+    cursor: pointer;
+    transition: .3s;
+
+}
+
+// Formulario padrão
+
+@mixin input( $focus:#ddd,$pad:0 15px, $border: 1px solid #ddd, $rad: 10px,$mar: 7.5px){
+    width: 100%;
+    padding: $pad;
+    border: $border;
+    border-radius: $rad;
+    margin-bottom: $mar;
+    transition: .3s;
+    color: rgba(175, 175, 175, .8);
+    box-sizing: border-box!important;
+
+    &:focus {
+        border-bottom: 1px solid $focus!important;
+        border-color: $focus;
+        box-shadow: none!important;
+        transition: .3s;
+    }
+    @include inputPlaceholder{
+    color: rgba(175, 175, 175, .8);
+    }
+}
+@include mq('tablet-wide'){
+    .iziModal{
+        border-radius: 30px!important;
+    }
+}
+@mixin hoverGrowUp {
+    &:hover, &:focus {
+        -moz-transform: scale(1.05);
+        -webkit-transform: scale(1.05);
+        transform: scale(1.05);
+        transition: .3s;
+    }
+}
+@mixin modal() {
+    padding: 30px 40px;
+    border-radius: 30px;
+
+    #INPUT{
+        @include input(#000160);
+    }
+
+    &__mascaraTelefone{
+        border: 1px solid #ddd;
+        border-radius: 10px;
+        margin-bottom: 7.5px;
+    }
+    &__telefoneDdd, &__telefoneNumero{
+        margin: 0!important;
+        border: none!important;
+    &:focus {
+        border-color: transparent!important;
+        border-width: 0!important;
+    }
+    }
+
+    &__telefoneDdd {
+        display: inline-block;
+        max-width: 21%; 
+        padding: 0 0 0 15px!important;
+    }
+
+    &__telefoneNumero {
+        display: inline-block;
+        max-width: 77%;
+    }
+
+    &__cargo{
+        display: block;
+        font-size: 1rem;
+        &:focus{
+            outline:none!important
+        }
+        & option:disabled{
+            color: rgba(175, 175, 175, .8);
+
+        }
+        // color: #3e464f;
+    }
+
+    &__button {
+        @include button(10px,70%,10px 0 0 0);
+        pointer-events: painted !important;
+        color: #fff !important;
+        font-size: 1em !important;
+        border: 1px solid #ddd !important;
+        font-weight: 600;
+        background: #2AEDAB;
+    }
+    &__nome,
+    &__email,
+    &__telefoneDdd,
+    &__telefoneNumero,
+    &__telefoneHidden,
+    &__cargo {
+        @extend #INPUT;
+    }
+    @include mq('tablet') {
+        & {
+            &__telefoneDdd {
+                display: inline-block;
+                max-width: 15%;
+                margin-right: 10px !important
+            }
+
+            &__telefoneNumero {
+                display: inline-block;
+            }
+            &__button{
+                max-width: 40%;
+            }
+        }
+    }
+}
+
+
+
+//botão pressionavel
+@mixin buttonPressionado($boxShadowColor:#000, $boxShadowBottom:5px, $padtb:5px, $padlr:20px) {
+    text-transform: uppercase;
+    border: none;
+    padding: $padtb $padlr;
+    display: inline-block;
+    color: #fff;
+    box-shadow: 0 $boxShadowBottom 0 $boxShadowColor;
+
+    &:hover {
+        box-shadow: 0 $boxShadowBottom 0 $boxShadowColor;
+
+    }
+
+    &:active {
+        position: relative;
+        top: $boxShadowBottom;
+        box-shadow: none;
+
+    }
+}
+
+@mixin circle($size) {
+        border-radius: 100%;
+        @include size($size);
+}
+
+@mixin hoverGrowUp {
+    &:hover, &:focus {
+        -moz-transform: scale(1.05);
+        -webkit-transform: scale(1.05);
+        transform: scale(1.05);
+        transition: .3s;
+    }
+}
+
+@mixin hoverLighten{
+    &--hoverLighten:hover {
+        opacity: 0.8;
+    }
+}
+
+@mixin listPointImage($img) {
+    position: relative;
+
+    &--listDecoration:after {
+        @include pseudo;
+        left: -30px;
+        @include centerx;
+        @include size(15px);
+        background: url('../../img/'+$img) no-repeat cover center;
+    }
+
+}
+
+// videoPlayer
+
+@mixin caixaVideo {
+    position: relative;
+    width: 100%;
+    &:before {
+        content: "";
+        display: block;
+        padding-bottom: 56.25%;
+    }
+
+    .videoPlayer {
+        display: block;
+        overflow: hidden;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        padding: 0;
+        width: 100%;
+        transition: width .2s ease-in-out, height .2s ease-in-out, transform .3s ease-in-out;
+
+        &:before {
+            content: "";
+            display: block;
+            padding-bottom: 56.25%;
+        }
+
+        &__iframe {
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        @include mq('tablet-wide') {
+            .close {
+                display: none;
+                position: absolute;
+                top: 15px;
+                right: 15px;
+                cursor: pointer;
+                z-index: 11;
+                color: #fff;
+            }
+            &.is-sticky {
+                position: fixed;
+                bottom: 30px;
+                right: 5px;
+                width: 380px;
+                z-index: 900;
+                transition: width .2s ease-in-out, height .2s ease-in-out, transform .3s ease-in-out;
+            }
+
+            &.stepDesaparece-1 {
+                display: none
+            }
+
+            &.stepAparece-1 {
+                -webkit-transition: .3s;
+                transition: .3s;
+                opacity: 0;
+                display: block
+            }
+
+            &.stepAparece-2 {
+                -webkit-transition: .3s;
+                transition: .3s;
+                opacity: 1;
+            }
+        }
+    }
+}
+
+//Set placeholder color 
+@mixin inputPlaceholder {
+    &.placeholder {
+        @content;
+    }
+
+    &:-moz-placeholder {
+        @content;
+    }
+
+    &::-moz-placeholder {
+        @content;
+    }
+
+    &:-ms-input-placeholder {
+        @content;
+    }
+
+    &::-webkit-input-placeholder {
+        @content;
+    }
+}

@@ -1,0 +1,55 @@
+@mixin reset {
+
+    *,
+    *::before,
+    *::after {
+        box-sizing: border-box;
+        outline: none
+
+    }
+
+    a,
+    a:focus,
+    a:hover,
+    .button:hover,
+    .button:focus {
+        text-decoration: none;
+        color: inherit;
+    }
+
+    img {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    strong{
+        font-weight: 900
+    }
+
+}
+
+$breakpoints: (
+    "phone-wide": 400px,
+    "tablet": 768px,
+    "tablet-wide": 1024px,
+    "desktop": 1280px,
+    "desktop-wide": 1366px,
+    "desktop-extra-wide": 1440px,
+    "desktop-large": 1600px,
+    "desktop-extra-large": 1900px,
+    "desktop-xx-large": 2500px
+    );
+
+@mixin mq($px, $worh: width, $type: min) {
+    @if map_has_key($breakpoints, $px) {
+        $px: map_get($breakpoints, $px);
+
+        @if $type==min {
+            $px: $px - 1px;
+        }
+
+        @media only screen and (#{$type}-#{$worh}: $px) {
+            @content;
+        }
+    }
+}

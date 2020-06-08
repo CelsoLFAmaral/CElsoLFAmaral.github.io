@@ -1,0 +1,9 @@
+@mixin buttonDisable{
+    &--buttonDisable {
+        background: #77767b;
+        color: #d6d6d8;
+        pointer-events: none;
+        font-weight: bold;
+        transition: .3s;
+    }
+}

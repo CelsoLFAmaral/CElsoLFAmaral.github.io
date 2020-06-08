@@ -1,0 +1,571 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700,900|Roboto:300,400,500,700,900|Source+Sans+Pro:300,400,700,900|Source+Serif+Pro:400,600,700|Titillium+Web:300,400,600,700,900&display=swap');
+
+$fontSerifSource:'Source Serif Pro',
+serif;
+$fontSansSource:'Source Sans Pro',
+sans-serif;
+$fontSansRoboto:'Roboto',
+sans-serif;
+$fontSerifTitillium:'Titillium Web',
+sans-serif;
+$fontSerifMontserrat:'Montserrat',
+sans-serif;
+
+$corTexto: #3e464f;
+
+@import 'layout';
+
+// Exemplo de variaveis para cores:
+
+// $corTexto
+// $corTextoFundoEscuro
+// $corDestaque
+// $corDestaque2
+// $corBotao
+// $corBotao2
+// $corBg
+// $corBgEscuro
+// @mixin corBgDegrade{}
+
+
+
+$breakpoints: ("phone-wide": 400px,
+    "tablet": 768px,
+    "tablet-wide": 1024px,
+    "desktop": 1280px,
+    "desktop-wide": 1366px,
+    "desktop-extra-wide": 1440px,
+    "desktop-large": 1600px,
+    "desktop-extra-large": 1900px,
+    "desktop-xx-large": 2500px);
+
+@mixin mq($px, $worh: width, $type: min) {
+    @if map_has_key($breakpoints, $px) {
+        $px: map_get($breakpoints, $px);
+
+        @if $type==min {
+            $px: $px - 1px;
+        }
+
+        @media only screen and (#{$type}-#{$worh}: $px) {
+            @content;
+        }
+    }
+}
+
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    outline: none
+}
+
+a,
+a:focus,
+a:hover,
+.button:hover,
+.button:focus {
+    text-decoration: none;
+    color: inherit
+}
+
+ul {
+    list-style: disc;
+    margin-left: 40px;
+    font-size: .8em;
+
+    li {
+        list-style: disc;
+    }
+}
+
+.container {
+    width: 100%;
+}
+
+img {
+    width: 100%;
+    max-width: 100%;
+}
+
+strong {
+    font-weight: 900
+}
+
+body {
+    font-size: 19.5px;
+    font-family: $fontSansSource;
+    font-weight: normal;
+    color: $corTexto;
+    text-rendering: optimizeLegibility;
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden;
+
+    h1 {
+        font-size: 27px;
+
+        &.titulo.comSubtitulo {
+            margin-bottom: 0
+        }
+    }
+
+    h2 {
+        font-size: 22px
+    }
+
+    h3 {
+        font-size: 20px;
+
+        &.subtitulo {
+            margin-top: 0
+        }
+    }
+
+    p {
+        line-height: 30px
+    }
+}
+
+.header,
+.main__section,
+.footer {
+    padding: 32px 0;
+}
+
+.footer {
+    &__link {
+        display: block;
+        font-size: .8em;
+    }
+}
+
+@include mq('tablet-wide') {}
+
+@media only screen and (min-width:48em) {
+    .container {
+        width: 47.25rem;
+
+        .row {
+            margin: 0 .5rem;
+
+            .col-sm,
+            .col-sm-1,
+            .col-sm-10,
+            .col-sm-11,
+            .col-sm-12,
+            .col-sm-2,
+            .col-sm-3,
+            .col-sm-4,
+            .col-sm-5,
+            .col-sm-6,
+            .col-sm-7,
+            .col-sm-8,
+            .col-sm-9 {
+                padding-right: 5px;
+                padding-left: 5px
+            }
+        }
+    }
+}
+
+@media only screen and (min-width:64em) {
+
+    body {
+        font-size: 21px;
+
+        h1 {
+            font-size: 42px
+        }
+
+        h2 {
+            font-size: 32px
+        }
+
+        h3 {
+            font-size: 25px
+        }
+    }
+
+    .header,
+    .main__section,
+    .footer {
+        padding: 64px 0;
+    }
+
+}
+
+.container {
+    max-width: 100%;
+    width: 47.25rem;
+
+    .row {
+        margin: 0;
+        .col-md,
+        .col-md-1,
+        .col-md-10,
+        .col-md-11,
+        .col-md-12,
+        .col-md-2,
+        .col-md-3,
+        .col-md-4,
+        .col-md-5,
+        .col-md-6,
+        .col-md-7,
+        .col-md-8,
+        .col-md-9 {
+            padding-right: 5px;
+            padding-left: 5px
+        }
+    }
+}
+
+@media only screen and (min-width:75em) {
+    .container {
+        width: 47.25rem;
+        .row{
+            .col-lg-11,
+            .col-lg-12,
+            .col-lg-2,
+            .col-lg-3,
+            .col-lg-4,
+            .col-lg-5,
+            .col-lg-6,
+            .col-lg-7,
+            .col-lg-8,
+            .col-lg-9 {
+                padding-right: 5px;
+                padding-left: 5px
+            }
+        }
+    }
+}
+
+/* xl 100rem(1900px)*/
+@media only screen and (min-width: 117rem) {
+    .container {
+        width: 47.25rem
+    }
+
+    .col-xl,
+    .col-xl-1,
+    .col-xl-2,
+    .col-xl-3,
+    .col-xl-4,
+    .col-xl-5,
+    .col-xl-6,
+    .col-xl-7,
+    .col-xl-8,
+    .col-xl-9,
+    .col-xl-10,
+    .col-xl-11,
+    .col-xl-12 {
+        box-sizing: border-box;
+        -ms-flex: 0 0 auto;
+        -webkit-box-flex: 0;
+        flex: 0 0 auto;
+        padding-right: 5px;
+        padding-left: 5px;
+    }
+
+    .col-xl {
+        -webkit-flex-grow: 1;
+        -ms-flex-positive: 1;
+        -webkit-box-flex: 1;
+        flex-grow: 1;
+        -ms-flex-preferred-size: 0;
+        flex-basis: 0;
+        max-width: 100%;
+    }
+
+    .col-xl-1 {
+        -ms-flex-preferred-size: 8.333%;
+        flex-basis: 8.333%;
+        max-width: 8.333%;
+    }
+
+    .col-xl-2 {
+        -ms-flex-preferred-size: 16.667%;
+        flex-basis: 16.667%;
+        max-width: 16.667%;
+    }
+
+    .col-xl-3 {
+        -ms-flex-preferred-size: 25%;
+        flex-basis: 25%;
+        max-width: 25%;
+    }
+
+    .col-xl-4 {
+        -ms-flex-preferred-size: 33.333%;
+        flex-basis: 33.333%;
+        max-width: 33.333%;
+    }
+
+    .col-xl-5 {
+        -ms-flex-preferred-size: 41.667%;
+        flex-basis: 41.667%;
+        max-width: 41.667%;
+    }
+
+    .col-xl-6 {
+        -ms-flex-preferred-size: 50%;
+        flex-basis: 50%;
+        max-width: 50%;
+    }
+
+    .col-xl-7 {
+        -ms-flex-preferred-size: 58.333%;
+        flex-basis: 58.333%;
+        max-width: 58.333%;
+    }
+
+    .col-xl-8 {
+        -ms-flex-preferred-size: 66.667%;
+        flex-basis: 66.667%;
+        max-width: 66.667%;
+    }
+
+    .col-xl-9 {
+        -ms-flex-preferred-size: 75%;
+        flex-basis: 75%;
+        max-width: 75%;
+    }
+
+    .col-xl-10 {
+        -ms-flex-preferred-size: 83.333%;
+        flex-basis: 83.333%;
+        max-width: 83.333%;
+    }
+
+    .col-xl-11 {
+        -ms-flex-preferred-size: 91.667%;
+        flex-basis: 91.667%;
+        max-width: 91.667%;
+    }
+
+    .col-xl-12 {
+        -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+        max-width: 100%;
+    }
+
+    .col-xl-offset-1 {
+        margin-left: 8.333%;
+    }
+
+    .col-xl-offset-2 {
+        margin-left: 16.667%;
+    }
+
+    .col-xl-offset-3 {
+        margin-left: 25%;
+    }
+
+    .col-xl-offset-4 {
+        margin-left: 33.333%;
+    }
+
+    .col-xl-offset-5 {
+        margin-left: 41.667%;
+    }
+
+    .col-xl-offset-6 {
+        margin-left: 50%;
+    }
+
+    .col-xl-offset-7 {
+        margin-left: 58.333%;
+    }
+
+    .col-xl-offset-8 {
+        margin-left: 66.667%;
+    }
+
+    .col-xl-offset-9 {
+        margin-left: 75%;
+    }
+
+    .col-xl-offset-10 {
+        margin-left: 83.333%;
+    }
+
+    .col-xl-offset-11 {
+        margin-left: 91.667%;
+    }
+
+    .start-xl {
+        -ms-flex-pack: start;
+        -webkit-box-pack: start;
+        justify-content: flex-start;
+        text-align: start;
+    }
+
+    .center-xl {
+        -ms-flex-pack: center;
+        -webkit-box-pack: center;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .end-xl {
+        -ms-flex-pack: end;
+        -webkit-box-pack: end;
+        justify-content: flex-end;
+        text-align: end;
+    }
+
+    .top-xl {
+        -ms-flex-align: start;
+        -webkit-box-align: start;
+        align-items: flex-start;
+    }
+
+    .middle-xl {
+        -ms-flex-align: center;
+        -webkit-box-align: center;
+        align-items: center;
+    }
+
+    .bottom-xl {
+        -ms-flex-align: end;
+        -webkit-box-align: end;
+        align-items: flex-end;
+    }
+
+    .around-xl {
+        -ms-flex-pack: distribute;
+        justify-content: space-around;
+    }
+
+    .between-xl {
+        -ms-flex-pack: justify;
+        -webkit-box-pack: justify;
+        justify-content: space-between;
+    }
+
+    .first-xl {
+        -ms-flex-order: -1;
+        -webkit-box-ordinal-group: 0;
+        order: -1;
+    }
+
+    .last-xl {
+        -ms-flex-order: 1;
+        -webkit-box-ordinal-group: 2;
+        order: 1;
+    }
+}
+
+// Sistema de imagens flutuantes
+@mixin imgensFlutuantes {
+    .container {
+        position: relative;
+
+    }
+
+    .container-imagemFlutuante {
+        position: absolute;
+        height: 100%;
+        width: 98.5vw;
+        left: 50%;
+        transform: translateX(-50%);
+
+        &__imgFl {
+            transform: translate(-50%, -50%);
+            position: absolute;
+
+            $-v: 100;
+            $v: 0;
+
+            @for $i from 20 through 0 {
+                &.md-v--#{$i * 5} {
+                    top: -#{$-v}px;
+                }
+
+                $-v: $-v - 5;
+            }
+
+            @for $i from 0 through 2000 {
+                &.md-v-#{$i * 5} {
+                    top: #{$v}px;
+                }
+
+                $v: $v+5;
+            }
+
+            $hr:0;
+
+            @for $i from 50 through 1 {
+                &.md-h--#{$i} {
+                    left: #{$hr}vw;
+                }
+
+                $hr: $hr+1
+            }
+
+            @for $i from 0 through 150 {
+                &.md-h-#{$i} {
+                    left: #{$i}vw;
+                }
+
+            }
+
+            @include mq('desktop-wide') {
+                $-v: 0;
+                $v: 0;
+
+                @for $i from 0 through 2000 {
+                    &.lg-v-#{$i * 5} {
+                        top: #{$v}px;
+                    }
+
+                    $v: $v+5;
+                }
+
+                @for $i from 50 through 1 {
+                    &.lg-h--#{$i} {
+                        left: -#{$i * 5}vw;
+                    }
+
+                }
+
+                @for $i from 0 through 150 {
+                    &.lg-h-#{$i} {
+                        left: #{$i}vw;
+                    }
+
+                }
+            }
+
+            @include mq('desktop-extra-large') {
+                $-v: 0;
+                $v: 0;
+
+                @for $i from 0 through 2000 {
+                    &.xl-v-#{$i * 5} {
+                        top: #{$v}px;
+                    }
+
+                    $v: $v+5;
+                }
+
+                @for $i from 50 through 1 {
+                    &.xl-h--#{$i} {
+                        left: -#{$i}vw;
+                    }
+
+                }
+
+                @for $i from 0 through 150 {
+                    &.xl-h-#{$i} {
+                        left: #{$i}vw;
+                    }
+
+                }
+            }
+
+        }
+    }
+}

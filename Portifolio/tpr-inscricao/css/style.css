@@ -1,0 +1,811 @@
+.header__button, .main .sectionValor .cardPreco__button, .main .sectionAviso__button, .main .sectionChamada__button {
+  background-color: #FEC92F;
+  color: #0A102F;
+  border-radius: 50px;
+  width: 100%;
+  max-width: 500px;
+  font-weight: initial;
+  font-size: 1.2em;
+  padding: 15px 0;
+  display: inline-block;
+  margin: 20px 0;
+}
+
+.espera {
+  filter: saturate(0);
+}
+
+.countdown {
+  background-color: #D72650;
+  color: #fff;
+  padding-bottom: 1.5rem;
+  display: none;
+}
+
+.countdown__subtitulo {
+  color: #FEC92F;
+  margin: 0;
+}
+
+.countdown__caixa {
+  font-weight: bold;
+}
+
+.countdown__caixa p {
+  line-height: 1;
+  display: inline-block;
+}
+
+.countdown__ponto {
+  font-size: 2rem;
+}
+
+.countdown__data {
+  font-size: 3rem;
+  margin: 0 .4rem;
+}
+
+.countdown__data.dia:after, .countdown__data.hora:after, .countdown__data.minuto:after, .countdown__data.segundo:after {
+  font-size: .45em;
+  bottom: -8px;
+}
+
+.collapsible--verMais .collapsible-header {
+  display: inline-block;
+  background-color: transparent;
+  border: 2px solid #D72650;
+  border-radius: 50px;
+  padding: 0 2rem;
+  color: #D72650;
+}
+
+.collapsible--verMais .collapsible-body {
+  margin-top: 1rem;
+  padding: 0;
+}
+
+.collapsible--verMais .collapsible-body p {
+  padding: 0;
+  margin: 1em 0;
+}
+
+.imgLarge {
+  padding: 0;
+}
+
+.darkRoom {
+  z-index: 1200;
+  display: none;
+  position: fixed;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.9);
+  will-change: opacity;
+}
+
+.darkRoom__video {
+  margin: 0 auto;
+  margin-top: 20px;
+  position: relative;
+  padding-bottom: 45.25%;
+  /* 16:9 */
+  padding-top: 25px;
+  height: 0;
+  width: 100%;
+}
+
+.darkRoom__iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0px 3px 20px 0px rgba(0, 0, 0, 0.75);
+}
+
+.darkRoom.stepDesaparece-1 {
+  display: none;
+}
+
+.darkRoom.stepAparece-1 {
+  -webkit-transition: .3s;
+  transition: .3s;
+  opacity: 0;
+  display: block;
+}
+
+.darkRoom.stepAparece-2 {
+  -webkit-transition: .3s;
+  transition: .3s;
+  opacity: 1;
+}
+
+.darkRoom.stepDesaparece-2 {
+  opacity: 0;
+  display: none;
+}
+
+.caixaDepoimentos__video {
+  cursor: pointer;
+  transition: .3s;
+}
+
+.caixaDepoimentos__video:hover {
+  filter: brightness(0.5);
+  transition: .3s;
+}
+
+body {
+  font-family: 'Roboto';
+  font-size: 14px;
+  background-color: #EFF2F5;
+  color: #0A102F;
+}
+
+body p {
+  line-height: 1.2;
+}
+
+body h1,
+body h2,
+body h3,
+body h4,
+body strong {
+  font-weight: 900;
+}
+
+.header {
+  background-image: url("../img/bg_header.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  color: #fff;
+}
+
+.header__titulo {
+  font-size: 18px;
+  font-weight: initial;
+}
+
+.header__titulo span {
+  display: block;
+  color: #FEC92F;
+  font-weight: bold;
+}
+
+.header__subtitulo {
+  font-weight: initial;
+  font-size: 20px;
+  margin-top: 0;
+}
+
+@media only screen and (min-width: 1023px) {
+  .header__titulo {
+    font-size: 22px;
+    line-height: 1.2;
+  }
+  .header__subtitulo {
+    font-size: 32px;
+    line-height: 1.2;
+  }
+}
+
+.main .sectionPare {
+  color: #0A102F;
+}
+
+.main .sectionPare__titulo {
+  margin-top: 0;
+  line-height: 1;
+}
+
+.main .sectionPare__titulo span {
+  color: #D72650;
+  display: block;
+}
+
+.main .sectionPare img {
+  display: none;
+}
+
+.main .sectionAlcance {
+  color: #0A102F;
+  background-image: url("../img/bg_cortado.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top center;
+}
+
+.main .sectionAlcance__titulo {
+  margin-top: 0;
+  line-height: 1;
+}
+
+.main .sectionAlcance__titulo span {
+  color: #D72650;
+  display: block;
+}
+
+.main .sectionAlcance__textoVermelho {
+  color: #D72650;
+}
+
+.main .sectionChristian {
+  background-color: #0A102F;
+  background-image: url("../img/bg_christian.png");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: 50px center;
+  color: #fff;
+  position: relative;
+}
+
+.main .sectionChristian h2 {
+  margin-top: 0;
+  color: #D72650;
+}
+
+.main .sectionChristian__efeito {
+  position: absolute;
+  max-width: 100px;
+  top: -70px;
+  left: -40px;
+}
+
+.main .sectionChristian__efeito--2 {
+  display: none;
+}
+
+.main .sectionMetodologia {
+  background-color: #070B1E;
+  color: #fff;
+}
+
+.main .sectionMetodologia h2 {
+  margin-top: 0;
+  color: #D72650;
+}
+
+.main .sectionMetodologia__imgMd {
+  display: none;
+}
+
+.main .sectionPrograma {
+  background-image: url("../img/bg_programa.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+.main .sectionPrograma h2 {
+  margin: 0;
+  line-height: 1.2;
+}
+
+.main .sectionPrograma h2 span {
+  color: #D72650;
+  display: block;
+}
+
+.main .sectionPrograma__subtitulo {
+  margin-top: 0;
+  line-height: 1;
+}
+
+.main .sectionPrograma__imgMd {
+  display: none;
+}
+
+.main .sectionPrograma__pilar1 h3 span,
+.main .sectionPrograma__pilar1 .collapsible .collapsible-body strong {
+  color: #D72650;
+}
+
+.main .sectionPrograma__pilar2 h3 span,
+.main .sectionPrograma__pilar2 .collapsible .collapsible-body strong {
+  color: #4090CC;
+}
+
+.main .sectionPrograma__pilar3 h3 span,
+.main .sectionPrograma__pilar3 .collapsible .collapsible-body strong {
+  color: #E2B124;
+}
+
+.main .sectionCertificado {
+  background-image: url("../img/bg_certificado.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom left;
+  background-color: #0A102F;
+  padding: 100px 0;
+}
+
+.main .sectionCertificado h2 span {
+  display: block;
+  color: #D72650;
+}
+
+.main .sectionCertificado__titulo {
+  margin-top: 0;
+  display: inline-block;
+  position: relative;
+}
+
+.main .sectionCertificado__titulo::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: -70%;
+  left: 50%;
+  transform: translate(-40%);
+  background-image: url("../img/certificado.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: top center;
+  width: 300px;
+  height: 300px;
+}
+
+.main .sectionCertificado__titulo--md {
+  display: none;
+}
+
+.main .sectionCertificado__img--md {
+  display: none;
+}
+
+.main .sectionBonus {
+  background-color: #0A102F;
+  color: #fff;
+  padding: 0;
+}
+
+.main .sectionBonus--escuro {
+  background-color: #070B1E;
+  padding: 1rem 0;
+}
+
+.main .sectionBonus--claro {
+  padding: 1rem 0;
+}
+
+.main .sectionBonus__aviso {
+  color: #FEC92F;
+}
+
+.main .sectionBonus__titulo {
+  margin-top: 0;
+  color: #D72650;
+}
+
+.main .sectionBonus__titulo span {
+  font-weight: initial;
+}
+
+.main .sectionBonus h3 {
+  display: flex;
+  margin-top: 0;
+}
+
+.main .sectionBonus h4 {
+  color: #D72650;
+  margin-bottom: 0;
+}
+
+.main .sectionBonus p {
+  margin-top: 0;
+}
+
+.main .sectionBonus img {
+  max-width: 56px;
+  height: 56px;
+  margin-right: 20px;
+}
+
+.main .sectionValor h2 {
+  margin: 0;
+}
+
+.main .sectionValor h2 span {
+  display: block;
+  color: #D72650;
+}
+
+.main .sectionValor .cardPreco {
+  background-color: #0A102F;
+  color: #fff;
+  border-radius: 20px;
+  margin-top: 2rem;
+}
+
+.main .sectionValor .cardPreco__linha {
+  padding: .5rem .5em;
+  margin-left: -1rem !important;
+  margin-right: -1rem !important;
+}
+
+.main .sectionValor .cardPreco__linha:nth-child(even) {
+  background-color: #070B1E;
+}
+
+.main .sectionValor .cardPreco__linha--claro {
+  background-color: #0A102F !important;
+}
+
+.main .sectionValor .cardPreco__linha--branco {
+  background-color: #EFF2F5;
+  color: #0A102F;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.main .sectionValor .cardPreco__linha--valor {
+  padding: 1.5rem .5rem;
+}
+
+.main .sectionValor .cardPreco__linha--total {
+  padding-bottom: 2rem;
+}
+
+.main .sectionValor .cardPreco__tracejado {
+  width: 100%;
+  border: 3px #fff dotted;
+  border-width: 3px 0 0 0;
+  margin-bottom: 2rem;
+}
+
+.main .sectionValor .cardPreco__total {
+  color: #070B1E;
+  background-color: #D72650;
+  padding: .5rem 1rem;
+  border-radius: 15px;
+}
+
+.main .sectionValor .cardPreco__preco::after {
+  display: none;
+}
+
+.main .sectionValor .cardPreco__preco--riscado::after {
+  display: block;
+  top: 48%;
+}
+
+.main .sectionValor .cardPreco__precoDesconto .col-xs-4 {
+  padding: 0;
+}
+
+.main .sectionValor .cardPreco__enunciado, .main .sectionValor .cardPreco__sifrao, .main .sectionValor .cardPreco__condicao {
+  display: block;
+}
+
+.main .sectionValor .cardPreco__enunciado, .main .sectionValor .cardPreco__sifrao, .main .sectionValor .cardPreco__condicao, .main .sectionValor .cardPreco__valor {
+  margin: 0;
+}
+
+.main .sectionValor .cardPreco__enunciado, .main .sectionValor .cardPreco__sifrao {
+  text-align: start;
+}
+
+.main .sectionValor .cardPreco__valor, .main .sectionValor .cardPreco__centavos, .main .sectionValor .cardPreco__sifrao {
+  color: #D72650;
+}
+
+.main .sectionValor .cardPreco__valor {
+  font-size: 27px;
+  position: relative;
+  font-weight: 900;
+}
+
+.main .sectionValor .cardPreco__valor--riscado::after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: -7.5%;
+  top: 45%;
+  width: 135%;
+  height: 2px;
+  background-color: #D72650;
+}
+
+.main .sectionValor .cardPreco__centavos, .main .sectionValor .cardPreco__sifrao, .main .sectionValor .cardPreco__condicao, .main .sectionValor .cardPreco__enunciado {
+  font-size: 12px;
+}
+
+.main .sectionValor .cardPreco__condicao {
+  text-align: end;
+  margin-top: -10px;
+}
+
+.main .sectionValor .cardPreco__condicao--credito {
+  text-align: center;
+}
+
+.main .sectionValor .cardPreco__button {
+  font-size: 1.1em;
+}
+
+.main .sectionAviso {
+  background-color: #D72650;
+  color: #fff;
+  display: none;
+}
+
+.main .sectionAviso h2 span:first-of-type {
+  color: #0A102F;
+}
+
+.main .sectionDepoimento {
+  background-color: #0A102F;
+  color: #fff;
+}
+
+.main .sectionDepoimento h2 {
+  color: #D72650;
+  margin-top: 0;
+}
+
+.main .sectionDepoimento h2 span {
+  font-weight: initial;
+}
+
+.main .sectionFaq {
+  background-color: #070B1E;
+  color: #fff;
+}
+
+.main .sectionFaq h2 {
+  color: #D72650;
+}
+
+.main .sectionFaq .collapsible__li {
+  border-bottom: solid 2px #fff;
+  border-radius: 0;
+}
+
+.main .sectionFaq .collapsible-header {
+  display: inline-block;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  background-color: transparent;
+  padding: 0 20px;
+  width: 100%;
+  transition: .3s;
+}
+
+.main .sectionFaq .collapsible-header:hover {
+  padding-left: 40px;
+}
+
+.main .sectionFaq .collapsible-body p {
+  padding: 2rem 0;
+}
+
+.main .sectionFaq .collapsible-body ul {
+  padding-bottom: 15px;
+  margin-left: 0;
+}
+
+.main .sectionFaq .collapsible-body a {
+  color: #fff;
+}
+
+.main .sectionChamada {
+  background-image: url("../img/bg_chamada.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  background-color: #070B1E;
+  color: #fff;
+}
+
+.main .sectionChamada__titulo {
+  font-size: 18px;
+  font-weight: initial;
+}
+
+.main .sectionChamada__titulo span {
+  display: block;
+  color: #FEC92F;
+  font-weight: bold;
+}
+
+.main .sectionChamada__subtitulo {
+  font-weight: initial;
+  font-size: 20px;
+  margin-top: 0;
+}
+
+@media only screen and (min-width: 1023px) {
+  .main .sectionChamada__titulo {
+    font-size: 22px;
+    line-height: 1.2;
+  }
+  .main .sectionChamada__subtitulo {
+    font-size: 32px;
+    line-height: 1.2;
+  }
+}
+
+.main .sectionChamada .row {
+  min-height: 60vh;
+}
+
+.footer {
+  background-color: #070B1E;
+}
+
+.footer a {
+  color: #fff;
+}
+
+@media only screen and (min-width: 399px) {
+  .main .sectionValor .cardPreco__condicao--credito {
+    font-size: 14px;
+  }
+}
+
+@media only screen and (min-width: 767px) {
+  .countdown {
+    background-color: #D72650;
+    color: #fff;
+    padding-bottom: 1rem;
+  }
+  .countdown__ponto {
+    font-size: 2rem;
+  }
+  .countdown__data {
+    font-size: 58px;
+    margin: 0 1rem;
+  }
+  .countdown__data.dia::after, .countdown__data.hora::after, .countdown__data.minuto::after, .countdown__data.segundo::after {
+    bottom: -15px;
+  }
+  .countdown__data.segundo::after {
+    content: "Segundo";
+  }
+  .main .sectionMetodologia__imgMb {
+    display: none;
+  }
+  .main .sectionMetodologia__imgMd {
+    display: block;
+  }
+  .main .sectionPrograma__imgMb {
+    display: none;
+  }
+  .main .sectionPrograma__imgMd {
+    display: block;
+  }
+  .main .sectionCertificado {
+    padding: 50px 0 100px 0;
+  }
+  .main .sectionCertificado__titulo {
+    display: none;
+  }
+  .main .sectionCertificado__titulo--md {
+    font-size: 32px;
+    display: block;
+  }
+  .main .sectionCertificado__titulo--md span {
+    font-size: .7em;
+  }
+  .main .sectionCertificado__img--md {
+    display: block;
+  }
+  .main .sectionValor .cardPreco__linha {
+    padding: .5rem 2rem;
+    margin-left: -1.5rem !important;
+    margin-right: -1.5rem !important;
+  }
+  .main .sectionValor .cardPreco__linha--valor {
+    padding: 1.5rem 2rem;
+  }
+  .main .sectionValor .cardPreco__linha--total {
+    padding-bottom: 2rem;
+  }
+  .main .sectionValor .cardPreco__precoDesconto .col-xs-4 {
+    padding: 0 .5rem;
+  }
+  .main .sectionValor .cardPreco__enunciado {
+    font-size: 18px;
+  }
+  .main .sectionValor .cardPreco__sifrao, .main .sectionValor .cardPreco__centavos, .main .sectionValor .cardPreco__condicao {
+    font-size: 12px;
+  }
+  .main .sectionValor .cardPreco__condicao {
+    margin-top: .1em;
+  }
+  .main .sectionValor .cardPreco__valor {
+    font-size: 40px;
+  }
+  .main .sectionAviso h2 {
+    font-size: 27px;
+  }
+}
+
+@media only screen and (min-width: 1023px) {
+  body {
+    font-size: 18px;
+  }
+  .main .sectionPare {
+    background-image: url("../img/bg_pare.png");
+    background-repeat: no-repeat;
+    background-size: 200px;
+    background-position: left -20px;
+    padding-bottom: 32px;
+  }
+  .main .sectionPare img {
+    display: block;
+  }
+  .main .sectionAlcance__titulo span {
+    display: inline;
+  }
+  .main .sectionChristian {
+    background-image: none;
+  }
+  .main .sectionChristian__efeito {
+    max-width: 300px;
+    top: -100px;
+    left: -110px;
+  }
+  .main .sectionChristian__efeito--2 {
+    display: block;
+    max-width: 60px;
+    left: auto;
+    top: auto;
+    right: 50px;
+    bottom: 50px;
+  }
+  .main .sectionChristian__perfil {
+    max-width: 25%;
+    margin-left: -15%;
+  }
+  .main .sectionChristian ul {
+    margin: 0;
+  }
+  .main .sectionPrograma__pilar2 {
+    margin: 3rem 0;
+  }
+  .main .sectionBonus--claro, .main .sectionBonus--escuro {
+    padding: 2rem 0;
+  }
+  .main .sectionChamada {
+    background-image: url("../img/bg_chamada-md.png");
+    background-position: -150px;
+  }
+  .main .sectionChamada .row {
+    min-height: auto;
+  }
+  .footer {
+    padding: 32px 0;
+  }
+}
+
+@media only screen and (min-width: 1279px) {
+  .main .sectionPare {
+    background-size: 300px;
+    background-position-y: -50px;
+  }
+  .main .sectionChristian__perfil {
+    margin-left: -17%;
+  }
+  .main .sectionChamada {
+    background-position: left;
+  }
+}
+
+@media only screen and (min-width: 1899px) {
+  .main .sectionPare {
+    background-size: 450px;
+    background-position-y: -70px;
+  }
+  .main .sectionChristian__efeito--2 {
+    right: 20%;
+  }
+  .main .sectionChristian__perfil {
+    max-width: 18%;
+    margin-left: -15%;
+  }
+}

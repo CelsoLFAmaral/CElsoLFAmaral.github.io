@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description"
+        content='Uma série onde você vai aprender a sair da correria do dia a dia e priorizar as pessoas e projetos mais importantes.'>
+    <meta name="keywords" content="">
+    <meta name="robots" content="index, follow">
+    <meta name="revisit-after" content="1 month">
+    <meta name="language" content="Portuguese">
+    <meta name="generator" content="N/A">
+    <meta property="og:title" content=" Como ter mais tempo para o mais importante">
+    <meta property='og:description'
+        content='Uma série onde você vai aprender a sair da correria do dia a dia e priorizar as pessoas e projetos mais importantes.' />
+    <meta property="og:url" content="https://triadedaprodutividade.com.br/workshop/" />
+    <meta property="og:image" content="https://triadedaprodutividade.com.br/workshop/img/img-compartilhamento.png" />
+
+    <!-- FontAwesome -->
+    <script src="https://kit.fontawesome.com/5d19a24c4a.js"></script>
+    <!-- FlexBox Grid -->
+    <link rel="stylesheet" href="triadLayout/css/flex.min.css">
+    <!-- IziModal -->
+    <link rel="stylesheet" href="triadLayout/css/iziModal.min.css">
+    <!-- Padrão -->
+    <link rel="stylesheet" href="triadLayout/css/triadLayout.min.css">
+
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Como ter mais tempo para o mais importante</title>
+    <div id="fb-root"></div>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v6.0&appId=675926975908932&autoLogAppEvents=1"></script>
+</head>
+
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="row center-xs">
+                <div class="col-xs-12">
+                    <img class="header__logo" src="img/logo.png" alt="Logo O Melhor Ano de Todos">
+                </div>
+            </div>
+            <div class="row center-xs">
+                <div class="col-xs-12 col-md-3 last-md">
+                    <div class="header__enunciado enunciado">
+                        <div class="row">
+                            <div class="col-xs-3">
+                                <a class="header__link enunciado1" href="#">
+                                    <div class="enunciado__icone">
+                                        <i class="fas fa-play"></i>
+                                    </div>
+                                    <h4 class="enunciado__titulo">Vídeo 1</h4>
+                                    <p class="enunciado__aviso">02/mar</p>
+                                </a>
+                            </div>
+                            <div class="col-xs-3">
+                                <a class="header__link enunciado2" href="#">
+                                    <div class="enunciado__icone">
+                                        <i class="fas fa-play"></i>
+                                    </div>
+                                    <h4 class="enunciado__titulo">Vídeo 2</h4>
+                                    <p class="enunciado__aviso video2">04/mar</p>
+                                </a>
+                            </div>
+                            <div class="col-xs-3">
+                                <a class="header__link enunciado3" href="#">
+                                    <div class="enunciado__icone">
+                                        <i class="fas fa-play"></i>
+                                    </div>
+                                    <h4 class="enunciado__titulo">Vídeo 3</h4>
+                                    <p class="enunciado__aviso video3">06/mar</p>
+                                </a>
+                            </div>
+                            <div class="col-xs-3">
+                                <a class="header__link enunciado4" href="#">
+                                    <div class="enunciado__icone">
+                                        <i class="fas fa-play"></i>
+                                    </div>
+                                    <h4 class="enunciado__titulo">Vídeo 4</h4>
+                                    <p class="enunciado__aviso">10/mar</p>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="header__thumbs thumbs1" style="margin-top:0">
+                        <a class="header__link link1" href="#">
+                            <img class="videoPlayer" src="https://i.ytimg.com/vi/-K3QN9_D0Aw/maxresdefault.jpg" alt="">
+                            <div class="header__play center-xs middle-xs">
+                                <i class="fas fa-lock"></i>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="header__thumbs thumbs2">
+                        <a class="header__link link2" href="#">
+                            <img class="videoPlayer" src="https://i.ytimg.com/vi/Z7qKG9gx354/maxresdefault.jpg" alt="">
+                            <div class="header__play center-xs middle-xs">
+                                <i class="fas fa-lock"></i>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="header__thumbs thumbs3">
+                        <a class="header__link link3" href="#">
+                            <img class="videoPlayer" src="https://i.ytimg.com/vi/dSFvOTIGqLk/maxresdefault.jpg" alt="">
+                            <div class="header__play center-xs middle-xs">
+                                <i class="fas fa-lock"></i>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="header__thumbs thumbs4">
+                        <a class="header__link link4" href="#">
+                            <img class="videoPlayer" src="img/thumb4.jpg" alt="">
+                            <div class="header__play center-xs middle-xs">
+                                <i class="fas fa-lock"></i>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-md-9">
+                    <div class="header__caixaVideo caixaVideo" id="caixaVideo">
+                        <img class="caixaVideo__capa" src="https://i.ytimg.com/vi/-K3QN9_D0Aw/maxresdefault.jpg" alt="">
+                        <div class="header__play center-xs middle-xs">
+                            <i class="fas fa-lock"></i>
+                        </div>
+                        <div id="videoPlayer" class="header__videoPlayer videoPlayer">
+                            <i class="fas fa-times close" id="videoClose" onclick="fechaMini()"></i>
+                            <iframe id="videoPlayerIframe" class="videoPlayer__iframe"
+                                src="https://www.youtube.com/embed/-K3QN9_D0Aw" frameborder="0"
+                                allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row center-xs">
+                <div class="col-xs-12">
+                    <a class="header__button center-xs" id="headerButton" target="_blank"
+                        href="http://triadedaprodutividade.com.br/aqui-esta-o-ebook-mindset/files/Ebook-Triade-da-produtividade.pdf">
+                        Faça o Download do E-book Gratuito Mindset Produtivo
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main class="main">
+        <section class="main__section sectionComentario">
+            <div class="container">
+                <div class="row ">
+                    <div class="col-xs-12 col-md-7">
+                        <h2>
+                            DEIXE SEU COMENTÁRIO:
+                        </h2>
+                        <p class="sectionComentario__pergunta">
+                            O que está achando do Workshop até aqui? Qual a parte do vídeo 1 que você mais gostou?
+                        </p>
+                        <div class="fb-comments" data-href="http://triadedaprodutividade.com.br/cpl" data-width="100%"
+                            data-order-by="reverse_time" data-numposts="5"></div>
+                    </div>
+                    <div class="col-xs-12 col-md-5">
+                        <div class="row middle-xs">
+                            <div class="col-xs-12 col-sm-6 col-md-12">
+                                <h4>
+                                    E compartilhe com quem precisa!
+                                </h4>
+                            </div>
+                            <div style="width: 100%;">
+                                <div class="fb-page" data-href="https://www.facebook.com/christianbarbosa"
+                                data-small-header="false" data-adapt-container-width="true" data-hide-cover="false"
+                                data-show-facepile="false">
+                                <blockquote cite="https://www.facebook.com/christianbarbosa"
+                                    class="fb-xfbml-parse-ignore"><a
+                                        href="https://www.facebook.com/christianbarbosa">Christian Barbosa</a>
+                                </blockquote>
+                            </div>
+                            </div>
+                            <div class="col-xs-12 col-sm-6 col-md-12">
+                                <a class="sectionComentario__compartilhar" target="_blank"
+                                    href="https://www.facebook.com/sharer/sharer.php?u=http%3A//www.omelhoranodetodos.com.br/workshop/?utm_source=FBK%26utm_medium=SHR">
+                                    <p>
+                                        Compartilhar
+                                    </p>
+                                </a>
+                                <a href="https://www.instagram.com/christiantriad/" target="_blank"
+                                    class="sectionComentario__redes redes start-xs middle-xs">
+                                    <div class="redes__circulo center-xs middle-xs">
+                                        <i class="fab fa-instagram"></i>
+                                    </div>
+                                    <p>
+                                        SIGA MEU PERFIL <br><span class="redes__destaque">no Instagram</span>
+                                    </p>
+                                    <i class="fas fa-chevron-right"></i>
+                                </a>
+                                <a href="https://www.youtube.com/user/christianbarbosa?sub_confirmation=1"
+                                    target="_blank" class="sectionComentario__redes redes start-xs middle-xs">
+                                    <div class="redes__circulo center-xs middle-xs">
+                                        <i class="fab fa-youtube"></i>
+                                    </div>
+                                    <p>
+                                        ASSINE MEU CANAL <br><span class="redes__destaque">no Youtube</span>
+                                    </p>
+                                    <i class="fas fa-chevron-right"></i>
+                                </a>
+                            </div>
+                            <div class="col-xs-12">
+                                <h2 class="sectionComentario__tituloDepoimentos">
+                                    Veja o depoimento de alguns alunos
+                                </h2>
+                            </div>
+                            <div class="col-xs-12 col-sm-6 col-md-12">
+                                <div class="sectionComentario__videosDepoimentos videosDepoimentos">
+                                    <div class="row middle-xs">
+
+                                        <div class="col-xs-6 no-pad">
+                                            <div class="videosDepoimentos__video">
+                                                <a onclick="ExibeDarkRoom('https://www.youtube.com/embed/RPnCAhfR_BU')">
+                                                    <img src="https://i.ytimg.com/vi/RPnCAhfR_BU/hqdefault.jpg">
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-6 no-pad">
+                                            <div class="videosDepoimentos__descricao">
+                                                <a onclick="ExibeDarkRoom('https://www.youtube.com/embed/RPnCAhfR_BU')">
+                                                    <h5 class="videosDepoimentos__nome">Wilber Fernandes</h5>
+                                                    <span class="videosDepoimentos__area">Hoje eu sinto a minha vida andando para a direção que eu quero</span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="sectionComentario__videosDepoimentos videosDepoimentos">
+                                    <div class="row middle-xs">
+                                        <div class="col-xs-6 no-pad">
+                                            <div class="videosDepoimentos__video">
+                                                <a onclick="ExibeDarkRoom('https://www.youtube.com/embed/tDfxofPokiE')">
+                                                    <img src="https://i.ytimg.com/vi/tDfxofPokiE/hqdefault.jpg">
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-6 no-pad">
+                                            <div class="videosDepoimentos__descricao">
+                                                <a onclick="ExibeDarkRoom('https://www.youtube.com/embed/tDfxofPokiE')">
+                                                    <h5 class="videosDepoimentos__nome">Sabryna Alsfasser</h5>
+                                                    <span class="videosDepoimentos__area">Fiquei mais eficiente e consigo manter o ritmo no meu negócio</span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="sectionComentario__videosDepoimentos videosDepoimentos">
+                                    <div class="row middle-xs">
+                                        <div class="col-xs-6 no-pad">
+                                            <div class="videosDepoimentos__video">
+                                                <a onclick="ExibeDarkRoom('https://www.youtube.com/embed/aGqan8Q10dw')">
+                                                    <img src="https://i.ytimg.com/vi/aGqan8Q10dw/hqdefault.jpg">
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-6 no-pad">
+                                            <div class="videosDepoimentos__descricao">
+                                                <a onclick="ExibeDarkRoom('https://www.youtube.com/embed/aGqan8Q10dw')">
+                                                    <h5 class="videosDepoimentos__nome">Priscila Rezende</h5>
+                                                    <span class="videosDepoimentos__area">A transformação foi tão grande que hoje eu trabalho com produtividade                                                    </span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="sectionComentario__videosDepoimentos videosDepoimentos">
+                                    <div class="row middle-xs">
+                                        <div class="col-xs-6 no-pad">
+                                            <div class="videosDepoimentos__video">
+                                                <a onclick="ExibeDarkRoom('https://www.youtube.com/embed/EcOAiIr476Q')">
+                                                    <img src="https://i.ytimg.com/vi/EcOAiIr476Q/hqdefault.jpg">
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-6 no-pad">
+                                            <div class="videosDepoimentos__descricao">
+                                                <a onclick="ExibeDarkRoom('https://www.youtube.com/embed/EcOAiIr476Q')">
+                                                    <h5 class="videosDepoimentos__nome">Denise Félix</h5>
+                                                    <span class="videosDepoimentos__area">O meu objetivo é me tornar uma mentora de produtividade </span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="sectionComentario__videosDepoimentos videosDepoimentos">
+                                    <div class="row middle-xs">
+                                        <div class="col-xs-6 no-pad">
+                                            <div class="videosDepoimentos__video">
+                                                <a onclick="ExibeDarkRoom('https://www.youtube.com/embed/8Bi7FAdmCaU')">
+                                                    <img src="https://i.ytimg.com/vi/8Bi7FAdmCaU/hqdefault.jpg">
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-6 no-pad">
+                                            <div class="videosDepoimentos__descricao">
+                                                <a onclick="ExibeDarkRoom('https://www.youtube.com/embed/8Bi7FAdmCaU')">
+                                                    <h5 class="videosDepoimentos__nome">Estela Hilger</h5>
+                                                    <span class="videosDepoimentos__area">Eu não estava dando conta de tudo e precisava ter mais foco    </span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="sectionComentario__videosDepoimentos videosDepoimentos">
+                                    <div class="row middle-xs">
+                                        <div class="col-xs-6 no-pad">
+                                            <div class="videosDepoimentos__video">
+                                                <a onclick="ExibeDarkRoom('https://www.youtube.com/embed/-54fSb91qFA')">
+                                                    <img src="https://i.ytimg.com/vi/-54fSb91qFA/hqdefault.jpg">
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-6 no-pad">
+                                            <div class="videosDepoimentos__descricao">
+                                                <a onclick="ExibeDarkRoom('https://www.youtube.com/embed/-54fSb91qFA')">
+                                                    <h5 class="videosDepoimentos__nome">Marcelo Augusto</h5>
+                                                    <span class="videosDepoimentos__area">Eu era um procrastinador, mas agora eu uso o tempo a meu favor</span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="sectionComentario__videosDepoimentos videosDepoimentos">
+                                    <div class="row middle-xs">
+                                        <div class="col-xs-6 no-pad">
+                                            <div class="videosDepoimentos__video">
+                                                <a onclick="ExibeDarkRoom('https://www.youtube.com/embed/Mu_EJgxDcxg')">
+                                                    <img src="https://i.ytimg.com/vi/Mu_EJgxDcxg/hqdefault.jpg">
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-6 no-pad">
+                                            <div class="videosDepoimentos__descricao">
+                                                <a onclick="ExibeDarkRoom('https://www.youtube.com/embed/Mu_EJgxDcxg')">
+                                                    <h5 class="videosDepoimentos__nome">Morgane Barbosa</h5>
+                                                    <span class="videosDepoimentos__area">Consegui tempo para colocar em prática o sonho de empreender</span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="sectionComentario__videosDepoimentos videosDepoimentos">
+                                    <div class="row middle-xs">
+                                        <div class="col-xs-6 no-pad">
+                                            <div class="videosDepoimentos__video">
+                                                <a onclick="ExibeDarkRoom('https://www.youtube.com/embed/s2iMRLTU9aA')">
+                                                    <img src="https://i.ytimg.com/vi/s2iMRLTU9aA/hqdefault.jpg">
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-6 no-pad">
+                                            <div class="videosDepoimentos__descricao">
+                                                <a onclick="ExibeDarkRoom('https://www.youtube.com/embed/s2iMRLTU9aA')">
+                                                    <h5 class="videosDepoimentos__nome">Rose Ribeiro</h5>
+                                                    <span class="videosDepoimentos__area">Estou conseguindo aproveitar melhor o meu tempo</span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="sectionComentario__videosDepoimentos videosDepoimentos">
+                                    <div class="row middle-xs">
+                                        <div class="col-xs-6 no-pad">
+                                            <div class="videosDepoimentos__video">
+                                                <a onclick="ExibeDarkRoom('https://www.youtube.com/embed/HOMp606Bi-0')">
+                                                    <img src="https://i.ytimg.com/vi/HOMp606Bi-0/hqdefault.jpg">
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-6 no-pad">
+                                            <div class="videosDepoimentos__descricao">
+                                                <a onclick="ExibeDarkRoom('https://www.youtube.com/embed/HOMp606Bi-0')">
+                                                    <h5 class="videosDepoimentos__nome">Ana Carolina Guimarães</h5>
+                                                    <span class="videosDepoimentos__area">Fiquei esperando o curso abrir para me especializar na metodologia</span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="container">
+            <div class="row center-xs">
+                <div class="col-xs-5">
+                    <img class="footer__logo" src="img/logo.png" alt="">
+                </div>
+                <div class="col-xs-12">
+                    <a href="https://www.pnl.com.br/politica-de-privacidade/">Política de Privacidade</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <div class="container-fluid darkRoom middle-xs center-xs" id="darkRoom" onclick="EscondeDarkRoom()">
+        <div class="darkRoom__video col-xs-12 col-lg-10">
+            <iframe id="darkRoom__iframe" class="darkRoom__iframe" src="" frameborder="0" allowfullscreen=""></iframe>
+        </div>
+    </div>
+
+    <!-- Jquery 3.3.1 -->
+    <script src="triadLayout/js/jquery3.1.1.min.js"></script>
+    <!-- Triad Layout JS -->
+    <script src="triadLayout/js/triadLayout.js"></script>
+    <!-- Padrão -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>

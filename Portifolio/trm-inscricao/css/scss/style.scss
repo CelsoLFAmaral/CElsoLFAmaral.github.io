@@ -1,0 +1,491 @@
+@import 'base', 'mixins', 'formulario';
+
+$corPrimaria:#44A8C8;
+$corSecundaria:#1A4A89;
+$corTerciaria: #FEC92F;
+$corQuartenaria:#fff;
+$corQuinaria:#EFF2F5;
+$corBotaoPrimaria:#0CEBEB;
+$corBotaoSecundaria:#20E3B2;
+$corBotaoTerciaria:#29FFC6;
+
+%bg-escuro {
+    background: $corSecundaria;
+    color: $corQuartenaria;
+}
+
+%bg-claro {
+    background: $corQuinaria;
+}
+
+.preco {
+    color: $corPrimaria;
+    margin: 0 auto;
+    font-size: 1.3em;
+
+    p {
+        margin: 0;
+    }
+
+    &--total {
+        position: relative;
+        font-size: 6em;
+        font-weight: 600;
+        line-height: .8;
+        margin: 0;
+
+        sup,
+        span {
+            font-size: .3em;
+        }
+    }
+}
+
+.logo {
+    max-width: 280px;
+}
+
+.no-pad {
+    padding: 0;
+}
+
+.l-titulo {
+    margin-top: 0;
+}
+
+.countdown {
+    position: relative;
+    border-radius: 20px;
+    color: #fff;
+    font-weight: bold;
+    font-size: 1.8em;
+    margin: 3rem 0;
+
+    %mostrador {
+        font-weight: normal;
+        font-size: .35em;
+        bottom: -7px;
+        left: 50%;
+        transform: translate(-50%);
+    }
+
+    &__caixas {
+        background-color: $corPrimaria;
+        padding-bottom: .35em;
+    }
+
+    &__mostrador {
+        color: $corTerciaria;
+    }
+
+    .dias {
+        position: relative;
+
+        &::after {
+            @include pseudo("DIAS");
+            @extend %mostrador;
+        }
+    }
+
+    .horas {
+        position: relative;
+
+        &::after {
+            @include pseudo("HORAS");
+            @extend %mostrador;
+        }
+    }
+
+    .minutos {
+        position: relative;
+
+        &::after {
+            @include pseudo("MINUTOS");
+            @extend %mostrador;
+        }
+    }
+
+    .segundos {
+        position: relative;
+
+        &::after {
+            @include pseudo("SEGUNDOS");
+            @extend %mostrador;
+        }
+    }
+}
+
+.button__trigger {
+    background: rgb(254,201,47);
+    background: linear-gradient(125deg, rgba(254,201,47,1) 0%, rgba(254,216,107,1) 50%, rgba(212,166,32,1) 100%);display: block;
+   display: block;
+    max-width: 600px;
+    color: $corSecundaria;
+    padding: 1rem .5rem;
+    margin: 1rem auto;
+    margin-bottom: 0;
+    border-radius: 50px;
+    transition: .3s;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 1em;
+
+    &:hover {
+        transition: .3s;
+        filter: brightness(90%);
+    }
+}
+
+.topico {
+    color: $corTerciaria;
+    display: inline-block;
+    border: 1px solid;
+    border-radius: 2px;
+    padding: .5rem 1rem;
+}
+
+ul {
+    list-style: none !important;
+    padding-left: 40px !important;
+
+    li {
+        list-style: none !important;
+        position: relative;
+
+        &:before {
+            content: '\25CF';
+            position: absolute;
+            left: -30px;
+            font-size: 40px;
+            line-height: 0;
+            top: 5px;
+            color: $corBotaoSecundaria;
+        }
+
+        ul li:before {
+            content: "\25CB";
+            font-size: 20px;
+            left: -25px;
+            top: 10px;
+        }
+    }
+}
+
+.header,
+.main__section,
+.footer {
+    padding: 32px 0;
+}
+
+blockquote {
+    padding-left: 125px;
+    line-height: 1.2;
+    border-left: none;
+    font-weight: bold;
+    min-height: 100px;
+
+    &::before {
+        @include pseudo;
+        @include background-image('aspas.png', center, center, contain);
+        @include size(100px);
+        margin-left: -120px;
+        margin-top: -10px;
+
+    }
+}
+
+.header {
+    @include background-image('bgHeader.png');
+    color: $corQuartenaria;
+
+    &__titulo {
+        margin-left: -2rem;
+        margin-right: -2rem;
+
+        span {
+            color: $corTerciaria;
+        }
+    }
+
+    &__aviso {
+        line-height: 1;
+    }
+
+    .obrigado {
+        background-color: $corPrimaria;
+        padding: 1.5rem .5rem;
+        margin: 0 -2rem;
+
+        h2 {
+            margin: 0;
+            text-transform: uppercase;
+            color: $corSecundaria;
+
+            &.obrigado__titulo {
+                font-weight: normal;
+                color: $corTerciaria;
+                font-size: 26px;
+            }
+        }
+
+        span {
+            color: $corTerciaria;
+        }
+
+        p {
+            font-size: 20px;
+            line-height: 1.2;
+            margin: 0;
+        }
+
+    }
+}
+
+.main {
+    @extend %bg-claro;
+
+    .section {
+        &Nunca {
+            font-size: 20px;
+            color: $corQuartenaria;
+            background: rgba(90, 92, 110, 1);
+            background: -moz-linear-gradient(left, rgba(90, 92, 110, 1) 0%, rgba(3, 9, 16, 1) 100%);
+            background: -webkit-gradient(left top, right top, color-stop(0%, rgba(90, 92, 110, 1)), color-stop(100%, rgba(3, 9, 16, 1)));
+            background: -webkit-linear-gradient(left, rgba(90, 92, 110, 1) 0%, rgba(3, 9, 16, 1) 100%);
+            background: -o-linear-gradient(left, rgba(90, 92, 110, 1) 0%, rgba(3, 9, 16, 1) 100%);
+            background: -ms-linear-gradient(left, rgba(90, 92, 110, 1) 0%, rgba(3, 9, 16, 1) 100%);
+            background: linear-gradient(to right, rgba(90, 92, 110, 1) 0%, rgba(3, 9, 16, 1) 100%);
+            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#5a5c6e', endColorstr='#030910', GradientType=1);
+
+            span {
+                color: $corTerciaria;
+                font-size: 27px;
+                display: block;
+
+                &.sectionNunca__destaque {
+                    font-size: 40px;
+                }
+            }
+        }
+
+        &Empresa,
+        &Reuniao {
+            h2 {
+                color: $corSecundaria;
+            }
+        }
+
+        &Aprender {
+            @extend %bg-escuro;
+            background-image: url("../img/imgFundo.png");
+            background-repeat: no-repeat;
+            background-size: 250px;
+            background-position: 120% bottom;
+            padding-bottom: 232px;
+        }
+
+        &Valor {
+
+            h2 {
+                color: $corPrimaria;
+            }
+
+            h3 {
+                color: $corSecundaria;
+            }
+
+            &__aviso {
+                background-color: $corTerciaria;
+                padding: 1rem;
+                border-radius: 20px;
+                color: $corTexto;
+                font-size: .8em;
+                font-weight: bold;
+                display: inline-block;
+                margin: 1rem auto;
+                margin-bottom: 0;
+            }
+
+            &__button {
+                // background: $corQuartenaria;
+                margin-bottom: 1rem;
+            }
+
+        }
+
+        &Instrutor {
+            h2 {
+                color: $corSecundaria;
+            }
+
+            &__nome {
+                background-color: $corPrimaria;
+                color: $corQuartenaria;
+                display: inline-block;
+                padding: 5px 10px;
+                width: 70%;
+                margin: 0;
+            }
+
+            &__especialidade {
+                margin: 0;
+            }
+        }
+
+        &FAQ {
+            @extend %bg-escuro;
+
+            a {
+                color: $corQuartenaria;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+
+            .topico {
+                display: flex;
+                align-items: center;
+
+                img {
+                    max-width: 30px;
+                    margin-right: 15px;
+                    display: inline-block;
+                }
+
+                span {
+                    color: $corQuartenaria;
+                }
+            }
+        }
+
+        &UltimaChamada {
+            @extend %bg-escuro;
+
+            h2 {
+                span {
+                    color: $corTerciaria
+                }
+            }
+        }
+    }
+}
+
+.footer {
+    background-color: #163967;
+
+    a {
+        color: $corQuartenaria;
+
+    }
+}
+
+@include mq("tablet-wide") {
+    .countdown {
+        font-size: 3.5em;
+    }
+
+    ul {
+        li {
+            &:before {
+                top: 8px;
+            }
+
+            ul li:before {
+                top: 13px;
+            }
+        }
+    }
+
+    .header,
+    .main__section {
+        padding: 64px 0;
+    }
+
+    .button__trigger {
+        font-size: 1.5em;
+
+    }
+
+    .logo {
+        max-width: 500px;
+    }
+
+    .header {
+        padding: 64px 0;
+
+        .obrigado {
+            h2 {
+                font-size: 32px;
+
+                &.obrigado__titulo {
+                    font-size: 42px;
+                }
+            }
+
+            p {
+                font-size: 23px;
+            }
+        }
+        h1 {
+            font-size: 42px;
+        }
+
+        .countdown {
+            font-size: 3.5em;
+        }
+
+        &__logo {
+            max-width: 500px;
+        }
+    }
+
+    .main {
+        .section {
+            &Nunca {
+                font-size: 23px;
+
+                span {
+                    font-size: 32px;
+
+                    &.sectionNunca__destaque {
+                        font-size: 52px;
+                    }
+                }
+            }
+
+            &Aprender {
+                background-size: 40%;
+                background-position: 110% bottom;
+                padding-bottom: 64px;
+            }
+
+            &Valor {
+                .preco {
+                    display: inline-block;
+                }
+
+                .countdown {
+                    color: $corTerciaria;
+                }
+            }
+
+            &Instrutor {
+                img {
+                    position: relative;
+                    z-index: 1;
+                }
+
+                &__nome {
+                    margin-left: -40px;
+                    position: relative;
+                    z-index: 0;
+                }
+
+                &__especialidade {
+                    margin-bottom: 65px;
+                }
+            }
+        }
+    }
+}

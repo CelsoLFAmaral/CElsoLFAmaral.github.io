@@ -1,0 +1,147 @@
+
+$breakpoints: (
+    "phone-wide": 400px,
+    "tablet": 768px,
+    "tablet-wide": 1024px,
+    "desktop": 1280px,
+    "desktop-wide": 1366px,
+    "desktop-extra-wide": 1440px,
+    "desktop-large": 1600px,
+    "desktop-extra-large": 1900px,
+    "desktop-xx-large": 2500px
+    );
+
+@mixin mq($px, $worh: width, $type: min) {
+    @if map_has_key($breakpoints, $px) {
+        $px: map_get($breakpoints, $px);
+
+        @if $type==min {
+            $px: $px - 1px;
+        }
+
+        @media only screen and (#{$type}-#{$worh}: $px) {
+            @content;
+        }
+    }
+}
+
+
+// imagem de fundo
+@mixin background-image($img, $positionX:center, $positionY:center, $size:cover, $repeat:no-repeat) {
+    background-image: url('../../img/'+$img) $repeat $size  $positionX $positionY;
+}
+
+//default pseudo
+@mixin pseudo($content: '', $display: block, $pos: absolute) {
+    content: $content;
+    display: $display;
+    position: $pos;
+}
+
+@mixin size($width, $height: $width) {
+    width: $width;
+    height: $height;
+}
+
+@mixin centerX{
+    left: 50%;
+    transform: translateX(-50%)
+}
+
+@mixin centerY{
+    top: 50%;
+    transform: translateY(-50%)
+}
+
+@mixin center{
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%)
+}
+
+@mixin shadow{
+    -webkit-box-shadow: 0px 5px 8px 0px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 0px 5px 8px 0px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 5px 8px 0px rgba(0, 0, 0, 0.3);
+}
+
+//botão pressionavel
+@mixin buttonPressionado($boxShadowColor:#000, $boxShadowBottom:5px, $padtb:5px, $padlr:20px) {
+    text-transform: uppercase;
+    border: none;
+    padding: $padtb $padlr;
+    display: inline-block;
+    color: #fff;
+    box-shadow: 0 $boxShadowBottom 0 $boxShadowColor;
+
+    &:hover {
+        box-shadow: 0 $boxShadowBottom 0 $boxShadowColor;
+
+    }
+
+    &:active {
+        position: relative;
+        top: $boxShadowBottom;
+        box-shadow: none;
+
+    }
+}
+
+@mixin circle($size) {
+    &--circle{
+        border-radius: 100%;
+        display: inline-flex;
+        @include size($size);
+    }
+}
+
+@mixin hoverGrowUp {
+    &--hoverGrowUp:hover, &--hoverGrowUp:focus {
+        -moz-transform: scale(1.05);
+        -webkit-transform: scale(1.05);
+        transform: scale(1.05);
+        transition: .3s;
+    }
+}
+
+@mixin hoverLighten{
+    &--hoverLighten:hover {
+        opacity: 0.8;
+    }
+}
+
+@mixin listPointImage($img) {
+    position: relative;
+
+    &--listDecoration:after {
+        @include pseudo;
+        left: -30px;
+        @include centerx;
+        @include size(15px);
+        background: url('../../img/'+$img) no-repeat cover center;
+    }
+
+}
+
+//Set placeholder color 
+@mixin inputPlaceholder {
+    &.placeholder {
+        @content;
+    }
+
+    &:-moz-placeholder {
+        @content;
+    }
+
+    &::-moz-placeholder {
+        @content;
+    }
+
+    &:-ms-input-placeholder {
+        @content;
+    }
+
+    &::-webkit-input-placeholder {
+        @content;
+    }
+}

@@ -1,0 +1,489 @@
+@import "layout";
+
+$textoClaro:#F9F9F9;
+$textoEscuro:#2C3960;
+$corDestaque:#2249EC;
+$corBotao:#FFCB3A;
+$bgCorpo:#E4EEF6;
+$bgCorpoEscuro:#10236B;
+
+%bgEscuro {
+    background-color: $bgCorpoEscuro;
+    color: $textoClaro;
+}
+
+%button {
+    display: block;
+    background-color: $corBotao;
+    color: $textoEscuro;
+    border-radius: 15px;
+    padding: 10px 15px;
+    margin: 20px 0;
+    max-width: 400px;
+    text-align: center;
+    font-weight: bold;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .16), 0 2px 10px 0 rgba(0, 0, 0, .12);
+    transition: .4s;
+
+    &:hover {
+        background-color: #e9c971;
+        transition: .4s
+    }
+}
+
+%titulo {
+    color: $corDestaque;
+    margin: 0;
+}
+
+%subtitulo {
+    font-weight: normal;
+    margin: 0;
+}
+
+%logo {
+    max-width: 125px;
+}
+
+.formulario {
+    @include modal;
+    select{
+        display: block;
+    }
+    &__button{
+        @include hoverGrowUp;
+        font-size: 1.5em;
+    }
+}
+
+body {
+    background-color: $bgCorpo;
+    color: $textoEscuro;
+}
+
+.header {
+    @include background-image("headerBg.png", bottom);
+    color: $textoClaro;
+    .row{
+        min-height: calc(100vh - 130px);
+    }
+    &__logo {
+        @extend %logo;
+        margin-bottom: 100px;
+    }
+
+    &__titulo {
+        font-size: 20px;
+        line-height: 1em;
+
+        &--destaque {
+            font-size: 36px;
+            line-height: 1em;
+            color: $corBotao;
+
+            &2 {
+                line-height: 1em;
+                font-size: 40px;
+            }
+        }
+    }
+
+    &__card {
+        background-color: rgba($color: #09133B, $alpha: .63);
+        border: solid 1px rgba($color: #086AE9, $alpha: .58);
+        border-radius: 20px;
+        padding: 0 1rem;
+        margin: 1rem 0;
+
+        p {
+            line-height: 1.2em;
+        }
+    }
+
+    &__button {
+        @extend %button;
+    }
+}
+
+.main {
+    .sectionJornada {
+        &__titulo {
+            @extend %titulo;
+        }
+
+        &__subtitulo {
+            @extend %subtitulo;
+        }
+
+        &__card {
+            @extend %bgEscuro;
+            border-radius: 30px;
+            padding: 1rem;
+            font-weight: bold;
+        }
+    }
+
+    .sectionChristian {
+        @extend %bgEscuro;
+        padding-top: 200px;
+        margin-top: 200px;
+
+        &__perfil {
+            margin-top: -380px;
+        }
+
+        &__titulo,
+        &__subtitulo {
+            margin: 0;
+            line-height: 1.2em;
+        }
+
+        &__subtitulo {
+            font-weight: normal;
+        }
+    }
+
+    .sectionModulos {
+        h2 {
+            @extend %titulo;
+        }
+
+        h3 {
+            @extend %subtitulo;
+        }
+
+        .marTop-0 {
+            margin-top: 0;
+        }
+
+        .marTB-50 {
+            margin: 50px 0;
+        }
+
+        &__tituloModulo {
+            &--destaque {
+                font-weight: normal;
+            }
+        }
+
+        .collapsible {
+            border-top: none;
+            border-right: none;
+            border-left: none;
+            box-shadow: none;
+            margin: .5rem 0 1rem;
+            font-size: 1em;
+
+            h3 {
+                font-weight: bold;
+                color: $corDestaque;
+                margin: 1em 0;
+            }
+
+            ul {
+                font-size: 1em;
+
+                li {
+                    list-style: disc;
+
+                    ul {
+                        li {
+                            list-style: circle;
+                        }
+                    }
+                }
+            }
+
+            li {
+                list-style: none;
+            }
+
+            &-header {
+                display: inline-block;
+                color: #0C34AD;
+                background-color: transparent;
+                border: solid 1px #0C34AD;
+                width: 100%;
+                max-width: 500px;
+                border-radius: 20px;
+                padding: 10px 15px;
+                margin: 20px 0;
+                font-weight: bold;
+                transition: .4s;
+                font-size: 16px;
+            }
+
+            &-body {
+                border-bottom: none;
+            }
+        }
+
+        &__card {
+            background-color: $textoClaro;
+            color: $corDestaque;
+            border-radius: 30px;
+            margin-top: 200px;
+            padding: 1rem 0;
+            box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .16), 0 2px 10px 0 rgba(0, 0, 0, .12);
+
+            img {
+                position: absolute;
+                bottom: 14px;
+                left: 50%;
+                transform: translate(-50%);
+            }
+
+            * {
+                margin: 0;
+            }
+        }
+    }
+
+    .sectionBonus {
+        @include background-image("valorBg.png");
+        @extend %bgEscuro;
+        padding-bottom: 400px;
+
+        &__titulo {
+            margin-bottom: 2em;
+        }
+
+        &__subtitulo {
+            color: $corBotao;
+        }
+
+        &__tituloCaixa {
+            margin-top: 2em;
+        }
+    }
+
+    .sectionValor {
+        @extend %bgEscuro;
+
+        &__card {
+            background-color: #fff;
+            padding: 32px 0;
+            color: $textoEscuro;
+            margin: 0 auto;
+            border-radius: 30px;
+            margin-top: -450px;
+        }
+
+        &__linha {
+            margin-left: -.70rem;
+            margin-right: -.70rem;
+
+            &:nth-child(even) {
+                background-color: #F5F6F9;
+            }
+        }
+
+        &__preco {
+            font-weight: bold;
+            line-height: 1.2em;
+
+            &--riscado {
+                position: relative;
+                font-size: 1.3em;
+
+                &:after {
+                    position: absolute;
+                    content: "";
+                    left: -7.5%;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    width: 115%;
+                    height: 1px;
+                    background-color: red;
+                }
+            }
+
+            &Parcelado {
+                font-size: 2.5em;
+                font-weight: bold;
+                color: $corDestaque;
+                margin: 0;
+                line-height: 1.2em;
+
+                &--centavos {
+                    font-size: .5em;
+                }
+            }
+        }
+
+        &__total {
+            background-color: $bgCorpoEscuro;
+            color: $textoClaro;
+            border-radius: 30px;
+            font-size: 1.5em;
+        }
+
+        &__button {
+            @extend %button;
+            margin-top: 30px;
+            margin-bottom: .5rem;
+            margin-left: auto;
+            margin-right: auto;
+            font-size: .8em;
+
+            &--aviso {
+                font-size: .8em;
+            }
+        }
+    }
+
+    .sectionFaq {
+        @extend %bgEscuro;
+
+        .collapsible {
+            border: none;
+            box-shadow: none;
+
+            li {
+                list-style: none;
+
+                ul {
+                    margin: 2rem;
+                    font-size: 1em;
+                }
+            }
+
+            &__li {
+                border: 1px solid $textoClaro;
+                border-radius: 30px;
+                margin: 2rem 0;
+            }
+
+            &-header {
+                background-color: transparent;
+                border: none;
+
+                span {
+                    // width: 85%;
+                    display: inline-block;
+                }
+
+                i {
+                    display: inline-block;
+                    float: none;
+                    margin: 0;
+                    font-size: .8em;
+                    border: 1px solid #F9F9F9;
+                    border-radius: 100%;
+                    position: relative;
+                    width: 23px;
+                    height: 23px;
+
+                    &::before {
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                    }
+                }
+            }
+
+            &-body {
+                border: none;
+            }
+        }
+
+        &__plus {
+            // width: 10%;
+            display: inline-flex;
+
+        }
+    }
+
+    .sectionUltimaChamada {
+        @extend %bgEscuro;
+        @include background-image("ultimaChamadaBg.png");
+        &__titulo {
+            font-size: 20px;
+            line-height: 1em;
+    
+            &--destaque {
+                font-size: 36px;
+                line-height: 1em;
+                color: $corBotao;
+    
+                &2 {
+                    line-height: 1em;
+                    font-size: 40px;
+                }
+            }
+        }
+    
+        &__card {
+            background-color: rgba($color: #09133B, $alpha: .63);
+            border: solid 1px rgba($color: #086AE9, $alpha: .58);
+            border-radius: 20px;
+            padding: 0 1rem;
+            margin: 1rem 0;
+    
+            p {
+                line-height: 1.2em;
+            }
+        }
+    
+        &__button {
+            @extend %button;
+        }
+    }
+}
+
+.footer {
+   background-color: #07133D;
+   color: $textoClaro;
+    &__logo {
+        @extend %logo;
+    }
+}
+
+@include mq("tablet") {
+    .marTB-100 {
+        margin: 100px 0;
+    }
+
+    .order-1 {
+        order: 1;
+    }
+
+    .order-2 {
+        order: 2;
+    }
+
+    .order-3 {
+        order: 3;
+    }
+
+    .header {
+        &__logo {
+         max-width: 200px;
+        }
+    }
+
+    .main {
+        .sectionModulos {
+            &__card {
+                img {
+                    bottom: -16px;
+                }
+            }
+        }
+
+        .sectionValor {
+            &__linha {
+                padding: 0 2rem;
+            }
+            &__preco--riscado {
+                font-size: 2em;
+            }
+
+            &__button {
+                font-size: 1em;
+                max-width: 500px;
+            }
+        }
+    }
+}

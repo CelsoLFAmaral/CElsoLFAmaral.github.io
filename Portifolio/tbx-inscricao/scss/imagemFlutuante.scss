@@ -1,0 +1,111 @@
+//BASE
+@import 'base';
+
+// .main,.header,.footer {
+//     overflow-x: hidden;
+
+// }
+
+.container {
+    position: relative;
+
+}
+
+.container-imagemFlutuante {
+    position: absolute;
+    height: 100%;
+    width: 98.5vw;
+    left: 50%;
+    transform: translateX(-50%);
+
+    &__imgFl {
+        transform: translate(-50%, -50%);
+        position: absolute;
+
+        $-v: 100;
+        $v: 0;
+        @for $i from 20 through 0 {
+            &.md-v--#{$i * 5} {
+                top: -#{$-v}px;
+            }
+
+            $-v: $-v - 5;
+        }
+
+        @for $i from 0 through 2000 {
+            &.md-v-#{$i * 5} {
+                top: #{$v}px;
+            }
+
+            $v: $v+5;
+        }
+
+        @for $i from 50 through 1 {
+            &.md-h--#{$i} {
+                left: -#{$i}vw;
+            }
+
+        }
+
+        @for $i from 0 through 150 {
+            &.md-h-#{$i} {
+                left: #{$i}vw;
+            }
+
+        }
+
+        @include mq('desktop-wide') {
+            $-v: 0;
+            $v: 0;
+
+            @for $i from 0 through 2000 {
+                &.lg-v-#{$i * 5} {
+                    top: #{$v}px;
+                }
+
+                $v: $v+5;
+            }
+
+            @for $i from 50 through 1 {
+                &.lg-h--#{$i} {
+                    left: -#{$i * 5}vw;
+                }
+
+            }
+
+            @for $i from 0 through 150 {
+                &.lg-h-#{$i} {
+                    left: #{$i}vw;
+                }
+
+            }
+        }
+
+        @include mq('desktop-extra-large') {
+            $-v: 0;
+            $v: 0;
+
+            @for $i from 0 through 2000 {
+                &.xl-v-#{$i * 5} {
+                    top: #{$v}px;
+                }
+                $v: $v+5;
+            }
+
+            @for $i from 50 through 1 {
+                &.xl-h--#{$i} {
+                    left: -#{$i}vw;
+                }
+
+            }
+
+            @for $i from 0 through 150 {
+                &.xl-h-#{$i} {
+                    left: #{$i}vw;
+                }
+
+            }
+        }
+
+    }
+}

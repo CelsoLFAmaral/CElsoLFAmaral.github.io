@@ -1,0 +1,587 @@
+@import 'base';
+@import 'layout';
+
+@include reset;
+
+body {
+    font-family: $fontSerif;
+    font-weight: 300;
+    font-size: 13.5px
+}
+
+.header {
+    background-image: url(../img/bg_header_mobile.png);
+    background-size: cover;
+    background-position-x: 64%;
+    background-attachment: fixed;
+    min-height: 100vh;
+
+    &__row {
+        padding: 5px 0;
+        min-height: 100vh;
+    }
+
+    &__logo {
+        max-width: 80%;
+        padding-top: 5px
+    }
+
+    &__subtitulo {
+        @extend #SANSERIF;
+        font-size: 1.5em;
+
+        &--vermelho {
+            @extend .vermelho;
+        }
+    }
+
+    &__data {
+        @extend #SANSERIF;
+        margin-bottom: 0
+    }
+
+    &__local {
+        @extend #SANSERIF;
+        margin-top: 0
+    }
+
+    &__button {
+        @extend #HIDDENXS
+    }
+}
+
+.main {
+    &__section {
+        padding: 30px 0;
+    }
+
+    .sectionSucesso {
+        &__titulo {
+            @extend #HEADLINE;
+
+            &--vermelho {
+                @extend .vermelho;
+            }
+        }
+
+        &__img {
+            display: inherit;
+            max-width: 400px;
+            margin: 3rem auto
+        }
+
+        &__logo {
+            max-width: 400px;
+            margin: 2rem auto;
+            display: inherit
+        }
+    }
+
+    .sectionAtencao {
+        &__card{
+            background-color: $corDestaque;
+            font-family: $fontSanSerif;
+            font-weight: bold;
+            color: #fff;
+        }
+        &__titulo {
+            font-size: 1.6em;
+            margin-top: 0
+        }
+
+        &__traco {
+            @extend .tracoCurto
+        }
+    }
+
+    .sectionTreinamento{
+        padding: 0;
+        &__logo {
+            display: inherit;
+            max-width: 400px;
+            margin: 3rem auto
+        }
+
+        .card {
+            background-color: $corDias;
+            font-family: $fontSanSerif;
+            color: #fff;
+            padding: 30px 60px;
+
+            &__logoTitulo {
+                max-width: 50px;
+                margin-right: 10px;
+                margin-bottom: -5px;
+                display: inline-block
+            }
+
+            &__titulo {
+                display: inline-block;
+            }
+
+            .separador {
+                display: flex;
+
+                margin-top: 30px;
+
+                &__traco {
+                    display: inline-flex;
+                    background-color: #fff;
+                    width: 100%;
+                    height: 2px;
+
+                }
+            }
+        }
+
+    }
+
+    .sectionImersao {
+        padding-top: 0;
+       &__card{
+        background-color: $corDestaque;
+        font-family: $fontSanSerif;
+        font-weight: bold;
+        color: #fff;
+        padding: 30px 60px;
+       }
+
+        & .bordaCircular {
+            &__i {
+                color: #fff;
+
+                &.fa-wpexplorer {
+                    font-size: 2.5em
+                }
+
+            }
+        }
+
+        .separador {
+            display: flex;
+
+            margin-top: 30px;
+            &__traco {
+                display: inline-flex;
+                background-color: #fff;
+                width: 100%;
+                height: 2px;
+
+            }
+        }
+    }
+
+    .sectionSbpnl {
+
+        
+        background-color: #002C47;
+        font-family: $fontSanSerif;
+        color: #fff;
+
+        &__titulo {
+            margin-bottom: 0
+        }
+
+        &__subtitulo {
+            margin-top: 0
+        }
+
+        &__traco {
+            @extend .tracoCurto
+        }
+
+        &__img {
+            padding: 20px
+        }
+    }
+
+    .sectionMentores {
+        background-color: #002136;
+        font-family: $fontSanSerif;
+        color: #fff;
+
+        &__titulo {
+            margin-bottom: 0
+        }
+
+        &__subtitulo {
+            margin-top: 0
+        }
+
+        &__traco {
+            @extend .tracoCurto
+        }
+
+        .perfil {
+            margin: 50px 0;
+
+            &__img {
+                margin: 0
+            }
+
+            &__titulo {
+                margin-top: 0;
+            }
+
+            &__subtitulo {
+                font-size: 1.5em;
+            }
+        }
+    }
+
+    .sectionPresentes {
+        &__titulo {
+            @extend #HEADLINE;
+            margin-bottom: 1.6rem
+        }
+
+        &__img {
+            padding: 30px 0
+        }
+    }
+
+    .sectionLocal {
+        background-color: #F9F9F9;
+
+        .info {
+            font-size: .9em;
+            &.card {
+ 
+                margin: .5rem 0;
+                border: solid 1px #000;
+                padding: 15px;
+                box-shadow: none
+            }
+
+            &__titulo,
+            &__texto {
+                margin: 0
+            }
+
+        }
+
+        &__img {
+            max-width: 400px;
+        }
+
+        &__button {
+            padding: 5px 30px;
+        }
+
+    }
+
+    .sectionParticipar {
+        .valor {
+            color: #FA1B57;
+            border: 2px dashed #FA1B57;
+            border-radius: 30px;
+            padding: 20px 0;
+            width: 100%;
+            margin: 30px auto;
+
+            &__texto {
+                font-weight: bolder;
+                font-size: 1.2em;
+                margin: 0;
+
+                &--regular {
+                    font-weight: initial
+                }
+            }
+
+            &__preco {
+                font-weight: 800;
+
+                &--big {
+                    font-size: 1.5em;
+
+                }
+            }
+        }
+
+        &__button {
+            margin: 20px 0;
+
+        }
+
+        .button--verde {
+
+            font-size: 1.1em;
+            margin: 0;
+            padding: 10px 40px
+        }
+
+        &__email {
+            text-decoration: underline
+        }
+    }
+
+    .sectionEvento {
+        background-image: url('../img/bg_sectionEvento.png');
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+        color: #fff;
+        padding: 50px 0;
+
+        &__titulo {
+            color: #FA185A
+        }
+    }
+
+    .sectionPerguntas {
+        background-color: #232323;
+        color: #fff;
+
+        &__titulo {
+            color: #FD0A6B
+        }
+
+        ul {
+            padding: 0;
+
+            li {
+                list-style: none;
+                margin: 30px 0;
+
+            }
+
+            .imersao {
+                padding-left: 30px
+            }
+        }
+
+        .collapsible {
+            &-header {
+                display: -webkit-box;
+                display: -webkit-flex;
+                display: -ms-flexbox;
+                display: flex;
+                cursor: pointer;
+                -webkit-tap-highlight-color: transparent;
+                padding: 0 20px;
+                width: 100%;
+                border: solid 2px #FD0A6B;
+
+                &__titulo {
+                    display: inline-block;
+                    width: 90%
+                }
+
+                &__icon {
+                    display: inline-block;
+                    width: 10%
+                }
+
+                i {
+                    display: inline-block;
+                }
+
+                &.active>.collapsible-body {
+                    display: block;
+                    height: auto !important;
+
+                }
+            }
+
+            &-body {
+                display: none;
+                padding: 0 20px;
+                border: solid 2px #FD0A6B;
+                border-top-color: transparent;
+
+                a {
+                    color: #fff
+                }
+
+            }
+        }
+    }
+
+}
+
+
+.footer {
+    padding: 2rem 0 calc(2rem + 94px) 0;
+    background-color: #232323;
+    color: #fff;
+
+    &__logos {
+        max-width: 250px
+    }
+
+    &__termos {
+        color: #fff
+    }
+}
+
+.bottomButton {
+    background: rgba(246, 41, 68, 1);
+    background: -moz-linear-gradient(left, rgba(246, 41, 68, 1) 0%, rgba(255, 0, 119, 1) 100%);
+    background: -webkit-gradient(left top, right top, color-stop(0%, rgba(246, 41, 68, 1)), color-stop(100%, rgba(255, 0, 119, 1)));
+    background: -webkit-linear-gradient(left, rgba(246, 41, 68, 1) 0%, rgba(255, 0, 119, 1) 100%);
+    background: -o-linear-gradient(left, rgba(246, 41, 68, 1) 0%, rgba(255, 0, 119, 1) 100%);
+    background: -ms-linear-gradient(left, rgba(246, 41, 68, 1) 0%, rgba(255, 0, 119, 1) 100%);
+    background: linear-gradient(to right, rgba(246, 41, 68, 1) 0%, rgba(255, 0, 119, 1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f62944', endColorstr='#ff0077', GradientType=1);
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+    width: 100%;
+    padding: 10px 0;
+
+    &__button {
+        color: #000;
+        background: #fff;
+        padding: 10px 0;
+        width: 100%;
+        max-width: 90%;
+        // border: none;
+        border-radius: 15px;
+        transition-property: all;
+        animation: pulse 1s infinite;
+
+    }
+}
+
+@include mq('phone-wide') {
+    body {
+        font-size: 15px
+    }
+
+    .container-fluid {
+        padding: 0 2rem;
+    }
+
+    .row {
+        margin: 0 -.5rem;
+    }
+
+    .header {
+        &__row {
+            padding: 30px 0;
+        }
+
+        &__logo {
+            max-width: 100%
+        }
+    }
+}
+
+@include mq('tablet') {
+    body {
+        font-size: 20px
+    }
+
+    .bottomButton {
+        padding: 20px 0;
+
+        &__button {
+            font-size: 2em;
+            border-radius: 30px;
+            max-width: 80%;
+
+        }
+    }
+}
+
+@include mq('tablet-wide') {
+    #HIDDENMD {
+        display: none !important
+    }
+
+    #VISIBLEMD {
+        display: inline-block !important
+    }
+
+    body {
+        font-size: 16px
+    }
+
+    .header {
+        background-image: url(../img/bg_header.png);
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+
+        &__logo {
+            max-width: 400px;
+            padding: 0
+        }
+
+        &__subtitulo {
+            font-size: 2em;
+        }
+
+        &__local {
+            font-size: 1.1em
+        }
+
+        &__button {
+            @extend #VISIBLEMD;
+            color: #fff;
+            font-size: 1.5em;
+        }
+    }
+
+    .main {
+        .sectionSucesso {
+
+            .dias,
+            .imersao {
+                padding: 30px 60px;
+            }
+        }
+
+        .sectionMentores {
+            .perfil {
+                &__img {
+                    margin: 50px 0;
+                }
+            }
+        }
+
+        .sectionParticipar {
+            .valor {
+                width: 80%;
+            }
+        }
+    }
+
+    .footer {
+        padding-bottom: 2rem;
+
+        &__logos {
+            max-width: 350px
+        }
+    }
+
+    .bottomButton {
+        @extend #HIDDENMD
+    }
+
+    #modal-pdf {
+        width: 60% !important;
+        height: 80% !important;
+    }
+
+}
+
+@include mq('desktop-extra-large') {
+    body {
+        font-size: 25px
+    }
+    .header{
+        &__titulo{
+            font-size: 1.5em
+        }
+    }
+    .main{
+        .sectionLocal{
+            .info{
+                font-size: .8em
+            }
+        }
+    }
+}

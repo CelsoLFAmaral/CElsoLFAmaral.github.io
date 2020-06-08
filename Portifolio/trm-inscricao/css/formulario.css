@@ -1,0 +1,161 @@
+.formulario__nome, .formulario__email, .formulario__telefoneHidden, .formulario__cargo, .formulario__interesse,
+.formulario .mascaraTelefone {
+  width: 100%;
+  display: block !important;
+  padding: 0 15px !important;
+  border: 1px solid #ddd !important;
+  border-radius: 10px !important;
+  box-sizing: border-box !important;
+  margin: 0 !important;
+  color: #969696 !important;
+  height: 3rem;
+  transition: 0.3s;
+}
+
+.placeholder.formulario__nome, .placeholder.formulario__email, .placeholder.formulario__telefoneHidden, .placeholder.formulario__cargo, .placeholder.formulario__interesse,
+.formulario .placeholder.mascaraTelefone {
+  color: #969696 !important;
+}
+
+.formulario__nome:-moz-placeholder, .formulario__email:-moz-placeholder, .formulario__telefoneHidden:-moz-placeholder, .formulario__cargo:-moz-placeholder, .formulario__interesse:-moz-placeholder,
+.formulario .mascaraTelefone:-moz-placeholder {
+  color: #969696 !important;
+}
+
+.formulario__nome::-moz-placeholder, .formulario__email::-moz-placeholder, .formulario__telefoneHidden::-moz-placeholder, .formulario__cargo::-moz-placeholder, .formulario__interesse::-moz-placeholder,
+.formulario .mascaraTelefone::-moz-placeholder {
+  color: #969696 !important;
+}
+
+.formulario__nome:-ms-input-placeholder, .formulario__email:-ms-input-placeholder, .formulario__telefoneHidden:-ms-input-placeholder, .formulario__cargo:-ms-input-placeholder, .formulario__interesse:-ms-input-placeholder,
+.formulario .mascaraTelefone:-ms-input-placeholder {
+  color: #969696 !important;
+}
+
+.formulario__nome::-webkit-input-placeholder, .formulario__email::-webkit-input-placeholder, .formulario__telefoneHidden::-webkit-input-placeholder, .formulario__cargo::-webkit-input-placeholder, .formulario__interesse::-webkit-input-placeholder,
+.formulario .mascaraTelefone::-webkit-input-placeholder {
+  color: #969696 !important;
+}
+
+.formulario__nome:focus, .formulario__email:focus, .formulario__telefoneHidden:focus, .formulario__cargo:focus, .formulario__interesse:focus,
+.formulario .mascaraTelefone:focus {
+  box-shadow: none !important;
+  border-bottom: 1px solid #000 !important;
+  border-color: #2249EC !important;
+  transition: 0.3s;
+}
+
+.formulario {
+  padding: 30px;
+}
+
+.formulario-pdf {
+  padding: 0;
+}
+
+.formulario__telefoneDdd, .formulario__telefoneNumero {
+  margin-bottom: 0 !important;
+  border: none !important;
+  display: inline-block !important;
+  height: 2.5rem;
+}
+
+.formulario__telefoneDdd:focus, .formulario__telefoneNumero:focus {
+  box-shadow: none !important;
+  border-bottom: 1px solid transparent !important;
+  transition: .5s;
+}
+
+.formulario select {
+  font-size: 0.7em !important;
+}
+
+.formulario select:focus {
+  outline: none !important;
+}
+
+.formulario__telefoneDdd {
+  max-width: 21%;
+  padding-right: 0;
+}
+
+.formulario__telefoneNumero {
+  max-width: 72.5%;
+}
+
+.formulario__check {
+  display: flex;
+  font-size: .8em;
+  border: none;
+  padding: 0;
+}
+
+.formulario .mascara {
+  position: relative;
+  margin: 0 0 20px;
+}
+
+.formulario .mascara i {
+  position: absolute;
+  opacity: 0;
+  transition: 0.3s;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+}
+
+.formulario .mascaraBotao {
+  display: inline;
+}
+
+.formulario .mascaraBotao i {
+  color: #fff;
+  right: 25%;
+}
+
+.formulario__button {
+  cursor: pointer;
+  pointer-events: painted;
+  color: #fff;
+  border-radius: 20px;
+  font-size: 1em;
+  width: 100%;
+  margin-top: 20px;
+  padding: 15px;
+  border: 1px solid #ddd;
+  font-weight: 600;
+  background: #01fcc6;
+  background: -webkit-gradient(left top, right top, color-stop(0%, #01fcc6), color-stop(100%, #27e38b));
+  background: linear-gradient(to right, #01fcc6 0%, #27e38b 100%);
+  transition: .3s;
+}
+
+.formulario__button:hover {
+  color: #fff;
+  opacity: 0.8;
+}
+
+.formulario__button--desativado {
+  background: #77767b;
+  color: #d6d6d8;
+  pointer-events: none;
+  font-weight: bold;
+  transition: .3s;
+}
+
+.formulario .termo--link {
+  color: blue;
+  cursor: pointer;
+}
+
+@media only screen and (min-width: 767px) {
+  .formulario__telefoneDdd {
+    display: inline-block;
+    max-width: 15%;
+  }
+  .formulario__telefoneNumero {
+    display: inline-block;
+    max-width: 81.5%;
+  }
+}
+/*# sourceMappingURL=formulario.css.map */

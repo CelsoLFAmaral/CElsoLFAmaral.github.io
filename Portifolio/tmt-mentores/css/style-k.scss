@@ -1,0 +1,322 @@
+#particles-background,
+#particles-foreground {
+
+    width: 100%;
+    min-height: 100vh;
+
+    // -webkit-transform: scale3d(0.5, 0.5, 1);
+    // -moz-transform: scale3d(0.5, 0.5, 1);
+    // -ms-transform: scale3d(0.5, 0.5, 1);
+    // -o-transform: scale3d(0.5, 0.5, 1);
+    // transform: scale3d(0.5, 0.5, 1);
+}
+
+#particles-background {
+    background: #2c2d44;
+    background-image: -moz-linear-gradient(45deg, #3f3251 2%, #002025 100%);
+    background-image: -webkit-linear-gradient(45deg, #3f3251 2%, #002025 100%);
+    background-image: linear-gradient(45deg, #3f3251 2%, #002025 100%);
+
+    // 
+    background-image: url('http://liderprodutivo.com.br/inscricao/img/headerBg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-blend-mode: multiply;
+}
+
+#particles-foreground {
+    margin-top: -100vh;
+}
+
+
+
+lesshat-selector {
+    -lh-property: 0;
+}
+
+@-webkit-keyframes rotate {
+    0% {
+        -webkit-transform: rotate(0deg);
+    }
+
+    100% {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+@-moz-keyframes rotate {
+    0% {
+        -moz-transform: rotate(0deg);
+    }
+
+    100% {
+        -moz-transform: rotate(360deg);
+    }
+}
+
+@-o-keyframes rotate {
+    0% {
+        -o-transform: rotate(0deg);
+    }
+
+    100% {
+        -o-transform: rotate(360deg);
+    }
+}
+
+@keyframes rotate {
+    0% {
+        -webkit-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+
+    100% {
+        -webkit-transform: rotate(360deg);
+        -moz-transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+[not-existing] {
+    zoom: 1;
+}
+
+lesshat-selector {
+    -lh-property: 0;
+}
+
+@-webkit-keyframes fade {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.25;
+    }
+}
+
+@-moz-keyframes fade {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.25;
+    }
+}
+
+@-o-keyframes fade {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.25;
+    }
+}
+
+@keyframes fade {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.25;
+    }
+}
+
+[not-existing] {
+    zoom: 1;
+}
+
+lesshat-selector {
+    -lh-property: 0;
+}
+
+@-webkit-keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@-moz-keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@-o-keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+[not-existing] {
+    zoom: 1;
+}
+
+#content-header {
+    min-height: 100vh;
+    margin-top: -100vh;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    z-index: 1000;
+
+    .row-loca {
+        height: calc(100vh - 160px);
+    }
+}
+
+
+h2.top-title {
+    text-transform: uppercase;
+    font-size: 3rem;
+    margin-top: 0;
+    margin-bottom: 15vh;
+    font-weight: 900;
+    color: rgb(255, 230, 0);
+}
+@media (max-width: 600px) 
+{
+    h2.top-title 
+   {
+    font-size: 1.8rem;
+   }
+}
+
+@import url('https://fonts.googleapis.com/css?family=Lato:400,700,900&display=swap');
+
+* {
+    font-family: 'Lato', sans-serif;
+
+}
+
+@keyframes float {
+    0% {
+
+        transform: translatey(0px);
+    }
+
+    50% {
+
+        transform: translatey(-10px);
+    }
+
+    100% {
+
+        transform: translatey(0px);
+    }
+}
+
+.saiba-mais {
+    display: inline-block;
+    animation: float 3s ease-in-out infinite;
+    transition: .3s;
+    border: 2px solid rgba(255, 255, 255, 0);
+    padding: 30px 15px 15px 15px;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, .05);
+    width: 115px;
+    height: 115px;
+
+    &:hover {
+        transition: 1s;
+        -moz-transform: scale(1.1);
+        -webkit-transform: scale(1.1);
+        transform: scale(1.1);
+        border: 2px solid rgba(255, 255, 255, 1);
+
+
+    }
+
+    i {
+        font-size: 2rem;
+    }
+}
+
+
+#trilha-do-mentor {
+    padding-top: 30px;
+    padding-bottom: 30px;
+
+    p {
+        color: #383838;
+        font-size: 1.2rem;
+    }
+
+    strong {
+        font-weight: 900;
+    }
+
+    ul {
+        padding: 0;
+
+        li {
+            list-style: circle;
+        }
+    }
+}
+
+#um-mentor-de-produtividade,
+#porque-escolher {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    background: #2c2d44;
+    background-image: -moz-linear-gradient(45deg, #3f3251 2%, #002025 100%);
+    background-image: -webkit-linear-gradient(45deg, #3f3251 2%, #002025 100%);
+    background-image: linear-gradient(45deg, #3f3251 2%, #002025 100%);
+
+    .avatatar {
+        background: #fff;
+        padding: 11% 10px;
+        border-radius: 50%;
+        animation: float 3s ease-in-out infinite;
+
+        img {
+            -moz-transform: scale(1.1);
+            -webkit-transform: scale(1.15);
+            transform: scale(1.15);
+        }
+    }
+
+    &.white {
+        background-color: #fff !important;
+        background-image: none;
+        color: #383838 !important;
+
+        .avatatar {
+            background-color: #ebecec;
+            padding: 10px 14%;
+        }
+    }
+}
+
+p {
+    font-size: 1.2rem;
+}

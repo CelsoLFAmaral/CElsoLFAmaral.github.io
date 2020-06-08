@@ -1,0 +1,250 @@
+@import url("https://fonts.googleapis.com/css?family=Lato:400,700,900&display=swap");
+#particles-background,
+#particles-foreground {
+  width: 100%;
+  min-height: 100vh;
+}
+
+#particles-background {
+  background: #2c2d44;
+  background-image: linear-gradient(45deg, #3f3251 2%, #002025 100%);
+  background-image: url("http://liderprodutivo.com.br/inscricao/img/headerBg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-blend-mode: multiply;
+}
+
+#particles-foreground {
+  margin-top: -100vh;
+}
+
+lesshat-selector {
+  -lh-property: 0;
+}
+
+@-webkit-keyframes rotate {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@keyframes rotate {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+[not-existing] {
+  zoom: 1;
+}
+
+lesshat-selector {
+  -lh-property: 0;
+}
+
+@-webkit-keyframes fade {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.25;
+  }
+}
+
+@keyframes fade {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.25;
+  }
+}
+
+[not-existing] {
+  zoom: 1;
+}
+
+lesshat-selector {
+  -lh-property: 0;
+}
+
+@-webkit-keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+[not-existing] {
+  zoom: 1;
+}
+
+#content-header {
+  min-height: 100vh;
+  margin-top: -100vh;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  z-index: 1000;
+}
+
+#content-header .row-loca {
+  height: calc(100vh - 160px);
+}
+
+h2.top-title {
+  text-transform: uppercase;
+  font-size: 3rem;
+  margin-top: 0;
+  margin-bottom: 15vh;
+  font-weight: 900;
+  color: #ffe600;
+}
+
+@media (max-width: 600px) {
+  h2.top-title {
+    font-size: 1.8rem;
+  }
+}
+
+* {
+  font-family: 'Lato', sans-serif;
+}
+
+@-webkit-keyframes float {
+  0% {
+    -webkit-transform: translatey(0px);
+            transform: translatey(0px);
+  }
+  50% {
+    -webkit-transform: translatey(-10px);
+            transform: translatey(-10px);
+  }
+  100% {
+    -webkit-transform: translatey(0px);
+            transform: translatey(0px);
+  }
+}
+
+@keyframes float {
+  0% {
+    -webkit-transform: translatey(0px);
+            transform: translatey(0px);
+  }
+  50% {
+    -webkit-transform: translatey(-10px);
+            transform: translatey(-10px);
+  }
+  100% {
+    -webkit-transform: translatey(0px);
+            transform: translatey(0px);
+  }
+}
+
+.saiba-mais {
+  display: inline-block;
+  -webkit-animation: float 3s ease-in-out infinite;
+          animation: float 3s ease-in-out infinite;
+  -webkit-transition: .3s;
+  transition: .3s;
+  border: 2px solid rgba(255, 255, 255, 0);
+  padding: 30px 15px 15px 15px;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.05);
+  width: 115px;
+  height: 115px;
+}
+
+.saiba-mais:hover {
+  -webkit-transition: 1s;
+  transition: 1s;
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+  border: 2px solid white;
+}
+
+.saiba-mais i {
+  font-size: 2rem;
+}
+
+#trilha-do-mentor {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+#trilha-do-mentor p {
+  color: #383838;
+  font-size: 1.2rem;
+}
+
+#trilha-do-mentor strong {
+  font-weight: 900;
+}
+
+#trilha-do-mentor ul {
+  padding: 0;
+}
+
+#trilha-do-mentor ul li {
+  list-style: circle;
+}
+
+#um-mentor-de-produtividade,
+#porque-escolher {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  background: #2c2d44;
+  background-image: linear-gradient(45deg, #3f3251 2%, #002025 100%);
+}
+
+#um-mentor-de-produtividade .avatatar,
+#porque-escolher .avatatar {
+  background: #fff;
+  padding: 11% 10px;
+  border-radius: 50%;
+  -webkit-animation: float 3s ease-in-out infinite;
+          animation: float 3s ease-in-out infinite;
+}
+
+#um-mentor-de-produtividade .avatatar img,
+#porque-escolher .avatatar img {
+  -webkit-transform: scale(1.15);
+  transform: scale(1.15);
+}
+
+#um-mentor-de-produtividade.white,
+#porque-escolher.white {
+  background-color: #fff !important;
+  background-image: none;
+  color: #383838 !important;
+}
+
+#um-mentor-de-produtividade.white .avatatar,
+#porque-escolher.white .avatatar {
+  background-color: #ebecec;
+  padding: 10px 14%;
+}
+
+p {
+  font-size: 1.2rem;
+}
+/*# sourceMappingURL=style-k.css.map */

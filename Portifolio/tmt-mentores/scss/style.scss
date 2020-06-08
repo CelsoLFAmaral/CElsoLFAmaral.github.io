@@ -1,0 +1,256 @@
+@import 'base';
+@import 'layout';
+
+@include reset;
+
+@font-face {
+    font-family: 'Gotham Book';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Gotham Book'), url('../font/GOTHAMBOOK.woff') format('woff');
+}
+
+body {
+    font-family: 'Gotham Book';
+    font-weight: 300;
+    font-size: 13.5px;
+    color: #fff
+}
+
+.main {
+    background-image: url(../img/background_triad_mentor.png);
+    background-position: top center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: calc(100vh - 223px);
+
+    &__section {
+        padding: 30px 0;
+    }
+
+    .sectionHeader {
+
+        &__img {
+            @extend #logo;
+        }
+
+        &__titulo {
+            font-size: 2em
+        }
+
+        .pesquisa {
+            background: #fff;
+
+            &__input {
+                border: none;
+                border-radius: 10px;
+                background-color: #F2F2F2;
+                padding: 20px 15px;
+                width: 100%;
+                margin: 5px 0;
+                border: 1px solid transparent;
+                transition: .3s;
+
+                @include input-placeholder {
+                    color: rgb(175, 175, 175);
+                }
+
+                &:focus {
+                    transition: .3s !important;
+                    border: 1px solid #232323 !important;
+                }
+            }
+        }
+    }
+
+    .sectionResultado {
+        padding-top: 0;
+
+        .ul {
+            padding: 0;
+
+            .li {
+                padding: 2rem .5rem;
+                transition: .3s;
+
+                &--center {
+                    width: 100%;
+                }
+
+                &__borda {
+                    display: flex;
+                    overflow: hidden;
+                    background-color: #fff;
+                    border: 5px solid #353943;
+                    border-radius: 100%;
+                    margin: 0 auto;
+                    width: 200px;
+                    height: 200px;
+                    padding: 3px;
+
+                    img {
+                        // max-width: 200px;
+                        background-color: #fff;
+                        border-radius: 100%;
+
+                    }
+                }
+
+                &__nome {
+                    margin-bottom: 0;
+                    margin-top: 0;
+                    font-size: 1.5em;
+                }
+
+                &__cidade {
+                    margin-top: 0
+                }
+
+                &__descricao {
+                    position: relative;
+                    z-index: 0;
+                    background-color: #353943;
+                    padding: 2rem 1rem 1rem 1rem;
+                    margin-top: -1rem;
+                    margin-bottom: 1rem;
+                    border-radius: 0 0 15px 15px;
+
+                    p {
+                        margin-top: 0
+                    }
+                }
+
+                &__redes a {
+                    display: inline-block;
+                    margin: 1rem .2rem;
+                    color: #fff
+                }
+
+                .button--verde,
+                .button__bordaIcone {
+                    color: #fff;
+                    transition: .3s;
+
+                    &:hover {
+                        -moz-transform: scale(1.1);
+                        -webkit-transform: scale(1.1);
+                        transform: scale(1.1);
+                        transition: .3s;
+                    }
+                }
+
+                &.stepApaga-1 {
+                    -webkit-transition: 1s;
+                    transition: 1s;
+                    opacity: 0;
+                }
+                &.stepApaga-2 {
+                    -webkit-transition: .3s;
+                    transition: .3s;
+                    display: none;
+                }
+    
+                &.stepAparece-1 {
+                    -webkit-transition: .3s;
+                    transition: .3s;
+                    display: block;
+                }
+    
+                &.stepAparece-2 {
+                    -webkit-transition: 1s;
+                    transition: 1s;
+                    opacity: 1;
+                }
+            }
+        }
+
+        .collapsible {
+            .conteudo {
+                max-width: 300px;
+                margin: 0 auto
+            }
+
+            &-header {
+                @extend .conteudo;
+                cursor: pointer;
+
+            }
+
+            .active {
+                display: inline-block;
+                height: auto !important;
+
+            }
+
+            &-body {
+                @extend .conteudo;
+                display: none;
+            }
+        }
+    }
+}
+
+.footer {
+    padding: 50px 0;
+    background-color: #232323;
+    color: #fff;
+
+    &__img {
+        @extend #logo;
+    }
+
+    &__termos {
+        color: #fff;
+        margin: 2rem 1rem 0
+    }
+}
+
+
+
+@include mq('phone-wide') {
+    body {
+        font-size: 15px
+    }
+
+    .container-fluid {
+        padding: 0 2rem;
+    }
+
+    .row {
+        margin: 0 -.5rem;
+    }
+
+    .main {
+        .sectionHeader {
+            &__titulo {
+                font-size: 1.5em
+            }
+        }
+    }
+
+
+}
+
+@include mq('desktop') {
+    body {
+        font-size: 16px
+    }
+
+    .sectionResultado {
+        .ul {
+            .li {
+                &:first {
+                    padding: 2rem .5rem !important;
+                }
+
+                &--center {
+                    padding: 2rem 4.666665% !important;
+
+                    .li__descricao {
+                        margin: -1rem auto 1rem auto
+                    }
+                }
+            }
+        }
+    }
+}
