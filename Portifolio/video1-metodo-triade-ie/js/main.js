@@ -4,9 +4,9 @@ var dataAlvo1 = new Date('03/02/2020 06:29:59'),
     dataAlvo4 = new Date('03/10/2020 06:29:00'),
     video = document.querySelector("#videoPlayer"),
     caixa = document.querySelector("#caixaVideo"),
-    video1 = document.getElementsByClassName(".link1"),
-    enunciado1 = document.getElementsByClassName(".enunciado1"),
-    thumbs1 = document.getElementsByClassName('.thumbs1'),
+    video1 = document.querySelector(".link1"),
+    enunciado1 = document.querySelector(".enunciado1"),
+    thumbs1 = document.querySelector('.thumbs1'),
     video2 = document.querySelector('.link2'),
     enunciado2 = document.querySelector('.enunciado2'),
     thumbs2 = document.querySelector('.thumbs2'),
@@ -18,23 +18,11 @@ var dataAlvo1 = new Date('03/02/2020 06:29:59'),
     thumbs4 = document.querySelector('.thumbs4');
     var dataAtual = new Date;
 
-    // if (dataAtual >= dataAlvo1) {
-        // console.log("foi");
-        
-        thumbs1.setAttribute("style", "pointer-events: none; cursor: none;filter: saturate(100%)");
-        thumbs1.getElementsByTagName("i").setAttribute("class", "fas fa-play");
-        enunciado1.getElementsByClassName(".enunciado__aviso").textContent = "Liberado";
-        caixa.getElementsByTagName('img').setAttribute("style", "display: none");
-        caixa.getElementsByClassName('.header__play').setAttribute("style", "display: none");
-        video.setAttribute("style", "display: block");
-        caixa.setAttribute("style", "filter: saturate(100%)");
-    // }
+ 
 setInterval(() => {
     var dataAtual = new Date;
     
     if (dataAtual >= dataAlvo4) {
-        video4.setAttribute("href", "https://clkdmg.site/lead/8ff75694-ab7d-40e1-a7b4-60a6cad2cd4b");
-        enunciado4.setAttribute("href", "https://clkdmg.site/lead/8ff75694-ab7d-40e1-a7b4-60a6cad2cd4b");
         video4.setAttribute("style", "pointer-events: pointer; cursor: pointer;");
         enunciado4.setAttribute("style", "pointer-events: pointer; cursor: pointer;");
         thumbs4.setAttribute("style", "pointer-events: pointer; cursor: pointer;filter: saturate(100%)");
@@ -42,8 +30,6 @@ setInterval(() => {
         enunciado4.querySelector(".enunciado__aviso").textContent = "Liberado";
     }
     if (dataAtual >= dataAlvo3) {
-        video3.setAttribute("href", "../video3-equilibrio-resultado");
-        enunciado3.setAttribute("href", "../video3-equilibrio-resultado");
         video3.setAttribute("style", "pointer-events: pointer; cursor: pointer;");
         enunciado3.setAttribute("style", "pointer-events: pointer; cursor: pointer;");
         thumbs3.setAttribute("style", "pointer-events: pointer; cursor: pointer;filter: saturate(100%)");
@@ -51,11 +37,15 @@ setInterval(() => {
         enunciado3.querySelector(".enunciado__aviso").textContent = "Liberado";
     }
     if (dataAtual >= dataAlvo2) {
-        video2.setAttribute("href", "../video2-verdadeiro-foco");
-        enunciado2.setAttribute("href", "../video2-verdadeiro-foco");
         thumbs2.setAttribute("style", "filter: saturate(100%)");
         thumbs2.querySelector("i").setAttribute("class", "fas fa-play");
         enunciado2.querySelector(".enunciado__aviso").textContent = "Liberado";
+    }
+    if (dataAtual >= dataAlvo1) {
+        
+            thumbs1.setAttribute("style", "filter: saturate(100%)");
+            thumbs1.querySelector("i").setAttribute("class", "fas fa-play");
+            enunciado1.querySelector(".enunciado__aviso").textContent = "Liberado";
     }
 
 }, 1000);

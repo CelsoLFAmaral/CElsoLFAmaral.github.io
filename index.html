@@ -17,30 +17,35 @@
     <script src="https://kit.fontawesome.com/5d19a24c4a.js"></script>
     <link rel="stylesheet" href="css/flex.min.css">
     <link rel="stylesheet" href="css/style.min.css">
-
-
 </head>
 
 <body>
     <header class="header middle-xs" id="sobre">
-
         <nav class="header__nav nav middle-xs">
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-xs-12">
-                        <h2 class="nav__nome">
-                            Celso Luiz Ferraz do Amaral
-                        </h2>
+                        <img class="nav__img" src="img/perfil.jpg" alt="">
                         <i class="nav__hamburguer fas fa-bars"></i>
                         <i class="nav__close fas fa-times"></i>
                     </div>
                     <div class="col-xs-12">
                         <div class="nav__menu" id="menu">
-                            <a class="nav__link" href="#sobre">Sobre</a>
-                            <a class="nav__link" href="#experiencia">Experiência</a>
-                            <a class="nav__link" href="#formacao">Formação</a>
-                            <a class="nav__link" href="#competencias">Competências</a>
-                            <a class="nav__link" href="#portifolio">Portifólio</a>
+                            <div class="nav__link">
+                                <a href="#sobre">Sobre</a>
+                            </div>
+                            <div class="nav__link">
+                                <a href="#experiencia">Experiência</a>
+                            </div>
+                            <div class="nav__link">
+                                <a href="#formacao">Formação</a>
+                            </div>
+                            <div class="nav__link">
+                                <a href="#competencias">Competências</a>
+                            </div>
+                            <div class="nav__link">
+                                <a href="#portifolio">Portifólio</a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -61,11 +66,11 @@
                     <a class="header__email" href="mailto:celsoluiz.ferrazdoamaral@gmail.com">
                         CELSOLUIZ.FERRAZDOAMARAL@GMAIL.COM
                     </a>
-                    <p class="header__descricao">
+                    <!-- <p class="header__descricao">
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis porro perferendis nam quasi
                         neque eligendi totam quisquam, corrupti quibusdam esse tenetur provident sit delectus laborum
                         laudantium, voluptatum ducimus ea inventore?
-                    </p>
+                    </p> -->
                 </div>
                 <div class="col-xs-3 col-sm-1">
                     <a href="https://github.com/CelsoLFAmaral" target="_blank" rel="noopener noreferrer">
@@ -82,7 +87,6 @@
                     </a>
                 </div>
             </div>
-        </div>
         </div>
     </header>
     <main class="main">
@@ -162,10 +166,8 @@
                         <h2>
                             COMPETÊNCIAS TÉCNICAS
                         </h2>
-                    </div>
-                    <div class="col-xs-12">
                         <div class="row center-sm">
-                            <div class="col-xs-4 col-sm-3 center-xs">
+                            <div class="col-xs-6 col-sm-3 center-xs">
                                 <div class="sectionCompetencias__tecnica">
                                     <i class="fab fa-html5">
                                         <p class="sectionCompetencias__label show">
@@ -174,7 +176,7 @@
                                     </i>
                                 </div>
                             </div>
-                            <div class="col-xs-4 col-sm-3 center-xs">
+                            <div class="col-xs-6 col-sm-3 center-xs">
                                 <div class="sectionCompetencias__tecnica">
                                     <i class="fab fa-css3-alt">
                                         <p class="sectionCompetencias__label show">
@@ -186,7 +188,7 @@
                                     </i>
                                 </div>
                             </div>
-                            <div class="col-xs-4 col-sm-3 center-xs">
+                            <div class="col-xs-6 col-sm-3 center-xs">
                                 <div class="sectionCompetencias__tecnica">
                                     <i class="fab fa-js-square">
                                         <p class="sectionCompetencias__label show">
@@ -197,7 +199,7 @@
                                     </i>
                                 </div>
                             </div>
-                            <div class="col-xs-4 col-sm-3 center-xs">
+                            <div class="col-xs-6 col-sm-3 center-xs">
                                 <div class="sectionCompetencias__tecnica">
                                     <i class="fab fa-sass">
                                         <p class="sectionCompetencias__label show">
@@ -206,7 +208,7 @@
                                     </i>
                                 </div>
                             </div>
-                            <div class="col-xs-4 col-sm-3 center-xs">
+                            <div class="col-xs-6 col-sm-3 center-xs">
                                 <div class="sectionCompetencias__tecnica">
                                     <i class="fab fa-gulp">
                                         <p class="sectionCompetencias__label show">
@@ -215,7 +217,7 @@
                                     </i>
                                 </div>
                             </div>
-                            <div class="col-xs-4 col-sm-3 center-xs">
+                            <div class="col-xs-6 col-sm-3 center-xs">
                                 <div class="sectionCompetencias__tecnica">
                                     <i class="fab fa-react">
                                         <p class="sectionCompetencias__label show">
@@ -224,7 +226,7 @@
                                     </i>
                                 </div>
                             </div>
-                            <div class="col-xs-4 col-sm-3 center-xs">
+                            <div class="col-xs-6 col-sm-3 center-xs">
                                 <div class="sectionCompetencias__tecnica">
                                     <i class="fab fa-github">
                                         <p class="sectionCompetencias__label show">
@@ -246,11 +248,70 @@
                             Portifólio
                         </h2>
                     </div>
-                    <div class="col-xs-12 center-xs">
-                        <div class="sectionPortifolio__sites">
-                                <img class="sectionPortifolio__img" src="img/triadbox.png" alt="">
+                    <div class="col-xs-12 col-md-6 center-xs">
+                        <div  class="sectionPortifolio__sites sites" >
+                            <a href="https://celsolfamaral.github.io/Portifolio/tbx-inscricao/">
+                                <div class="sites__img" style="background-image: url('img/triadbox.png');">
+                                </div>
+                            </a>
+                            <a href="https://celsolfamaral.github.io/Portifolio/tbx-inscricao/">
                                 <h3>Triadbox</h3>
-
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-md-6 center-xs">
+                        <div  class="sectionPortifolio__sites sites" >
+                            <a href="https://celsolfamaral.github.io/Portifolio/workshop/">
+                                <div class="sites__img" style="background-image: url('img/workshop.png');">
+                                </div>
+                            </a>
+                            <a href="https://celsolfamaral.github.io/Portifolio/workshop/">
+                                <h3>Workshop</h3>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-md-6 center-xs">
+                        <div  class="sectionPortifolio__sites sites" >
+                            <a href="https://celsolfamaral.github.io/Portifolio/tpr-inscricao/">
+                                <div class="sites__img" style="background-image: url('img/triadedaprodutividade.png');">
+                                </div>
+                            </a>
+                            <a href="https://celsolfamaral.github.io/Portifolio/tpr-inscricao/">
+                                <h3>Triade da Produtividade</h3>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-md-6 center-xs">
+                        <div  class="sectionPortifolio__sites sites" >
+                            <a href="https://celsolfamaral.github.io/Portifolio/tmt-inscricao/">
+                                <div class="sites__img" style="background-image: url('img/triadmentor.png');">
+                                </div>
+                            </a>
+                            <a href="https://celsolfamaral.github.io/Portifolio/tmt-inscricao/">
+                                <h3>Triad Mentor</h3>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-md-6 center-xs">
+                        <div  class="sectionPortifolio__sites sites" >
+                            <a href="https://celsolfamaral.github.io/Portifolio/omt-inscricao/">
+                                <div class="sites__img" style="background-image: url('img/omat.png');">
+                                </div>
+                            </a>
+                            <a href="https://celsolfamaral.github.io/Portifolio/omt-inscricao/">
+                                <h3>O Melhor Ano de Todos</h3>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-md-6 center-xs">
+                        <div  class="sectionPortifolio__sites sites" >
+                            <a href="https://celsolfamaral.github.io/Portifolio/lpr-inscricao/">
+                                <div class="sites__img" style="background-image: url('img/liderprodutivo.png');">
+                                </div>
+                            </a>
+                            <a href="https://celsolfamaral.github.io/Portifolio/lpr-inscricao/">
+                                <h3>Lider Produtivo</h3>
+                            </a>
                         </div>
                     </div>
                 </div>

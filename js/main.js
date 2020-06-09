@@ -50,6 +50,8 @@ var header = document.querySelector('.header'),
 botao.addEventListener('click', function () {
     if (menu.className === "nav__menu") {
         menu.classList.add("responsive");
+        console.log('foi');
+        
     } else {
         menu.classList.remove("responsive");
     }
