@@ -35,9 +35,9 @@ $('a[href*="#"]')
             }
         }
     });
-var header = document.querySelector('.header'),
+
+    var header = document.querySelector('.header'),
     main = document.querySelector('.main'),
-    footer = document.querySelector('.footer'),
     nav = document.querySelector('.nav'),
     menu = document.querySelector('#menu'),
     botao = document.querySelector('.nav__hamburguer'),
@@ -49,6 +49,8 @@ var header = document.querySelector('.header'),
 
 botao.addEventListener('click', function () {
     if (menu.className === "nav__menu") {
+        console.log(menu);
+        
         menu.classList.add("responsive");
         console.log('foi');
         
@@ -61,7 +63,6 @@ botaoDesktop.addEventListener('click', function () {
     nav.classList.add("responsive");
     header.style.marginLeft = "250px";
     main.style.marginLeft = "250px";
-    footer.style.marginLeft = "250px";
     this.style.display = "none";
 
 });
@@ -69,17 +70,22 @@ botaoClose.addEventListener('click', function () {
     nav.classList.remove("responsive");
     header.style.marginLeft = "0";
     main.style.marginLeft = "0";
-    footer.style.marginLeft = "0";
     botaoDesktop.style.display = "block";
 
 })
 
-link.forEach(element => {
-    element.addEventListener('click', function () {
-        menu.classList.remove("responsive");
-
-    })
-});
+var windowWidth = window.innerWidth;
+if(windowWidth <= 1100){
+    link.forEach(element => {
+        element.addEventListener('click', function () {
+            nav.classList.remove("responsive");
+            header.style.marginLeft = "0";
+            main.style.marginLeft = "0";
+            botaoDesktop.style.display = "block";
+    
+        })
+    });
+}
 
 $('.fab').hover(
     $(this).addClass("show")

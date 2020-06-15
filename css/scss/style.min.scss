@@ -1,12 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600&display=swap');
 $corFonte: #868e96;
 $corDestaque: #323538;
 
 body {
+    font-family: 'Source Sans Pro', sans-serif;
     font-size: 19.5px;
     color: $corFonte;
 
     * {
         outline: none;
+        box-sizing: border-box;
     }
 
     h1 {
@@ -26,6 +29,7 @@ body {
 
     a {
         color: $corDestaque;
+        text-decoration: none;
     }
 
     img {
@@ -35,7 +39,6 @@ body {
 
     ul {
         list-style: disc;
-        margin-left: 40px;
         font-size: .8em;
 
         li {
@@ -45,13 +48,16 @@ body {
 }
 
 %Espacamento {
-    padding: 80px 0;
+    padding: 32px 0;
     border-bottom: $corFonte .5px solid;
 }
 
 %data {
     color: $corDestaque;
     font-size: .8em;
+    margin: 0;
+    font-weight: bold;
+    float: right;
 }
 
 
@@ -62,8 +68,6 @@ body {
 }
 
 .header {
-    padding-top: 75px;
-    padding-bottom: 20px;
     border-bottom: $corFonte .5px solid;
     transition: margin-left .5s;
 
@@ -75,11 +79,25 @@ body {
         position: fixed;
         top: 0;
         left: 0;
-        height: 4em;
+        min-height: 4em;
         width: 100%;
-        background-color: $corDestaque;
+        background-color: #141516;
         transition: .5s;
         overflow: hidden;
+
+        &:after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 100%;
+            height: 5px;
+            background: #0683ad;
+            /* fallback for old browsers */
+            background: -webkit-linear-gradient(to right, #033474, #0683ad);
+            /* Chrome 10-25, Safari 5.1-6 */
+            background: linear-gradient(to right, #033474, #0683ad);
+        }
 
         &__menu {
             height: 0;
@@ -96,7 +114,7 @@ body {
 
         &__img {
             border-radius: 50%;
-            border: 5px solid $corFonte;
+            border: 5px solid #033474;
             display: none;
         }
 
@@ -112,11 +130,11 @@ body {
                     width: 0px;
                     height: 3px;
                     display: block;
-                    background: #56CCF2;
+                    background: #0683ad;
                     /* fallback for old browsers */
-                    background: -webkit-linear-gradient(to right, #2F80ED, #56CCF2);
+                    background: -webkit-linear-gradient(to right, #033474, #0683ad);
                     /* Chrome 10-25, Safari 5.1-6 */
-                    background: linear-gradient(to right, #2F80ED, #56CCF2);
+                    background: linear-gradient(to right, #033474, #0683ad);
                     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
                     transition: 300ms;
@@ -145,7 +163,7 @@ body {
     }
 
     &__titulo {
-        font-size: 40px;
+        font-size: 38px;
         margin-bottom: 0;
     }
 
@@ -157,6 +175,10 @@ body {
         display: block;
         font-size: 15px;
         font-weight: bolder;
+
+        &:hover {
+            color: #033474;
+        }
     }
 
     &__redes {
@@ -171,8 +193,14 @@ body {
         margin: 1rem 0;
 
         &:hover {
+            background: #0683ad;
+            /* fallback for old browsers */
+            background: -webkit-linear-gradient(to right, #033474, #0683ad);
+            /* Chrome 10-25, Safari 5.1-6 */
+            background: linear-gradient(to right, #033474, #0683ad);
+            /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+            transform: scale(1.1);
             transition: .3s;
-            transform: scale(1.3);
         }
     }
 }
@@ -189,8 +217,11 @@ body {
     }
 
     .sectionExperiencia {
+        &__card{
+            margin: 4rem 0;
+        }
         &__cargo {
-            margin-bottom: 0;
+            margin: 0;
         }
 
         &__empresa {
@@ -203,8 +234,11 @@ body {
     }
 
     .sectionFormacao {
+        &__card{
+            margin: 4rem 0;
+        }
         &__instituicao {
-            margin-bottom: 0;
+            margin: 0;
         }
 
         &__curso {
@@ -270,11 +304,11 @@ body {
                     width: 0px;
                     height: 3px;
                     display: block;
-                    background: #56CCF2;
+                    background: #0683ad;
                     /* fallback for old browsers */
-                    background: -webkit-linear-gradient(to right, #2F80ED, #56CCF2);
+                    background: -webkit-linear-gradient(to right, #033474, #0683ad);
                     /* Chrome 10-25, Safari 5.1-6 */
-                    background: linear-gradient(to right, #2F80ED, #56CCF2);
+                    background: linear-gradient(to right, #033474, #0683ad);
                     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
                     transition: .5s;
@@ -322,7 +356,7 @@ body {
     }
 
     %Espacamento {
-        padding: 120px 0;
+        padding: 64px 0;
     }
 
     .header,
@@ -352,6 +386,13 @@ body {
             width: 0;
             padding: 0;
 
+            &:after {
+                bottom: 0;
+                right: 0;
+                width: 5px;
+                height: 100vh;
+            }
+
             &.responsive {
                 width: 250px;
             }
@@ -366,6 +407,20 @@ body {
 
             &__img {
                 display: inline-block;
+                position: relative;
+                &:after {
+                    content: "";
+                    position: absolute;
+                    bottom: 0;
+                    right: 0;
+                    width: 100%;
+                    height: 5px;
+                    background: #0683ad;
+                    /* fallback for old browsers */
+                    background: -webkit-linear-gradient(to right, #033474, #0683ad);
+                    /* Chrome 10-25, Safari 5.1-6 */
+                    background: linear-gradient(to right, #033474, #0683ad);
+                }
             }
 
             &__close {
@@ -465,6 +520,8 @@ body {
     }
 
     .header {
+        margin-left: 250px;
+
         &__hamburguer {
             display: none;
         }
@@ -480,5 +537,8 @@ body {
                 font-size: 40px;
             }
         }
+    }
+    .main{
+        margin-left: 250px;
     }
 }

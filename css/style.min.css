@@ -1,10 +1,13 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600&display=swap");
 body {
+  font-family: 'Source Sans Pro', sans-serif;
   font-size: 19.5px;
   color: #868e96;
 }
 
 body * {
   outline: none;
+  box-sizing: border-box;
 }
 
 body h1 {
@@ -24,6 +27,7 @@ body h3 {
 
 body a {
   color: #323538;
+  text-decoration: none;
 }
 
 body img {
@@ -33,7 +37,6 @@ body img {
 
 body ul {
   list-style: disc;
-  margin-left: 40px;
   font-size: .8em;
 }
 
@@ -42,13 +45,16 @@ body ul li {
 }
 
 .main__section, .footer {
-  padding: 80px 0;
+  padding: 32px 0;
   border-bottom: #868e96 0.5px solid;
 }
 
 .main .sectionExperiencia__data, .main .sectionFormacao__data {
   color: #323538;
   font-size: .8em;
+  margin: 0;
+  font-weight: bold;
+  float: right;
 }
 
 .header,
@@ -58,8 +64,6 @@ body ul li {
 }
 
 .header {
-  padding-top: 75px;
-  padding-bottom: 20px;
   border-bottom: #868e96 0.5px solid;
   transition: margin-left .5s;
 }
@@ -72,11 +76,24 @@ body ul li {
   position: fixed;
   top: 0;
   left: 0;
-  height: 4em;
+  min-height: 4em;
   width: 100%;
-  background-color: #323538;
+  background-color: #141516;
   transition: .5s;
   overflow: hidden;
+}
+
+.header .nav:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 5px;
+  background: #0683ad;
+  /* fallback for old browsers */
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #033474, #0683ad);
 }
 
 .header .nav__menu {
@@ -94,7 +111,7 @@ body ul li {
 
 .header .nav__img {
   border-radius: 50%;
-  border: 5px solid #868e96;
+  border: 5px solid #033474;
   display: none;
 }
 
@@ -112,10 +129,10 @@ body ul li {
   width: 0px;
   height: 3px;
   display: block;
-  background: #56CCF2;
+  background: #0683ad;
   /* fallback for old browsers */
   /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #2F80ED, #56CCF2);
+  background: linear-gradient(to right, #033474, #0683ad);
   /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   transition: 300ms;
 }
@@ -140,7 +157,7 @@ body ul li {
 }
 
 .header__titulo {
-  font-size: 40px;
+  font-size: 38px;
   margin-bottom: 0;
 }
 
@@ -152,6 +169,10 @@ body ul li {
   display: block;
   font-size: 15px;
   font-weight: bolder;
+}
+
+.header__email:hover {
+  color: #033474;
 }
 
 .header__redes {
@@ -167,8 +188,13 @@ body ul li {
 }
 
 .header__redes:hover {
+  background: #0683ad;
+  /* fallback for old browsers */
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #033474, #0683ad);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  transform: scale(1.1);
   transition: .3s;
-  transform: scale(1.3);
 }
 
 .main {
@@ -179,16 +205,24 @@ body ul li {
   margin-top: 0;
 }
 
+.main .sectionExperiencia__card {
+  margin: 4rem 0;
+}
+
 .main .sectionExperiencia__cargo {
-  margin-bottom: 0;
+  margin: 0;
 }
 
 .main .sectionExperiencia__empresa {
   margin: 0;
 }
 
+.main .sectionFormacao__card {
+  margin: 4rem 0;
+}
+
 .main .sectionFormacao__instituicao {
-  margin-bottom: 0;
+  margin: 0;
 }
 
 .main .sectionFormacao__curso {
@@ -241,10 +275,10 @@ body ul li {
   width: 0px;
   height: 3px;
   display: block;
-  background: #56CCF2;
+  background: #0683ad;
   /* fallback for old browsers */
   /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #2F80ED, #56CCF2);
+  background: linear-gradient(to right, #033474, #0683ad);
   /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   transition: .5s;
 }
@@ -280,7 +314,7 @@ body ul li {
     font-size: 25px;
   }
   .main__section, .footer {
-    padding: 120px 0;
+    padding: 64px 0;
   }
   .header.responsive,
   .main.responsive,
@@ -305,6 +339,12 @@ body ul li {
     width: 0;
     padding: 0;
   }
+  .header .nav:after {
+    bottom: 0;
+    right: 0;
+    width: 5px;
+    height: 100vh;
+  }
   .header .nav.responsive {
     width: 250px;
   }
@@ -316,6 +356,19 @@ body ul li {
   }
   .header .nav__img {
     display: inline-block;
+    position: relative;
+  }
+  .header .nav__img:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 5px;
+    background: #0683ad;
+    /* fallback for old browsers */
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #033474, #0683ad);
   }
   .header .nav__close {
     display: block;
@@ -386,6 +439,9 @@ body ul li {
   .container {
     width: 47.25rem;
   }
+  .header {
+    margin-left: 250px;
+  }
   .header__hamburguer {
     display: none;
   }
@@ -397,6 +453,9 @@ body ul li {
   }
   .header .nav__nome {
     font-size: 40px;
+  }
+  .main {
+    margin-left: 250px;
   }
 }
 /*# sourceMappingURL=style.min.css.map */
